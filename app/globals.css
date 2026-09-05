@@ -1,0 +1,74 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --brand-brown: #2B241E;
+    --brand-brown-dark: #1E1814;
+    --brand-green: #1D4F40;
+    --brand-green-dark: #13382D;
+    --brand-cream: #FBF9F5;
+    --brand-cream-dark: #F3EDE2;
+    --brand-gold: #C5A059;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    font-family: var(--font-plus-jakarta), system-ui, -apple-system, sans-serif;
+    color: #2B241E;
+    background-color: #FBF9F5;
+  }
+
+  body {
+    overflow-x: hidden;
+    min-height: 100vh;
+    background-color: #FBF9F5;
+    color: #2B241E;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-cormorant), "Cinzel", "Playfair Display", Georgia, serif;
+    letter-spacing: -0.01em;
+    color: #2B241E;
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #F3EDE2;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #C5A059;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #1D4F40;
+}
+
+/* Glassmorphism & luxury effects */
+.glass-header {
+  background: rgba(251, 249, 245, 0.88);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+.glass-dark {
+  background: rgba(43, 36, 30, 0.92);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+}
+
+.vedic-gold-gradient {
+  background: linear-gradient(135deg, #C5A059 0%, #E8D3A7 50%, #9E7B36 100%);
+}
+
+.vedic-border-glow {
+  box-shadow: 0 0 0 1px rgba(197, 160, 89, 0.25);
+}
