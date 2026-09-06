@@ -80,9 +80,9 @@ function LoginContent() {
   };
 
   return (
-    <div className="min-h-screen bg-brand-cream py-16 sm:py-24 flex items-center">
+    <div className="min-h-screen bg-white py-16 sm:py-24 flex items-center">
       <Container size="md">
-        <div className="max-w-md mx-auto bg-white rounded-3xl p-8 sm:p-10 border border-brand-brown-border shadow-luxury space-y-6">
+        <div className="max-w-md mx-auto bg-white rounded-2xl p-8 sm:p-10 border border-brand-brown-border shadow-luxury space-y-6">
           {/* Logo & Header */}
           <div className="text-center space-y-2">
             <div className="relative h-12 w-48 mx-auto mb-3">
@@ -100,7 +100,7 @@ function LoginContent() {
             <h1 className="font-serif text-2xl sm:text-3xl font-bold text-brand-brown">
               Welcome Back
             </h1>
-            <p className="text-xs text-brand-brown-muted">
+            <p className="text-xs text-brand-brown-muted font-light">
               Sign in to access your prescriptions, consultation appointments, and order tracking.
             </p>
           </div>
@@ -124,7 +124,7 @@ function LoginContent() {
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 placeholder="name@example.com"
-                className="w-full p-3 bg-brand-sand/30 border border-brand-brown-border rounded-xl text-sm text-brand-brown focus:outline-none focus:ring-1 focus:ring-brand-green"
+                className="w-full p-3 bg-white border border-brand-brown-border rounded-xl text-sm text-brand-brown focus:outline-none focus:ring-1 focus:ring-brand-green"
               />
             </div>
 
@@ -146,7 +146,7 @@ function LoginContent() {
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
                 placeholder="••••••••"
-                className="w-full p-3 bg-brand-sand/30 border border-brand-brown-border rounded-xl text-sm text-brand-brown focus:outline-none focus:ring-1 focus:ring-brand-green"
+                className="w-full p-3 bg-white border border-brand-brown-border rounded-xl text-sm text-brand-brown focus:outline-none focus:ring-1 focus:ring-brand-green"
               />
             </div>
 
@@ -166,7 +166,7 @@ function LoginContent() {
             <button
               type="button"
               onClick={handleDemoLogin}
-              className="w-full py-2.5 px-4 rounded-xl bg-brand-sand/60 hover:bg-brand-sand text-brand-brown text-xs font-semibold border border-brand-brown-border/60 transition-colors flex items-center justify-center gap-2"
+              className="w-full py-2.5 px-4 rounded-xl bg-brand-brown/5 hover:bg-brand-brown/10 text-brand-brown text-xs font-semibold border border-brand-brown-border/60 transition-colors flex items-center justify-center gap-2"
             >
               <Sparkles className="w-4 h-4 text-brand-gold" />
               <span>Preview as Demo Patient (Radhika Sharma)</span>
@@ -229,7 +229,7 @@ export default function LoginPage() {
   return (
     <Suspense
       fallback={
-        <div className="min-h-screen bg-brand-cream flex items-center justify-center">
+        <div className="min-h-screen bg-white flex items-center justify-center">
           <div className="animate-spin w-8 h-8 border-4 border-brand-green border-t-transparent rounded-full" />
         </div>
       }

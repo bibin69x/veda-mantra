@@ -64,8 +64,8 @@ export default function TreatmentDetailPage({ params }: PageProps) {
   ).slice(0, 3);
 
   return (
-    <div className="flex flex-col min-h-screen bg-brand-cream">
-      {/* 1. Breadcrumb Strip */}
+    <div className="flex flex-col min-h-screen bg-white">
+      {/* 1. Breadcrumb Strip (bg-white) */}
       <div className="bg-white border-b border-brand-brown-border py-3 text-xs text-brand-brown-muted">
         <Container size="xl" className="flex items-center gap-2 flex-wrap">
           <Link href="/" className="hover:text-brand-green transition-colors">
@@ -82,11 +82,8 @@ export default function TreatmentDetailPage({ params }: PageProps) {
         </Container>
       </div>
 
-      {/* 2. Hero Header Section */}
+      {/* 2. Hero Header Section (bg-brand-brown) */}
       <section className="relative py-12 sm:py-20 bg-brand-brown text-white overflow-hidden">
-        <div className="absolute inset-0 bg-[radial-gradient(#C5A059_1px,transparent_1px)] [background-size:28px_28px] opacity-10 pointer-events-none" />
-        <div className="absolute -bottom-20 -right-20 w-96 h-96 rounded-full bg-brand-green/20 blur-3xl pointer-events-none" />
-
         <Container size="xl" className="relative z-10">
           <div className="max-w-3xl space-y-4">
             <div className="flex flex-wrap items-center gap-3">
@@ -124,14 +121,14 @@ export default function TreatmentDetailPage({ params }: PageProps) {
         </Container>
       </section>
 
-      {/* 3. Main Treatment Information & Booking Layout */}
-      <section className="py-12 sm:py-20 flex-grow">
+      {/* 3. Main Treatment Information & Booking Layout (bg-white) */}
+      <section className="py-12 sm:py-20 flex-grow bg-white">
         <Container size="xl">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
             {/* Left Content Column */}
             <div className="lg:col-span-8 space-y-12">
               {/* Treatment Hero Image */}
-              <div className="relative aspect-[16/9] rounded-sm overflow-hidden shadow-luxury border-2 border-white">
+              <div className="relative aspect-[16/9] rounded-sm overflow-hidden shadow-luxury border-2 border-brand-brown-border">
                 <Image
                   src={treatment.image}
                   alt={treatment.title}
@@ -144,7 +141,7 @@ export default function TreatmentDetailPage({ params }: PageProps) {
               {/* Comprehensive Clinical Description */}
               <div className="bg-white rounded-sm p-8 border border-brand-brown-border shadow-card-soft space-y-4">
                 <h2 className="text-2xl font-serif text-brand-brown font-medium">
-                  Classical Description & Purpose
+                  Classical Description & Clinical Purpose
                 </h2>
                 <div className="w-10 h-0.5 bg-brand-green" />
                 <p className="text-xs sm:text-sm text-brand-brown-muted leading-relaxed font-light">
@@ -163,7 +160,7 @@ export default function TreatmentDetailPage({ params }: PageProps) {
                   {treatment.benefits.map((benefit, bIdx) => (
                     <div
                       key={bIdx}
-                      className="p-4 rounded-sm bg-brand-cream border border-brand-brown-border/60 flex items-start gap-3"
+                      className="p-4 rounded-sm bg-white border border-brand-brown-border flex items-start gap-3 shadow-sm hover:border-brand-green transition-colors"
                     >
                       <CheckCircle2 className="w-4 h-4 text-brand-green shrink-0 mt-0.5" />
                       <span className="text-xs sm:text-sm text-brand-brown font-light">
@@ -177,7 +174,7 @@ export default function TreatmentDetailPage({ params }: PageProps) {
               {/* Step-by-Step Clinical Procedure */}
               <div className="bg-white rounded-sm p-8 border border-brand-brown-border shadow-card-soft space-y-6">
                 <h2 className="text-2xl font-serif text-brand-brown font-medium">
-                  Step-by-Step Procedure (विधि)
+                  Step-by-Step Clinical Procedure (विधि)
                 </h2>
                 <div className="w-10 h-0.5 bg-brand-green" />
 
@@ -185,7 +182,7 @@ export default function TreatmentDetailPage({ params }: PageProps) {
                   {treatment.process.map((step, sIdx) => (
                     <div
                       key={sIdx}
-                      className="flex items-start gap-4 p-4 rounded-sm bg-brand-cream border border-brand-brown-border/60"
+                      className="flex items-start gap-4 p-4 rounded-sm bg-white border border-brand-brown-border shadow-sm"
                     >
                       <div className="w-7 h-7 rounded-full bg-brand-green text-white flex items-center justify-center font-serif text-xs font-semibold shrink-0">
                         {sIdx + 1}
@@ -211,7 +208,7 @@ export default function TreatmentDetailPage({ params }: PageProps) {
                   {treatment.recommendedFor.map((rec, rIdx) => (
                     <span
                       key={rIdx}
-                      className="inline-flex items-center gap-1.5 px-4 py-2 rounded-full bg-brand-sand/60 border border-brand-brown-border text-xs text-brand-brown font-medium"
+                      className="inline-flex items-center gap-1.5 px-4 py-2 rounded-full bg-white border border-brand-brown-border text-xs text-brand-brown font-medium shadow-sm"
                     >
                       <Sparkles className="w-3.5 h-3.5 text-brand-gold" />
                       <span>{rec}</span>
@@ -220,16 +217,16 @@ export default function TreatmentDetailPage({ params }: PageProps) {
                 </div>
               </div>
 
-              {/* Precautions & Guidance */}
-              <div className="bg-brand-brown text-brand-cream rounded-sm p-8 border border-brand-brown-light/40 space-y-4">
+              {/* Precautions & Guidance (bg-brand-brown) */}
+              <div className="bg-brand-brown text-white rounded-sm p-8 border border-brand-gold/20 space-y-4 shadow-xl">
                 <div className="flex items-center gap-2 text-brand-gold">
                   <ShieldAlert className="w-5 h-5" />
                   <h3 className="font-serif text-lg font-medium text-white">
-                    Patient Guidelines & Precautions
+                    Patient Guidelines & Clinical Precautions
                   </h3>
                 </div>
                 <p className="text-xs text-brand-sand/80 leading-relaxed font-light">
-                  Patients are advised to consume light meals 1.5 to 2 hours prior to the therapy session. Direct exposure to cold breeze or chilled water immediately post-therapy is contraindicated. Our Vaidya will provide exact post-treatment herbal decoction instructions during your session.
+                  Patients are advised to consume light meals 1.5 to 2 hours prior to the therapy session. Direct exposure to cold breeze or chilled water immediately post-therapy is contraindicated. Chief Physician Dr. Anupama Ramachandran will provide individualized post-treatment guidance during your session.
                 </p>
               </div>
             </div>
@@ -244,8 +241,8 @@ export default function TreatmentDetailPage({ params }: PageProps) {
                   <h3 className="font-serif text-2xl font-medium text-brand-brown">
                     {treatment.title}
                   </h3>
-                  <p className="text-xs text-brand-brown-muted">
-                    Conducted by trained certified therapists under senior Vaidya supervision.
+                  <p className="text-xs text-brand-brown-muted font-light">
+                    Conducted by trained certified therapists under Chief Physician supervision.
                   </p>
                 </div>
 
@@ -291,10 +288,10 @@ export default function TreatmentDetailPage({ params }: PageProps) {
                   </Button>
                 </div>
 
-                <div className="pt-4 border-t border-brand-brown-border/60 space-y-2 text-[11px] text-brand-brown-muted">
+                <div className="pt-4 border-t border-brand-brown-border/60 space-y-2 text-[11px] text-brand-brown-muted font-light">
                   <div className="flex items-center gap-2">
                     <ShieldCheck className="w-3.5 h-3.5 text-brand-green shrink-0" />
-                    <span>100% Classical Ayurvedic tailams</span>
+                    <span>100% Classical Ayurvedic Tailams</span>
                   </div>
                   <div className="flex items-center gap-2">
                     <ShieldCheck className="w-3.5 h-3.5 text-brand-green shrink-0" />
@@ -303,15 +300,15 @@ export default function TreatmentDetailPage({ params }: PageProps) {
                 </div>
               </div>
 
-              {/* Clinic Helpline Card */}
-              <div className="bg-brand-sand/50 rounded-sm p-6 border border-brand-brown-border space-y-2 text-center">
-                <p className="font-serif text-sm font-semibold text-brand-brown">
+              {/* Clinic Helpline Card (bg-brand-green) */}
+              <div className="bg-brand-green text-white rounded-sm p-6 space-y-2 text-center shadow-md">
+                <p className="font-serif text-sm font-semibold text-white">
                   Questions about this Therapy?
                 </p>
-                <p className="text-xs text-brand-brown-muted">
+                <p className="text-xs text-brand-sand/80 font-light">
                   Speak directly with our clinical coordinators.
                 </p>
-                <p className="text-sm font-semibold text-brand-green pt-1">
+                <p className="text-sm font-semibold text-brand-gold-light pt-1">
                   +91 98765 43210
                 </p>
               </div>
@@ -320,7 +317,7 @@ export default function TreatmentDetailPage({ params }: PageProps) {
         </Container>
       </section>
 
-      {/* 4. Related / Complementary Therapies */}
+      {/* 4. Related / Complementary Therapies (bg-white) */}
       {relatedTreatments.length > 0 && (
         <section className="py-16 sm:py-20 bg-white border-t border-brand-brown-border">
           <Container size="xl">
@@ -347,9 +344,9 @@ export default function TreatmentDetailPage({ params }: PageProps) {
               {relatedTreatments.map((rel) => (
                 <div
                   key={rel.id}
-                  className="group bg-brand-cream rounded-sm border border-brand-brown-border overflow-hidden shadow-card-soft transition-all duration-300 hover:shadow-luxury flex flex-col justify-between"
+                  className="group bg-white rounded-sm border border-brand-brown-border overflow-hidden shadow-card-soft transition-all duration-300 hover:shadow-luxury flex flex-col justify-between"
                 >
-                  <div className="relative aspect-[16/10] overflow-hidden">
+                  <div className="relative aspect-[16/10] overflow-hidden bg-brand-brown-light">
                     <Image
                       src={rel.image}
                       alt={rel.title}
@@ -367,7 +364,7 @@ export default function TreatmentDetailPage({ params }: PageProps) {
                     <h4 className="font-serif text-base font-medium text-brand-brown group-hover:text-brand-green transition-colors">
                       <Link href={`/treatments/${rel.slug}`}>{rel.title}</Link>
                     </h4>
-                    <p className="text-xs text-brand-brown-muted line-clamp-2">
+                    <p className="text-xs text-brand-brown-muted line-clamp-2 font-light">
                       {rel.tagline}
                     </p>
                   </div>

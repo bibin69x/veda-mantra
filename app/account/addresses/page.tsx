@@ -96,9 +96,9 @@ export default function AccountAddressesPage() {
   };
 
   return (
-    <div className="min-h-screen bg-brand-cream pb-24">
+    <div className="min-h-screen bg-white pb-24">
       {/* Header Breadcrumbs */}
-      <div className="bg-brand-sand/40 border-b border-brand-brown-border/60 py-3">
+      <div className="bg-white border-b border-brand-brown-border/60 py-3">
         <Container size="xl">
           <nav className="flex items-center space-x-2 text-xs text-brand-brown-muted">
             <Link href="/" className="hover:text-brand-green transition-colors">
@@ -167,7 +167,7 @@ export default function AccountAddressesPage() {
                       value={newAddress.name}
                       onChange={(e) => setNewAddress({ ...newAddress, name: e.target.value })}
                       placeholder="e.g. Radhika Sharma (Residence)"
-                      className="w-full p-2.5 bg-brand-sand/30 border border-brand-brown-border rounded-lg text-xs"
+                      className="w-full p-2.5 bg-white border border-brand-brown-border rounded-lg text-xs"
                     />
                   </div>
 
@@ -183,7 +183,7 @@ export default function AccountAddressesPage() {
                         setNewAddress({ ...newAddress, addressLine1: e.target.value })
                       }
                       placeholder="Street address"
-                      className="w-full p-2.5 bg-brand-sand/30 border border-brand-brown-border rounded-lg text-xs"
+                      className="w-full p-2.5 bg-white border border-brand-brown-border rounded-lg text-xs"
                     />
                   </div>
 
@@ -196,7 +196,7 @@ export default function AccountAddressesPage() {
                       value={newAddress.landmark}
                       onChange={(e) => setNewAddress({ ...newAddress, landmark: e.target.value })}
                       placeholder="Optional landmark"
-                      className="w-full p-2.5 bg-brand-sand/30 border border-brand-brown-border rounded-lg text-xs"
+                      className="w-full p-2.5 bg-white border border-brand-brown-border rounded-lg text-xs"
                     />
                   </div>
 
@@ -210,7 +210,7 @@ export default function AccountAddressesPage() {
                       value={newAddress.city}
                       onChange={(e) => setNewAddress({ ...newAddress, city: e.target.value })}
                       placeholder="City name"
-                      className="w-full p-2.5 bg-brand-sand/30 border border-brand-brown-border rounded-lg text-xs"
+                      className="w-full p-2.5 bg-white border border-brand-brown-border rounded-lg text-xs"
                     />
                   </div>
 
@@ -223,7 +223,7 @@ export default function AccountAddressesPage() {
                       required
                       value={newAddress.state}
                       onChange={(e) => setNewAddress({ ...newAddress, state: e.target.value })}
-                      className="w-full p-2.5 bg-brand-sand/30 border border-brand-brown-border rounded-lg text-xs"
+                      className="w-full p-2.5 bg-white border border-brand-brown-border rounded-lg text-xs"
                     />
                   </div>
 
@@ -238,7 +238,7 @@ export default function AccountAddressesPage() {
                       value={newAddress.pincode}
                       onChange={(e) => setNewAddress({ ...newAddress, pincode: e.target.value })}
                       placeholder="6-digit PIN code"
-                      className="w-full p-2.5 bg-brand-sand/30 border border-brand-brown-border rounded-lg text-xs font-mono"
+                      className="w-full p-2.5 bg-white border border-brand-brown-border rounded-lg text-xs font-mono"
                     />
                   </div>
 

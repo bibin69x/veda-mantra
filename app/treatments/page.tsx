@@ -8,7 +8,7 @@ import { SectionHeading } from "@/components/ui/SectionHeading";
 import { Badge } from "@/components/ui/Badge";
 import { Button } from "@/components/ui/Button";
 import { TREATMENTS, TREATMENT_CATEGORIES, Treatment } from "@/data/treatments";
-import { Clock, Search, CheckCircle2, ArrowRight, Calendar, Sparkles, Shield, Heart } from "lucide-react";
+import { Clock, Search, CheckCircle2, ArrowRight, Calendar, Sparkles, ShieldCheck } from "lucide-react";
 import { formatINR, cn } from "@/lib/utils";
 
 export default function TreatmentsPage() {
@@ -28,35 +28,32 @@ export default function TreatmentsPage() {
   });
 
   return (
-    <div className="flex flex-col min-h-screen bg-brand-cream">
-      {/* 1. Header Hero Banner */}
+    <div className="flex flex-col min-h-screen bg-white">
+      {/* 1. Header Hero Banner (bg-brand-brown) */}
       <section className="relative py-16 sm:py-24 bg-brand-brown text-white overflow-hidden">
-        <div className="absolute inset-0 bg-[radial-gradient(#1D4F40_1px,transparent_1px)] [background-size:24px_24px] opacity-15 pointer-events-none" />
-        <div className="absolute top-0 right-0 w-96 h-96 rounded-full bg-brand-green/20 blur-3xl pointer-events-none" />
-
         <Container size="xl" className="relative z-10 text-center">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-brand-brown-light border border-brand-brown-border/30 text-brand-gold-light text-xs font-semibold tracking-widest uppercase mb-4">
+          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-brand-brown-light border border-brand-gold/30 text-brand-gold-light text-xs font-semibold tracking-widest uppercase mb-4">
             <Sparkles className="w-3.5 h-3.5 text-brand-gold" />
             <span>Classical Panchakarma & Clinical Therapies</span>
           </div>
 
           <h1 className="text-3xl sm:text-5xl font-serif font-normal text-white leading-tight max-w-3xl mx-auto">
             Sacred Healing Therapies &{" "}
-            <span className="italic text-brand-gold-light">
+            <span className="italic text-brand-gold-light font-light">
               Panchakarma Rituals
             </span>
           </h1>
 
           <div className="w-12 h-0.5 bg-brand-gold mx-auto my-5" />
 
-          <p className="text-xs sm:text-base text-brand-sand/80 max-w-2xl mx-auto font-light leading-relaxed">
-            Every therapy is conducted in strict alignment with classical Ayurvedic texts using freshly prepared medicated decoctions, organic cold-pressed oils, and individualized physician oversight.
+          <p className="text-xs sm:text-base text-brand-sand/90 max-w-2xl mx-auto font-light leading-relaxed">
+            Every therapy is conducted in strict alignment with classical Ayurvedic texts using freshly prepared medicated decoctions, organic cold-pressed oils, and individualized physician oversight by Chief Physician Dr. Anupama Ramachandran.
           </p>
         </Container>
       </section>
 
-      {/* 2. Search & Category Filters */}
-      <section className="py-10 bg-white border-b border-brand-brown-border sticky top-[72px] sm:top-[88px] z-30 shadow-sm">
+      {/* 2. Search & Category Filters (bg-white) */}
+      <section className="py-8 bg-white border-b border-brand-brown-border sticky top-[72px] sm:top-[88px] z-30 shadow-sm">
         <Container size="xl">
           <div className="flex flex-col md:flex-row items-center justify-between gap-4">
             {/* Category Buttons */}
@@ -70,8 +67,8 @@ export default function TreatmentsPage() {
                     className={cn(
                       "text-xs font-medium tracking-wide px-4 py-2 rounded-full transition-all shrink-0",
                       isActive
-                        ? "bg-brand-green text-white shadow-sm"
-                        : "bg-brand-cream text-brand-brown border border-brand-brown-border hover:bg-brand-sand/60"
+                        ? "bg-brand-green text-white shadow-sm font-semibold scale-105"
+                        : "bg-white text-brand-brown border border-brand-brown-border hover:border-brand-green/60"
                     )}
                   >
                     {cat}
@@ -87,7 +84,7 @@ export default function TreatmentsPage() {
                 placeholder="Search symptom, therapy, or herb..."
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
-                className="w-full pl-9 pr-4 py-2 text-xs rounded-full border border-brand-brown-border bg-brand-cream text-brand-brown placeholder:text-brand-brown-muted/60 focus:outline-none focus:ring-2 focus:ring-brand-green focus:bg-white transition-all"
+                className="w-full pl-9 pr-4 py-2 text-xs rounded-full border border-brand-brown-border bg-white text-brand-brown placeholder:text-brand-brown-muted/60 focus:outline-none focus:ring-2 focus:ring-brand-green transition-all"
               />
               <Search className="w-4 h-4 text-brand-brown-muted absolute left-3 top-2.5" />
               {searchQuery && (
@@ -103,8 +100,8 @@ export default function TreatmentsPage() {
         </Container>
       </section>
 
-      {/* 3. Treatments Grid */}
-      <section className="py-16 sm:py-24 bg-brand-cream flex-grow">
+      {/* 3. Treatments Grid (bg-white) */}
+      <section className="py-16 sm:py-24 bg-white flex-grow">
         <Container size="xl">
           {filteredTreatments.length === 0 ? (
             <div className="text-center py-16 space-y-4 max-w-md mx-auto">
@@ -134,7 +131,7 @@ export default function TreatmentsPage() {
                 >
                   <div>
                     {/* Image Header */}
-                    <div className="relative aspect-[16/10] overflow-hidden bg-brand-sand">
+                    <div className="relative aspect-[16/10] overflow-hidden bg-brand-brown-light">
                       <Image
                         src={treatment.image}
                         alt={treatment.title}
@@ -177,7 +174,7 @@ export default function TreatmentsPage() {
                         </h3>
                       </div>
 
-                      <p className="text-xs sm:text-sm text-brand-brown-muted leading-relaxed line-clamp-2">
+                      <p className="text-xs sm:text-sm text-brand-brown-muted leading-relaxed line-clamp-2 font-light">
                         {treatment.tagline}
                       </p>
 
@@ -187,7 +184,7 @@ export default function TreatmentsPage() {
                           Key Clinical Indications:
                         </p>
                         {treatment.benefits.slice(0, 3).map((benefit, bIdx) => (
-                          <div key={bIdx} className="flex items-start gap-2 text-xs text-brand-brown-muted">
+                          <div key={bIdx} className="flex items-start gap-2 text-xs text-brand-brown-muted font-light">
                             <CheckCircle2 className="w-3.5 h-3.5 text-brand-green shrink-0 mt-0.5" />
                             <span className="line-clamp-1">{benefit}</span>
                           </div>
@@ -222,19 +219,25 @@ export default function TreatmentsPage() {
         </Container>
       </section>
 
-      {/* 4. Panchakarma 3-Stage Guide */}
-      <section className="py-20 sm:py-24 bg-white border-t border-brand-brown-border">
+      {/* 4. Panchakarma 3-Stage Guide (bg-brand-green) */}
+      <section className="py-20 sm:py-24 bg-brand-green text-white border-t border-brand-green-dark">
         <Container size="xl">
-          <SectionHeading
-            sanskritSubtitle="पञ्चकर्म त्रिविध कर्म विधि"
-            tagline="The 3-Stage Process"
-            title="The Scientific Anatomy of a Panchakarma Journey"
-            description="True detoxification cannot happen abruptly. Classical Ayurveda methodically prepares the tissues, mobilizes dormant toxins (Ama), and rejuvenates the cellular matrix."
-            align="center"
-          />
+          <div className="text-center max-w-3xl mx-auto space-y-3 mb-16">
+            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-brand-green-dark border border-brand-gold/30 text-brand-gold-light text-xs font-semibold tracking-widest uppercase">
+              <Sparkles className="w-3.5 h-3.5 text-brand-gold" />
+              <span>पञ्चकर्म त्रिविध कर्म विधि</span>
+            </div>
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-serif font-normal text-white leading-tight">
+              The Scientific Anatomy of a Panchakarma Journey
+            </h2>
+            <div className="w-16 h-0.5 bg-brand-gold mx-auto my-3" />
+            <p className="text-xs sm:text-sm lg:text-base text-brand-sand/80 font-light leading-relaxed">
+              True detoxification cannot happen abruptly. Classical Ayurveda methodically prepares the tissues, mobilizes dormant toxins (Ama), and rejuvenates the cellular matrix.
+            </p>
+          </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="p-8 rounded-sm bg-brand-cream border border-brand-brown-border space-y-4">
+            <div className="p-8 rounded-sm bg-white text-brand-brown shadow-luxury space-y-4">
               <span className="text-xs font-serif font-bold text-brand-green uppercase tracking-widest">
                 Stage 01 • पूर्वकर्म
               </span>
@@ -246,19 +249,19 @@ export default function TreatmentsPage() {
               </p>
             </div>
 
-            <div className="p-8 rounded-sm bg-brand-cream border border-brand-brown-border space-y-4">
-              <span className="text-xs font-serif font-bold text-brand-gold uppercase tracking-widest">
+            <div className="p-8 rounded-sm bg-white text-brand-brown shadow-luxury space-y-4">
+              <span className="text-xs font-serif font-bold text-brand-gold-dark uppercase tracking-widest">
                 Stage 02 • प्रधानकर्म
               </span>
               <h3 className="text-2xl font-serif text-brand-brown font-medium">
                 Pradhana Karma (Detox)
               </h3>
               <p className="text-xs sm:text-sm text-brand-brown-muted leading-relaxed font-light">
-                The targeted elimination protocols (Vamana, Virechana, Basti, Nasya) prescribed specifically by the Vaidya to expel cellular waste and restore constitutional balance.
+                The targeted elimination protocols (Vamana, Virechana, Basti, Nasya) prescribed specifically by Dr. Anupama to expel cellular waste and restore constitutional balance.
               </p>
             </div>
 
-            <div className="p-8 rounded-sm bg-brand-cream border border-brand-brown-border space-y-4">
+            <div className="p-8 rounded-sm bg-white text-brand-brown shadow-luxury space-y-4">
               <span className="text-xs font-serif font-bold text-brand-green uppercase tracking-widest">
                 Stage 03 • पश्चात्कर्म
               </span>
@@ -268,6 +271,41 @@ export default function TreatmentsPage() {
               <p className="text-xs sm:text-sm text-brand-brown-muted leading-relaxed font-light">
                 Gradual restoration of digestive fire (Samsarjana Krama) using wholesome nourishing soups, Rasayana herbal tonics, and lifestyle guidance to lock in long-term vitality.
               </p>
+            </div>
+          </div>
+        </Container>
+      </section>
+
+      {/* 5. Doctor Consultation CTA (bg-brand-brown) */}
+      <section className="py-16 bg-brand-brown text-white border-t border-brand-brown-dark">
+        <Container size="xl">
+          <div className="flex flex-col lg:flex-row items-center justify-between gap-8 text-center lg:text-left">
+            <div className="space-y-2 max-w-2xl">
+              <h3 className="text-2xl sm:text-3xl font-serif font-normal text-white">
+                Personalized Diagnosis with Chief Physician Dr. Anupama
+              </h3>
+              <p className="text-xs sm:text-sm text-brand-sand/80 font-light">
+                Not sure which treatment package is right for you? Book a comprehensive Nadi Pariksha consultation online or at our Kochi sanctum.
+              </p>
+            </div>
+
+            <div className="flex flex-col sm:flex-row items-center gap-4 shrink-0">
+              <Button
+                href="/consultation"
+                variant="gold"
+                size="lg"
+                leftIcon={<Calendar className="w-4 h-4" />}
+              >
+                Book Nadi Pariksha
+              </Button>
+              <Button
+                href="/contact"
+                variant="outline"
+                size="lg"
+                className="border-white/40 text-white hover:bg-white hover:text-brand-brown"
+              >
+                Contact Centre
+              </Button>
             </div>
           </div>
         </Container>

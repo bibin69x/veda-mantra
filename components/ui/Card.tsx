@@ -17,8 +17,8 @@ export function Card({
 }: CardProps) {
   const bgStyles = {
     white: "bg-white text-brand-brown",
-    cream: "bg-brand-cream text-brand-brown",
-    dark: "bg-brand-brown text-brand-cream border-brand-brown-light",
+    cream: "bg-white text-brand-brown",
+    dark: "bg-brand-brown text-white border-brand-brown-light",
   };
 
   return (

@@ -1,21 +1,22 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { Metadata } from "next";
+import type { Metadata } from "next";
 import { Container } from "@/components/ui/Container";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { Button } from "@/components/ui/Button";
-import { Badge } from "@/components/ui/Badge";
 import {
-  ShieldCheck,
-  Award,
   Sparkles,
-  HeartPulse,
+  ShieldCheck,
   Leaf,
+  HeartPulse,
+  Award,
   Calendar,
   CheckCircle2,
   Stethoscope,
   Microscope,
+  Clock,
+  ArrowRight,
 } from "lucide-react";
 
 export const metadata: Metadata = {
@@ -30,10 +31,10 @@ const DOCTORS = [
     title: "Chief Physician & Senior Panchakarma Specialist",
     degrees: "BAMS, MD (Ayurveda), Senior Nadi Pariksha Consultant",
     experience: "15+ Years Clinical Experience",
-    bio: "With over 15 years of dedicated classical clinical practice, Dr. Anupama Ramachandran leads the medical faculty at Ayur Veda Mantra. Hailing from a deep tradition of Ayurvedic healing, Dr. Anupama specializes in authentic Panchakarma detoxification, Nadi Pariksha pulse diagnosis, chronic musculoskeletal disorders, and individualized Prakriti constitutional care.",
+    bio: "With over 15 years of dedicated classical clinical practice, Dr. Anupama Ramachandran leads the medical faculty at Ayur Veda Mantra. Specializing in authentic Panchakarma detoxification, Nadi Pariksha pulse diagnosis, chronic musculoskeletal disorders, and individualized Prakriti constitutional care, Dr. Anupama brings deep classical mastery and compassionate clinical attention to every patient.",
     image: "https://images.unsplash.com/photo-1594824813589-325244585e5d?auto=format&fit=crop&w=800&q=80",
     specialties: [
-      "Classical Panchakarma",
+      "Classical Panchakarma Detox",
       "Nadi Pariksha (Pulse Diagnosis)",
       "Spine & Musculoskeletal Care",
       "Hormonal & Women's Health",
@@ -51,7 +52,7 @@ const VALUES = [
   {
     icon: Microscope,
     title: "Clinical Research & Purity",
-    description: "All botanical extracts undergo rigorous laboratory verification for heavy metal safety, microbial purity, and active phytochemical potency.",
+    description: "All botanical extracts undergo rigorous verification for heavy metal safety, microbial purity, and active phytochemical potency.",
   },
   {
     icon: HeartPulse,
@@ -67,28 +68,25 @@ const VALUES = [
 
 export default function AboutPage() {
   return (
-    <div className="flex flex-col min-h-screen bg-brand-cream">
-      {/* 1. Editorial Hero Banner */}
+    <div className="flex flex-col min-h-screen bg-white">
+      {/* 1. Editorial Hero Banner (bg-brand-brown) */}
       <section className="relative py-20 lg:py-28 bg-brand-brown text-white overflow-hidden">
-        <div className="absolute inset-0 bg-[radial-gradient(#C5A059_1px,transparent_1px)] [background-size:28px_28px] opacity-10 pointer-events-none" />
-        <div className="absolute top-0 right-0 w-96 h-96 rounded-full bg-brand-green/20 blur-3xl pointer-events-none" />
-
         <Container size="xl" className="relative z-10 text-center">
-          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-brand-brown-light border border-brand-brown-border/30 text-brand-gold-light text-xs font-semibold tracking-widest uppercase mb-6">
+          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-brand-brown-light border border-brand-gold/30 text-brand-gold-light text-xs font-semibold tracking-widest uppercase mb-6">
             <Sparkles className="w-3.5 h-3.5 text-brand-gold" />
             <span>Ayurveda Panchakarma Treatment & Research Centre</span>
           </div>
 
           <h1 className="text-3xl sm:text-5xl lg:text-6xl font-serif font-normal text-white leading-tight max-w-4xl mx-auto">
             Sacred Lineage. Clinical Research.{" "}
-            <span className="italic text-brand-gold-light block sm:inline">
+            <span className="italic text-brand-gold-light block sm:inline font-light">
               Timeless Vedic Healing.
             </span>
           </h1>
 
           <div className="w-16 h-0.5 bg-brand-gold mx-auto my-6" />
 
-          <p className="text-sm sm:text-base lg:text-lg text-brand-sand/80 max-w-2xl mx-auto font-light leading-relaxed">
+          <p className="text-sm sm:text-base lg:text-lg text-brand-sand/90 max-w-2xl mx-auto font-light leading-relaxed">
             &ldquo;प्रयोजनं चास्य स्वस्थस्य स्वास्थ्यरक्षणम् आतुरस्य विकारप्रशमनं च&rdquo;
             <span className="block text-xs sm:text-sm text-brand-gold-light font-sans font-normal mt-2">
               — Charaka Samhita (To protect the health of the healthy and alleviate the affliction of the ill)
@@ -97,7 +95,7 @@ export default function AboutPage() {
         </Container>
       </section>
 
-      {/* 2. Story & Origin Section */}
+      {/* 2. Story & Origin Section (bg-white) */}
       <section className="py-20 sm:py-28 bg-white border-b border-brand-brown-border">
         <Container size="xl">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
@@ -113,7 +111,7 @@ export default function AboutPage() {
 
               <div className="space-y-4 text-xs sm:text-sm text-brand-brown-muted leading-relaxed font-light">
                 <p>
-                  <strong>Ayur Veda Mantra</strong> was established as an answer to the commercialization of ancient wellness. While the world embraced rapid, superficial spa rituals, our founding Vaidyas envisioned a dedicated clinical sanctuary where the true curative depth of authentic <strong>Panchakarma</strong> and <strong>Nadi Pariksha</strong> could be practiced without compromise.
+                  <strong>Ayur Veda Mantra</strong> was established as an answer to the commercialization of ancient wellness. While modern centers adopted rapid, superficial spa rituals, our founding Vaidyas envisioned a dedicated clinical sanctuary where the true curative depth of authentic <strong>Panchakarma</strong> and <strong>Nadi Pariksha</strong> could be practiced without compromise.
                 </p>
                 <p>
                   Operating as both a specialized treatment sanctum and an active Ayurvedic research center, we bridge classical scriptures with contemporary clinical case documentation. Every medicated oil (Tailam), herbal decoction (Kashayam), and fermented elixir (Arishta) is crafted according to strict classical textual guidelines using wildcrafted forest herbs.
@@ -123,7 +121,7 @@ export default function AboutPage() {
                 </p>
               </div>
 
-              <div className="pt-4 grid grid-cols-2 sm:grid-cols-3 gap-6 border-t border-brand-brown-border/60">
+              <div className="pt-6 grid grid-cols-2 sm:grid-cols-3 gap-6 border-t border-brand-brown-border/60">
                 <div>
                   <p className="font-serif text-3xl text-brand-green font-normal">25,000+</p>
                   <p className="text-xs text-brand-brown-muted mt-1">Patients Healed</p>
@@ -133,15 +131,15 @@ export default function AboutPage() {
                   <p className="text-xs text-brand-brown-muted mt-1">Classical Purity</p>
                 </div>
                 <div>
-                  <p className="font-serif text-3xl text-brand-green font-normal">350+</p>
-                  <p className="text-xs text-brand-brown-muted mt-1">Herbal Formulations</p>
+                  <p className="font-serif text-3xl text-brand-green font-normal">15+ Years</p>
+                  <p className="text-xs text-brand-brown-muted mt-1">Clinical Mastery</p>
                 </div>
               </div>
             </div>
 
             {/* Right Imagery */}
             <div className="lg:col-span-5 relative">
-              <div className="relative aspect-[4/5] rounded-sm overflow-hidden shadow-2xl border-4 border-brand-cream">
+              <div className="relative aspect-[4/5] rounded-sm overflow-hidden shadow-2xl border-4 border-white">
                 <Image
                   src="https://images.unsplash.com/photo-1544161515-4ab6ce6db874?auto=format&fit=crop&w=1000&q=80"
                   alt="Authentic Ayurvedic Treatment Preparation"
@@ -163,16 +161,22 @@ export default function AboutPage() {
         </Container>
       </section>
 
-      {/* 3. Core Values & Principles */}
-      <section className="py-20 sm:py-28 bg-brand-cream border-b border-brand-brown-border">
+      {/* 3. Core Values & Principles (bg-brand-green) */}
+      <section className="py-20 sm:py-28 bg-brand-green text-white border-b border-brand-green-dark">
         <Container size="xl">
-          <SectionHeading
-            sanskritSubtitle="चतुर्विध सिद्धान्त"
-            tagline="Our Guiding Pillars"
-            title="The Four Foundations of Our Clinical Care"
-            description="Our approach unites scriptural fidelity, rigorous quality verification, and deeply personalized clinical attention."
-            align="center"
-          />
+          <div className="text-center max-w-3xl mx-auto space-y-3 mb-16">
+            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-brand-green-dark border border-brand-gold/30 text-brand-gold-light text-xs font-semibold tracking-widest uppercase">
+              <Sparkles className="w-3.5 h-3.5 text-brand-gold" />
+              <span>चतुर्विध सिद्धान्त</span>
+            </div>
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-serif font-normal text-white leading-tight">
+              The Four Foundations of Our Clinical Care
+            </h2>
+            <div className="w-16 h-0.5 bg-brand-gold mx-auto my-3" />
+            <p className="text-xs sm:text-sm lg:text-base text-brand-sand/80 font-light leading-relaxed">
+              Our clinical approach unites scriptural fidelity, rigorous quality verification, and deeply personalized clinical attention.
+            </p>
+          </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {VALUES.map((val, idx) => {
@@ -180,7 +184,7 @@ export default function AboutPage() {
               return (
                 <div
                   key={idx}
-                  className="bg-white rounded-sm p-8 border border-brand-brown-border shadow-card-soft space-y-4 flex flex-col justify-between transition-all duration-300 hover:shadow-luxury hover:-translate-y-1"
+                  className="bg-white text-brand-brown rounded-sm p-8 shadow-luxury space-y-4 flex flex-col justify-between transition-all duration-300 hover:-translate-y-1"
                 >
                   <div className="space-y-4">
                     <div className="w-12 h-12 rounded-full bg-brand-green/10 text-brand-green flex items-center justify-center">
@@ -200,7 +204,7 @@ export default function AboutPage() {
         </Container>
       </section>
 
-      {/* 4. Meet Our Senior Vaidya */}
+      {/* 4. Meet Our Chief Physician (bg-white) */}
       <section className="py-20 sm:py-28 bg-white border-b border-brand-brown-border">
         <Container size="xl">
           <SectionHeading
@@ -215,9 +219,9 @@ export default function AboutPage() {
             {DOCTORS.map((doc, idx) => (
               <div
                 key={idx}
-                className="bg-brand-cream rounded-2xl border border-brand-brown-border overflow-hidden shadow-card flex flex-col md:flex-row gap-8 items-center p-6 sm:p-10 group hover:shadow-luxury transition-all duration-300"
+                className="bg-white rounded-2xl border border-brand-brown-border overflow-hidden shadow-luxury flex flex-col md:flex-row gap-8 items-center p-6 sm:p-10 group transition-all duration-300"
               >
-                <div className="relative w-48 h-48 sm:w-64 sm:h-64 rounded-2xl overflow-hidden bg-brand-sand shrink-0 border border-brand-brown-border shadow-md">
+                <div className="relative w-48 h-48 sm:w-64 sm:h-64 rounded-2xl overflow-hidden bg-brand-brown-light shrink-0 border border-brand-brown-border shadow-md">
                   <Image
                     src={doc.image}
                     alt={doc.name}
@@ -242,7 +246,7 @@ export default function AboutPage() {
                     </p>
                   </div>
 
-                  <p className="text-xs sm:text-sm text-brand-brown leading-relaxed font-light pt-2 border-t border-brand-brown-border/60">
+                  <p className="text-xs sm:text-sm text-brand-brown-muted leading-relaxed font-light pt-2 border-t border-brand-brown-border/60">
                     {doc.bio}
                   </p>
 
@@ -254,7 +258,7 @@ export default function AboutPage() {
                       {doc.specialties.map((spec, sIdx) => (
                         <span
                           key={sIdx}
-                          className="text-xs font-medium bg-white px-3 py-1 rounded-full border border-brand-brown-border text-brand-brown"
+                          className="text-xs font-medium bg-white px-3 py-1 rounded-full border border-brand-brown-border text-brand-brown shadow-sm"
                         >
                           {spec}
                         </span>
@@ -279,38 +283,39 @@ export default function AboutPage() {
         </Container>
       </section>
 
-      {/* 5. The Treatment Sanctum & Facilities */}
-      <section className="py-20 sm:py-28 bg-brand-cream border-b border-brand-brown-border">
+      {/* 5. The Treatment Sanctum & Facilities (bg-brand-brown) */}
+      <section className="py-20 sm:py-28 bg-brand-brown text-white border-b border-brand-brown-dark">
         <Container size="xl">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
             <div className="lg:col-span-6 space-y-6">
-              <SectionHeading
-                sanskritSubtitle="चिकित्सालय परिवेश"
-                tagline="Our Healing Sanctum"
-                title="Sacred Architecture Crafted for Restoration"
-                align="left"
-                className="mb-4"
-              />
+              <div className="space-y-2">
+                <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-brand-brown-light border border-brand-gold/30 text-brand-gold-light text-xs font-semibold tracking-widest uppercase">
+                  <span>चिकित्सालय परिवेश</span>
+                </div>
+                <h2 className="text-3xl sm:text-4xl font-serif font-normal text-white">
+                  Sacred Architecture Crafted for Cellular Restoration
+                </h2>
+              </div>
 
-              <p className="text-xs sm:text-sm text-brand-brown-muted leading-relaxed font-light">
+              <p className="text-xs sm:text-sm text-brand-sand/80 leading-relaxed font-light">
                 Our centre is intentionally designed according to Vedic Vastu principles. Each therapy suite features traditional, hand-carved medicinal wood treatment tables (Dronis) sculpted from sacred Neem and Jackwood trees, which naturally amplify therapeutic bio-energy.
               </p>
 
               <div className="space-y-3 pt-2">
-                <div className="flex items-start gap-3 text-xs sm:text-sm text-brand-brown">
-                  <CheckCircle2 className="w-4 h-4 text-brand-green shrink-0 mt-0.5" />
+                <div className="flex items-start gap-3 text-xs sm:text-sm text-brand-sand">
+                  <CheckCircle2 className="w-4 h-4 text-brand-gold shrink-0 mt-0.5" />
                   <span>
                     <strong>Classical Droni Tables:</strong> Custom medicinal wood tables treated with herbal decoctions.
                   </span>
                 </div>
-                <div className="flex items-start gap-3 text-xs sm:text-sm text-brand-brown">
-                  <CheckCircle2 className="w-4 h-4 text-brand-green shrink-0 mt-0.5" />
+                <div className="flex items-start gap-3 text-xs sm:text-sm text-brand-sand">
+                  <CheckCircle2 className="w-4 h-4 text-brand-gold shrink-0 mt-0.5" />
                   <span>
                     <strong>Herbal Steam Sanctums:</strong> Direct infusion of freshly harvested Dashamoola herbs.
                   </span>
                 </div>
-                <div className="flex items-start gap-3 text-xs sm:text-sm text-brand-brown">
-                  <CheckCircle2 className="w-4 h-4 text-brand-green shrink-0 mt-0.5" />
+                <div className="flex items-start gap-3 text-xs sm:text-sm text-brand-sand">
+                  <CheckCircle2 className="w-4 h-4 text-brand-gold shrink-0 mt-0.5" />
                   <span>
                     <strong>Quiet Meditation & Recovery Lounges:</strong> Acoustic shielding for alpha-brainwave recovery.
                   </span>
@@ -318,14 +323,14 @@ export default function AboutPage() {
               </div>
 
               <div className="pt-4">
-                <Button href="/contact" variant="secondary" size="md">
+                <Button href="/contact" variant="gold" size="md">
                   Visit Our Centre in Person &rarr;
                 </Button>
               </div>
             </div>
 
             <div className="lg:col-span-6 grid grid-cols-2 gap-4">
-              <div className="relative aspect-[3/4] rounded-sm overflow-hidden shadow-md">
+              <div className="relative aspect-[3/4] rounded-sm overflow-hidden shadow-2xl border-2 border-white/20">
                 <Image
                   src="https://images.unsplash.com/photo-1600334089648-b0d9d3028eb2?auto=format&fit=crop&w=600&q=80"
                   alt="Therapy Suite"
@@ -333,7 +338,7 @@ export default function AboutPage() {
                   className="object-cover"
                 />
               </div>
-              <div className="relative aspect-[3/4] rounded-sm overflow-hidden shadow-md mt-6">
+              <div className="relative aspect-[3/4] rounded-sm overflow-hidden shadow-2xl border-2 border-white/20 mt-6">
                 <Image
                   src="https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=600&q=80"
                   alt="Herbal Preparation Area"
@@ -346,7 +351,7 @@ export default function AboutPage() {
         </Container>
       </section>
 
-      {/* 6. Consultation Booking Callout */}
+      {/* 6. Consultation Booking Callout (bg-brand-green) */}
       <section className="py-16 sm:py-20 bg-brand-green text-white">
         <Container size="xl">
           <div className="flex flex-col lg:flex-row items-center justify-between gap-8 text-center lg:text-left">
@@ -355,7 +360,7 @@ export default function AboutPage() {
                 Begin Your Journey Toward Sacred Restoration
               </h3>
               <p className="text-xs sm:text-sm text-brand-sand/80 font-light">
-                Consult with our senior physicians to uncover the root cause of your symptoms and design your custom Panchakarma regimen.
+                Consult with Chief Physician Dr. Anupama Ramachandran to uncover the root cause of your symptoms and design your custom Panchakarma regimen.
               </p>
             </div>
 

@@ -22,7 +22,7 @@ export function FeaturedProductsSection() {
   };
 
   return (
-    <section className="py-20 sm:py-28 bg-brand-cream border-b border-brand-brown-border">
+    <section className="py-20 sm:py-28 bg-white border-b border-brand-brown-border">
       <Container size="xl">
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 sm:mb-16">
           <SectionHeading
@@ -54,7 +54,7 @@ export function FeaturedProductsSection() {
               >
                 <div>
                   {/* Image Container */}
-                  <div className="relative aspect-square overflow-hidden bg-brand-sand/30 p-4">
+                  <div className="relative aspect-square overflow-hidden bg-white border-b border-brand-brown-border p-4">
                     <Image
                       src={product.image}
                       alt={product.title}

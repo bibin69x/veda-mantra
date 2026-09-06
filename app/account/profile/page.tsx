@@ -82,9 +82,9 @@ export default function AccountProfilePage() {
   };
 
   return (
-    <div className="min-h-screen bg-brand-cream pb-24">
+    <div className="min-h-screen bg-white pb-24">
       {/* Header Breadcrumbs */}
-      <div className="bg-brand-sand/40 border-b border-brand-brown-border/60 py-3">
+      <div className="bg-white border-b border-brand-brown-border/60 py-3">
         <Container size="xl">
           <nav className="flex items-center space-x-2 text-xs text-brand-brown-muted">
             <Link href="/" className="hover:text-brand-green transition-colors">
@@ -137,7 +137,7 @@ export default function AccountProfilePage() {
                       type="text"
                       value={profile.fullName}
                       onChange={(e) => setProfile({ ...profile, fullName: e.target.value })}
-                      className="w-full p-3 bg-brand-sand/30 border border-brand-brown-border rounded-lg text-sm"
+                      className="w-full p-3 bg-white border border-brand-brown-border rounded-lg text-sm"
                     />
                   </div>
 
@@ -149,7 +149,7 @@ export default function AccountProfilePage() {
                       type="email"
                       value={profile.email}
                       onChange={(e) => setProfile({ ...profile, email: e.target.value })}
-                      className="w-full p-3 bg-brand-sand/30 border border-brand-brown-border rounded-lg text-sm"
+                      className="w-full p-3 bg-white border border-brand-brown-border rounded-lg text-sm"
                     />
                   </div>
 
@@ -161,7 +161,7 @@ export default function AccountProfilePage() {
                       type="tel"
                       value={profile.phone}
                       onChange={(e) => setProfile({ ...profile, phone: e.target.value })}
-                      className="w-full p-3 bg-brand-sand/30 border border-brand-brown-border rounded-lg text-sm font-mono"
+                      className="w-full p-3 bg-white border border-brand-brown-border rounded-lg text-sm font-mono"
                     />
                   </div>
 
@@ -174,12 +174,12 @@ export default function AccountProfilePage() {
                         type="number"
                         value={profile.age}
                         onChange={(e) => setProfile({ ...profile, age: e.target.value })}
-                        className="w-full p-3 bg-brand-sand/30 border border-brand-brown-border rounded-lg text-sm"
+                        className="w-full p-3 bg-white border border-brand-brown-border rounded-lg text-sm"
                       />
                       <select
                         value={profile.gender}
                         onChange={(e) => setProfile({ ...profile, gender: e.target.value })}
-                        className="w-full p-3 bg-brand-sand/30 border border-brand-brown-border rounded-lg text-sm"
+                        className="w-full p-3 bg-white border border-brand-brown-border rounded-lg text-sm"
                       >
                         <option value="female">Female</option>
                         <option value="male">Male</option>
@@ -197,7 +197,7 @@ export default function AccountProfilePage() {
                     <select
                       value={profile.dosha}
                       onChange={(e) => setProfile({ ...profile, dosha: e.target.value })}
-                      className="w-full p-3 bg-brand-sand/30 border border-brand-brown-border rounded-lg text-sm font-semibold"
+                      className="w-full p-3 bg-white border border-brand-brown-border rounded-lg text-sm font-semibold"
                     >
                       <option value="Vata-Pitta">Vata-Pitta (Mobility & Transformation)</option>
                       <option value="Pitta-Kapha">Pitta-Kapha (Transformation & Stability)</option>
@@ -229,7 +229,7 @@ export default function AccountProfilePage() {
                         setPasswordState({ ...passwordState, currentPassword: e.target.value })
                       }
                       placeholder="••••••••"
-                      className="w-full p-2.5 bg-brand-sand/30 border border-brand-brown-border rounded-lg text-xs"
+                      className="w-full p-2.5 bg-white border border-brand-brown-border rounded-lg text-xs"
                     />
                   </div>
 
@@ -244,7 +244,7 @@ export default function AccountProfilePage() {
                         setPasswordState({ ...passwordState, newPassword: e.target.value })
                       }
                       placeholder="••••••••"
-                      className="w-full p-2.5 bg-brand-sand/30 border border-brand-brown-border rounded-lg text-xs"
+                      className="w-full p-2.5 bg-white border border-brand-brown-border rounded-lg text-xs"
                     />
                   </div>
 
@@ -259,7 +259,7 @@ export default function AccountProfilePage() {
                         setPasswordState({ ...passwordState, confirmPassword: e.target.value })
                       }
                       placeholder="••••••••"
-                      className="w-full p-2.5 bg-brand-sand/30 border border-brand-brown-border rounded-lg text-xs"
+                      className="w-full p-2.5 bg-white border border-brand-brown-border rounded-lg text-xs"
                     />
                   </div>
                 </div>

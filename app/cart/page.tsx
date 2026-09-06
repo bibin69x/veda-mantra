@@ -55,9 +55,9 @@ export default function CartPage() {
   };
 
   return (
-    <div className="min-h-screen bg-brand-cream pb-24">
+    <div className="min-h-screen bg-white pb-24">
       {/* Header Breadcrumbs */}
-      <div className="bg-brand-sand/40 border-b border-brand-brown-border/60 py-3">
+      <div className="bg-white border-b border-brand-brown-border py-3">
         <Container size="xl">
           <nav className="flex items-center space-x-2 text-xs text-brand-brown-muted">
             <Link href="/" className="hover:text-brand-green transition-colors">
@@ -91,7 +91,7 @@ export default function CartPage() {
           {items.length > 0 && (
             <button
               onClick={clearCart}
-              className="text-xs text-brand-brown-muted hover:text-red-700 flex items-center gap-1.5 self-start sm:self-auto py-1 px-2.5 rounded hover:bg-red-50 transition-colors"
+              className="text-xs text-brand-brown-muted hover:text-red-700 flex items-center gap-1.5 self-start sm:self-auto py-1 px-2.5 rounded hover:bg-brand-brown/5 transition-colors"
             >
               <Trash2 className="w-3.5 h-3.5" />
               Empty Basket
@@ -102,7 +102,7 @@ export default function CartPage() {
         {items.length === 0 ? (
           /* Empty Basket State */
           <div className="bg-white rounded-2xl p-12 sm:p-16 text-center border border-brand-brown-border shadow-card max-w-xl mx-auto space-y-6">
-            <div className="w-24 h-24 rounded-full bg-brand-sand/80 flex items-center justify-center mx-auto text-brand-gold">
+            <div className="w-24 h-24 rounded-full bg-brand-brown/5 border border-brand-brown-border flex items-center justify-center mx-auto text-brand-gold">
               <ShoppingBag className="w-12 h-12 stroke-[1.2]" />
             </div>
 
@@ -140,7 +140,7 @@ export default function CartPage() {
             {/* Left Column: Cart Items List */}
             <div className="lg:col-span-8 space-y-6">
               {/* Free Shipping Notification Banner */}
-              <div className="bg-brand-sand/50 rounded-xl p-4 border border-brand-brown-border">
+              <div className="bg-white rounded-xl p-4 border border-brand-brown-border shadow-sm">
                 {freeShippingRemaining > 0 ? (
                   <div className="space-y-2">
                     <div className="flex items-center justify-between text-xs text-brand-brown font-medium">
@@ -150,9 +150,9 @@ export default function CartPage() {
                       </span>
                       <span className="font-bold">{freeShippingProgress}%</span>
                     </div>
-                    <div className="w-full h-2.5 bg-brand-brown-border/40 rounded-full overflow-hidden">
+                    <div className="w-full h-2.5 bg-brand-brown/10 rounded-full overflow-hidden">
                       <div
-                        className="h-full bg-gradient-to-r from-brand-gold to-brand-green transition-all duration-500 rounded-full"
+                        className="h-full bg-brand-green transition-all duration-500 rounded-full"
                         style={{ width: `${freeShippingProgress}%` }}
                       />
                     </div>
@@ -176,7 +176,7 @@ export default function CartPage() {
                     <div className="flex gap-4 items-center">
                       <Link
                         href={`/products/${item.slug}`}
-                        className="relative w-20 h-20 sm:w-24 sm:h-24 rounded-xl overflow-hidden bg-brand-sand/40 border border-brand-brown-border/60 shrink-0 group"
+                        className="relative w-20 h-20 sm:w-24 sm:h-24 rounded-xl overflow-hidden bg-white border border-brand-brown-border shrink-0 group"
                       >
                         <Image
                           src={item.image}
@@ -199,7 +199,7 @@ export default function CartPage() {
                           {item.title}
                         </Link>
                         <div className="flex items-center gap-2">
-                          <span className="text-xs uppercase font-semibold text-brand-brown-muted bg-brand-sand px-2 py-0.5 rounded">
+                          <span className="text-xs uppercase font-semibold text-brand-brown-muted bg-brand-brown/5 border border-brand-brown-border/60 px-2 py-0.5 rounded">
                             {item.volumeOrWeight}
                           </span>
                           <span className="text-xs text-brand-brown-muted font-mono">
@@ -212,10 +212,10 @@ export default function CartPage() {
                     {/* Quantity Stepper & Subtotal */}
                     <div className="flex items-center justify-between sm:justify-end gap-6 w-full sm:w-auto pt-2 sm:pt-0 border-t sm:border-t-0 border-brand-brown-border/40">
                       {/* Quantity Stepper */}
-                      <div className="flex items-center border border-brand-brown-border rounded-lg bg-brand-sand/40 p-0.5">
+                      <div className="flex items-center border border-brand-brown-border rounded-lg bg-white p-0.5">
                         <button
                           onClick={() => updateQuantity(item.id, item.quantity - 1)}
-                          className="p-1.5 hover:bg-white text-brand-brown rounded transition-colors focus:outline-none"
+                          className="p-1.5 hover:bg-brand-brown/5 text-brand-brown rounded transition-colors focus:outline-none"
                           aria-label="Decrease quantity"
                         >
                           <Minus className="w-3.5 h-3.5" />
@@ -225,7 +225,7 @@ export default function CartPage() {
                         </span>
                         <button
                           onClick={() => updateQuantity(item.id, item.quantity + 1)}
-                          className="p-1.5 hover:bg-white text-brand-brown rounded transition-colors focus:outline-none"
+                          className="p-1.5 hover:bg-brand-brown/5 text-brand-brown rounded transition-colors focus:outline-none"
                           aria-label="Increase quantity"
                         >
                           <Plus className="w-3.5 h-3.5" />
@@ -247,7 +247,7 @@ export default function CartPage() {
                       {/* Remove Button */}
                       <button
                         onClick={() => removeItem(item.id)}
-                        className="p-2 text-brand-brown-muted hover:text-red-700 hover:bg-red-50 rounded-lg transition-colors focus:outline-none"
+                        className="p-2 text-brand-brown-muted hover:text-red-700 hover:bg-brand-brown/5 rounded-lg transition-colors focus:outline-none"
                         title="Remove from basket"
                         aria-label={`Remove ${item.title}`}
                       >
@@ -290,7 +290,7 @@ export default function CartPage() {
                         value={promoInput}
                         onChange={(e) => setPromoInput(e.target.value)}
                         placeholder="e.g. VEDA10"
-                        className="w-full pl-9 pr-3 py-2 bg-brand-sand/40 border border-brand-brown-border rounded-lg text-xs uppercase font-mono text-brand-brown placeholder:text-brand-brown-muted focus:outline-none focus:ring-1 focus:ring-brand-green"
+                        className="w-full pl-9 pr-3 py-2 bg-white border border-brand-brown-border rounded-lg text-xs uppercase font-mono text-brand-brown placeholder:text-brand-brown-muted focus:outline-none focus:ring-1 focus:ring-brand-green"
                       />
                     </div>
                     <button
@@ -312,7 +312,7 @@ export default function CartPage() {
                   )}
 
                   {discountCode && (
-                    <div className="flex items-center justify-between p-2 rounded bg-brand-green/10 text-xs text-brand-green font-medium">
+                    <div className="flex items-center justify-between p-2 rounded bg-brand-green/10 border border-brand-green/20 text-xs text-brand-green font-medium">
                       <span>Code <strong>{discountCode}</strong> applied</span>
                       <button
                         type="button"

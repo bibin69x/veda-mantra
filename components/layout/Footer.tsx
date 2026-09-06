@@ -6,7 +6,7 @@ import { Phone, Mail, MapPin, Clock, ShieldCheck, HeartPulse, Sparkles } from "l
 
 export function Footer() {
   return (
-    <footer className="bg-brand-brown text-brand-cream border-t-4 border-brand-green">
+    <footer className="bg-brand-brown text-white/90 border-t-4 border-brand-green">
       {/* Upper Trust Signals Strip */}
       <div className="border-b border-brand-brown-light/40 py-8 bg-brand-brown-dark">
         <Container size="xl">
@@ -17,7 +17,7 @@ export function Footer() {
               </div>
               <div>
                 <h4 className="font-serif text-base text-white font-medium">100% Classical Purity</h4>
-                <p className="text-xs text-brand-sand/70 mt-0.5">Formulations prepared strictly per Vedic texts</p>
+                <p className="text-xs text-white/70 mt-0.5">Formulations prepared strictly per Vedic texts</p>
               </div>
             </div>
 
@@ -27,7 +27,7 @@ export function Footer() {
               </div>
               <div>
                 <h4 className="font-serif text-base text-white font-medium">Certified Vaidyas</h4>
-                <p className="text-xs text-brand-sand/70 mt-0.5">Traditional Nadi Pariksha & clinical care</p>
+                <p className="text-xs text-white/70 mt-0.5">Traditional Nadi Pariksha & clinical care</p>
               </div>
             </div>
 
@@ -37,7 +37,7 @@ export function Footer() {
               </div>
               <div>
                 <h4 className="font-serif text-base text-white font-medium">Panchakarma Sanctum</h4>
-                <p className="text-xs text-brand-sand/70 mt-0.5">Specialized holistic detox & healing suites</p>
+                <p className="text-xs text-white/70 mt-0.5">Specialized holistic detox & healing suites</p>
               </div>
             </div>
 

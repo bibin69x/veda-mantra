@@ -215,7 +215,7 @@ END:VCALENDAR`;
   const selectedDateObject = availableDates.find((d) => d.dateString === selectedDate);
 
   return (
-    <div className="min-h-screen bg-brand-cream pb-24">
+    <div className="min-h-screen bg-white pb-24">
       {/* Hero Banner */}
       <section className="relative bg-brand-brown text-white py-14 lg:py-18 overflow-hidden border-b border-brand-brown-light/30">
         <div className="absolute inset-0 opacity-10 bg-[radial-gradient(#C5A059_1px,transparent_1px)] [background-size:24px_24px]" />
@@ -238,7 +238,7 @@ END:VCALENDAR`;
             </h1>
           </div>
 
-          <p className="text-xs sm:text-sm text-brand-cream-dark leading-relaxed max-w-2xl mx-auto">
+          <p className="text-xs sm:text-sm text-white/80 leading-relaxed max-w-2xl mx-auto">
             Experience authentic Nadi Pariksha (Pulse Diagnosis), Prakriti constitutional analysis, and customized Panchakarma roadmaps with our Senior Certified Vaidyas.
           </p>
         </Container>
@@ -269,7 +269,7 @@ END:VCALENDAR`;
                             ? "bg-brand-green text-white"
                             : isCurrent
                             ? "bg-brand-brown text-white ring-4 ring-brand-brown/10"
-                            : "bg-brand-sand text-brand-brown-muted"
+                            : "bg-brand-brown/10 text-brand-brown-muted"
                         }`}
                       >
                         {isDone ? <Check className="w-4 h-4 stroke-[3]" /> : s.step}
@@ -355,7 +355,7 @@ END:VCALENDAR`;
                         className={`inline-block text-xs font-semibold px-3 py-1 rounded-full ${
                           consultationMode === "online"
                             ? "bg-brand-green text-white"
-                            : "bg-brand-sand text-brand-brown-muted"
+                            : "bg-brand-brown/10 text-brand-brown-muted"
                         }`}
                       >
                         {consultationMode === "online" ? "Selected Mode" : "Choose Online"}
@@ -374,7 +374,7 @@ END:VCALENDAR`;
                   >
                     <div className="space-y-3">
                       <div className="flex items-center justify-between">
-                        <div className="w-12 h-12 rounded-xl bg-brand-gold/15 text-brand-gold-dark flex items-center justify-center">
+                        <div className="w-12 h-12 rounded-xl bg-brand-brown/10 text-brand-brown flex items-center justify-center">
                           <MapPin className="w-6 h-6" />
                         </div>
                         <span className="text-lg font-bold font-serif text-brand-brown">
@@ -410,7 +410,7 @@ END:VCALENDAR`;
                         className={`inline-block text-xs font-semibold px-3 py-1 rounded-full ${
                           consultationMode === "clinic"
                             ? "bg-brand-green text-white"
-                            : "bg-brand-sand text-brand-brown-muted"
+                            : "bg-brand-brown/10 text-brand-brown-muted"
                         }`}
                       >
                         {consultationMode === "clinic" ? "Selected Mode" : "Choose In-Clinic"}
@@ -440,7 +440,7 @@ END:VCALENDAR`;
                           className={`p-4 rounded-xl border transition-all cursor-pointer flex flex-col justify-between space-y-2 ${
                             isSelected
                               ? "bg-brand-brown text-white border-brand-brown shadow-sm"
-                              : "bg-brand-sand/30 text-brand-brown border-brand-brown-border/70 hover:border-brand-brown"
+                              : "bg-white text-brand-brown border-brand-brown-border hover:border-brand-brown"
                           }`}
                         >
                           <div className="flex items-start justify-between">
@@ -457,7 +457,7 @@ END:VCALENDAR`;
                             </h4>
                             <p
                               className={`text-[11px] line-clamp-2 pt-1 ${
-                                isSelected ? "text-brand-sand/80" : "text-brand-brown-muted"
+                                isSelected ? "text-white/80" : "text-brand-brown-muted"
                               }`}
                             >
                               {concern.description}
@@ -531,7 +531,7 @@ END:VCALENDAR`;
                       className={`text-xs font-semibold px-3 py-1.5 rounded-full ${
                         selectedDoctorId === "auto"
                           ? "bg-brand-green text-white"
-                          : "bg-brand-sand text-brand-brown-muted"
+                          : "bg-brand-brown/10 text-brand-brown-muted"
                       }`}
                     >
                       {selectedDoctorId === "auto" ? "Selected" : "Select Auto"}
@@ -554,12 +554,12 @@ END:VCALENDAR`;
                           onClick={() => setSelectedDoctorId(doc.id)}
                           className={`p-5 rounded-2xl border-2 transition-all cursor-pointer flex flex-col md:flex-row gap-5 items-start md:items-center justify-between ${
                             isSelected
-                              ? "border-brand-brown bg-brand-sand/30 shadow-md ring-2 ring-brand-brown/10"
+                              ? "border-brand-brown bg-brand-brown/5 shadow-md ring-2 ring-brand-brown/10"
                               : "border-brand-brown-border hover:border-brand-brown bg-white"
                           }`}
                         >
                           <div className="flex gap-4 items-center">
-                            <div className="relative w-16 h-16 sm:w-20 sm:h-20 rounded-xl overflow-hidden bg-brand-sand shrink-0 border border-brand-brown-border">
+                            <div className="relative w-16 h-16 sm:w-20 sm:h-20 rounded-xl overflow-hidden bg-white shrink-0 border border-brand-brown-border">
                               <Image
                                 src={doc.image}
                                 alt={doc.name}
@@ -584,7 +584,7 @@ END:VCALENDAR`;
                                 {doc.specialties.slice(0, 2).map((spec, i) => (
                                   <span
                                     key={i}
-                                    className="bg-brand-sand text-brand-brown text-[10px] font-medium px-2 py-0.5 rounded"
+                                    className="bg-brand-brown/5 border border-brand-brown-border/60 text-brand-brown text-[10px] font-medium px-2 py-0.5 rounded"
                                   >
                                     {spec}
                                   </span>
@@ -607,7 +607,7 @@ END:VCALENDAR`;
                               className={`text-xs font-semibold px-4 py-1.5 rounded-full ${
                                 isSelected
                                   ? "bg-brand-brown text-white"
-                                  : "bg-brand-sand text-brand-brown-muted"
+                                  : "bg-brand-brown/10 text-brand-brown-muted"
                               }`}
                             >
                               {isSelected ? "Selected Vaidya" : "Select"}
@@ -673,7 +673,7 @@ END:VCALENDAR`;
                           className={`p-3 rounded-xl border text-center transition-all min-w-[72px] shrink-0 ${
                             isSelected
                               ? "bg-brand-brown text-white border-brand-brown shadow-md scale-105"
-                              : "bg-brand-sand/40 text-brand-brown border-brand-brown-border/80 hover:border-brand-brown"
+                              : "bg-white text-brand-brown border-brand-brown-border hover:border-brand-brown"
                           }`}
                         >
                           <span className="block text-[10px] uppercase font-semibold tracking-wider opacity-80">
@@ -717,7 +717,7 @@ END:VCALENDAR`;
                           className={`py-2.5 px-3 rounded-lg text-xs font-semibold transition-all border ${
                             selectedTimeSlot === slot
                               ? "bg-brand-green text-white border-brand-green shadow-sm"
-                              : "bg-brand-sand/30 text-brand-brown border-brand-brown-border hover:border-brand-brown"
+                              : "bg-white text-brand-brown border-brand-brown-border hover:border-brand-brown"
                           }`}
                         >
                           {slot}
@@ -740,7 +740,7 @@ END:VCALENDAR`;
                           className={`py-2.5 px-3 rounded-lg text-xs font-semibold transition-all border ${
                             selectedTimeSlot === slot
                               ? "bg-brand-green text-white border-brand-green shadow-sm"
-                              : "bg-brand-sand/30 text-brand-brown border-brand-brown-border hover:border-brand-brown"
+                              : "bg-white text-brand-brown border-brand-brown-border hover:border-brand-brown"
                           }`}
                         >
                           {slot}
@@ -763,7 +763,7 @@ END:VCALENDAR`;
                           className={`py-2.5 px-3 rounded-lg text-xs font-semibold transition-all border ${
                             selectedTimeSlot === slot
                               ? "bg-brand-green text-white border-brand-green shadow-sm"
-                              : "bg-brand-sand/30 text-brand-brown border-brand-brown-border hover:border-brand-brown"
+                              : "bg-white text-brand-brown border-brand-brown-border hover:border-brand-brown"
                           }`}
                         >
                           {slot}
@@ -824,7 +824,7 @@ END:VCALENDAR`;
                         setPatientDetails({ ...patientDetails, fullName: e.target.value })
                       }
                       placeholder="e.g. Radhika Sharma"
-                      className={`w-full p-3 bg-brand-sand/30 border rounded-lg text-sm text-brand-brown focus:outline-none focus:ring-1 focus:ring-brand-green ${
+                      className={`w-full p-3 bg-white border rounded-lg text-sm text-brand-brown focus:outline-none focus:ring-1 focus:ring-brand-green ${
                         formErrors.fullName ? "border-red-500" : "border-brand-brown-border"
                       }`}
                     />
@@ -846,7 +846,7 @@ END:VCALENDAR`;
                         setPatientDetails({ ...patientDetails, email: e.target.value })
                       }
                       placeholder="e.g. radhika@example.com"
-                      className={`w-full p-3 bg-brand-sand/30 border rounded-lg text-sm text-brand-brown focus:outline-none focus:ring-1 focus:ring-brand-green ${
+                      className={`w-full p-3 bg-white border rounded-lg text-sm text-brand-brown focus:outline-none focus:ring-1 focus:ring-brand-green ${
                         formErrors.email ? "border-red-500" : "border-brand-brown-border"
                       }`}
                     />
@@ -868,7 +868,7 @@ END:VCALENDAR`;
                         setPatientDetails({ ...patientDetails, phone: e.target.value })
                       }
                       placeholder="e.g. 9876543210"
-                      className={`w-full p-3 bg-brand-sand/30 border rounded-lg text-sm text-brand-brown focus:outline-none focus:ring-1 focus:ring-brand-green ${
+                      className={`w-full p-3 bg-white border rounded-lg text-sm text-brand-brown focus:outline-none focus:ring-1 focus:ring-brand-green ${
                         formErrors.phone ? "border-red-500" : "border-brand-brown-border"
                       }`}
                     />
@@ -889,7 +889,7 @@ END:VCALENDAR`;
                         setPatientDetails({ ...patientDetails, age: e.target.value })
                       }
                       placeholder="e.g. 38"
-                      className={`w-full p-3 bg-brand-sand/30 border rounded-lg text-sm text-brand-brown focus:outline-none focus:ring-1 focus:ring-brand-green ${
+                      className={`w-full p-3 bg-white border rounded-lg text-sm text-brand-brown focus:outline-none focus:ring-1 focus:ring-brand-green ${
                         formErrors.age ? "border-red-500" : "border-brand-brown-border"
                       }`}
                     />
@@ -908,7 +908,7 @@ END:VCALENDAR`;
                       onChange={(e) =>
                         setPatientDetails({ ...patientDetails, gender: e.target.value })
                       }
-                      className="w-full p-3 bg-brand-sand/30 border border-brand-brown-border rounded-lg text-sm text-brand-brown focus:outline-none focus:ring-1 focus:ring-brand-green"
+                      className="w-full p-3 bg-white border border-brand-brown-border rounded-lg text-sm text-brand-brown focus:outline-none focus:ring-1 focus:ring-brand-green"
                     >
                       <option value="female">Female</option>
                       <option value="male">Male</option>
@@ -932,7 +932,7 @@ END:VCALENDAR`;
                           className={`py-2 px-2 rounded-lg text-xs font-medium border transition-all ${
                             patientDetails.preferredLanguage === lang
                               ? "bg-brand-brown text-white border-brand-brown font-bold"
-                              : "bg-brand-sand/20 text-brand-brown border-brand-brown-border"
+                              : "bg-white text-brand-brown border-brand-brown-border"
                           }`}
                         >
                           {lang}
@@ -954,7 +954,7 @@ END:VCALENDAR`;
                         setPatientDetails({ ...patientDetails, symptoms: e.target.value })
                       }
                       placeholder="e.g. Chronic lower back pain for 6 months, aggravated in cold weather. Disturbed sleep and morning joint stiffness."
-                      className={`w-full p-3 bg-brand-sand/30 border rounded-lg text-sm text-brand-brown focus:outline-none focus:ring-1 focus:ring-brand-green ${
+                      className={`w-full p-3 bg-white border rounded-lg text-sm text-brand-brown focus:outline-none focus:ring-1 focus:ring-brand-green ${
                         formErrors.symptoms ? "border-red-500" : "border-brand-brown-border"
                       }`}
                     />
@@ -975,7 +975,7 @@ END:VCALENDAR`;
                         setPatientDetails({ ...patientDetails, medicalHistory: e.target.value })
                       }
                       placeholder="e.g. Taking thyroid supplements, allergic to penicillin, previous lumbar MRI available."
-                      className="w-full p-3 bg-brand-sand/30 border border-brand-brown-border rounded-lg text-sm text-brand-brown focus:outline-none focus:ring-1 focus:ring-brand-green"
+                      className="w-full p-3 bg-white border border-brand-brown-border rounded-lg text-sm text-brand-brown focus:outline-none focus:ring-1 focus:ring-brand-green"
                     />
                   </div>
                 </div>
@@ -1018,7 +1018,7 @@ END:VCALENDAR`;
                 </div>
 
                 {/* Summary Card */}
-                <div className="bg-brand-sand/40 rounded-2xl p-6 border border-brand-brown-border space-y-5">
+                <div className="bg-white rounded-2xl p-6 border border-brand-brown-border shadow-sm space-y-5">
                   <h3 className="font-serif text-lg font-bold text-brand-brown border-b border-brand-brown-border/60 pb-2">
                     Consultation Summary
                   </h3>
@@ -1089,7 +1089,7 @@ END:VCALENDAR`;
                       <h4 className="font-serif font-bold text-sm text-white">
                         Razorpay Standard Secure Gateway
                       </h4>
-                      <p className="text-[11px] text-brand-cream-dark">
+                      <p className="text-[11px] text-white/80">
                         UPI (GPay, PhonePe, Paytm), Cards, Net Banking & Net-Banking.
                       </p>
                     </div>
@@ -1138,13 +1138,13 @@ END:VCALENDAR`;
               <p className="text-sm text-brand-brown-muted">
                 Your Ayurvedic Doctor Consultation has been successfully scheduled.
               </p>
-              <p className="text-xs font-mono font-bold text-brand-gold-dark bg-brand-sand/60 py-1 px-3 rounded-full inline-block mt-2">
+              <p className="text-xs font-mono font-bold text-brand-gold-dark bg-brand-brown/5 border border-brand-brown-border/60 py-1 px-3 rounded-full inline-block mt-2">
                 Booking ID: {bookingId}
               </p>
             </div>
 
             {/* Appointment Details Box */}
-            <div className="bg-brand-sand/40 rounded-xl p-6 border border-brand-brown-border text-left space-y-3 text-xs text-brand-brown">
+            <div className="bg-white rounded-xl p-6 border border-brand-brown-border shadow-sm text-left space-y-3 text-xs text-brand-brown">
               <div className="flex justify-between border-b border-brand-brown-border/40 pb-2">
                 <span className="text-brand-brown-muted">Consultation Mode:</span>
                 <strong className="font-serif text-sm">
@@ -1172,9 +1172,9 @@ END:VCALENDAR`;
             </div>
 
             {/* Pre-Consultation Instructions */}
-            <div className="p-4 rounded-xl bg-amber-50/70 border border-amber-200/80 text-left text-xs text-amber-950 space-y-1.5">
+            <div className="p-4 rounded-xl bg-brand-brown/5 border border-brand-brown-border text-left text-xs text-brand-brown space-y-1.5">
               <h4 className="font-bold uppercase tracking-wider flex items-center gap-1.5">
-                <AlertCircle className="w-4 h-4 text-amber-700" />
+                <AlertCircle className="w-4 h-4 text-brand-gold-dark" />
                 Pre-Consultation Clinical Guidelines:
               </h4>
               <ul className="space-y-1 list-disc list-inside text-[11px] leading-relaxed">

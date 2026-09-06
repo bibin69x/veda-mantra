@@ -87,7 +87,7 @@ export default function RootLayout({
         <MedicalBusinessJsonLd />
         <Analytics />
       </head>
-      <body className="flex min-h-screen flex-col bg-brand-cream text-brand-brown font-sans antialiased selection:bg-brand-green selection:text-white">
+      <body className="flex min-h-screen flex-col bg-white text-brand-brown font-sans antialiased selection:bg-brand-green selection:text-white">
         <GTMNoscript />
         <CartProvider>
           <Header />

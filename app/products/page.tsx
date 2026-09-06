@@ -79,11 +79,9 @@ export default function ProductsPage() {
   };
 
   return (
-    <div className="min-h-screen bg-brand-cream pb-20">
+    <div className="min-h-screen bg-white pb-20">
       {/* Editorial Apothecary Hero */}
       <section className="relative bg-brand-brown text-white py-16 lg:py-20 overflow-hidden border-b border-brand-brown-light/30">
-        <div className="absolute inset-0 opacity-10 bg-[radial-gradient(#C5A059_1px,transparent_1px)] [background-size:20px_20px]" />
-        
         <Container size="xl" className="relative z-10 text-center max-w-4xl mx-auto space-y-6">
           <Badge variant="gold" size="md" className="mx-auto bg-brand-gold/20 text-brand-gold-light border-brand-gold/40">
             Aushadha Seva • Classical Herbal Pharmacy
@@ -98,7 +96,7 @@ export default function ProductsPage() {
             </h1>
           </div>
 
-          <p className="text-sm sm:text-base text-brand-cream-dark leading-relaxed max-w-2xl mx-auto">
+          <p className="text-sm sm:text-base text-brand-sand/90 leading-relaxed max-w-2xl mx-auto font-light">
             Authentic, slow-decocted herbal oils, medicated ghees, and immunity rasayanas hand-compounded strictly according to the Charaka Samhita and Ashtanga Hridaya.
           </p>
 
@@ -135,7 +133,7 @@ export default function ProductsPage() {
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
                 placeholder="Search by herb (e.g. Saffron, Bhringraj, Ashwagandha)..."
-                className="w-full pl-10 pr-10 py-2.5 bg-brand-sand/50 border border-brand-brown-border rounded-lg text-sm text-brand-brown placeholder:text-brand-brown-muted focus:outline-none focus:ring-2 focus:ring-brand-green/20 focus:border-brand-green transition-all"
+                className="w-full pl-10 pr-10 py-2.5 bg-white border border-brand-brown-border rounded-lg text-sm text-brand-brown placeholder:text-brand-brown-muted focus:outline-none focus:ring-2 focus:ring-brand-green/20 focus:border-brand-green transition-all"
               />
               {searchQuery && (
                 <button
@@ -158,7 +156,7 @@ export default function ProductsPage() {
                 id="sort-by"
                 value={sortBy}
                 onChange={(e) => setSortBy(e.target.value)}
-                className="bg-brand-sand/50 border border-brand-brown-border rounded-lg px-3 py-2 text-xs font-medium text-brand-brown focus:outline-none focus:ring-2 focus:ring-brand-green/20 focus:border-brand-green cursor-pointer"
+                className="bg-white border border-brand-brown-border rounded-lg px-3 py-2 text-xs font-medium text-brand-brown focus:outline-none focus:ring-2 focus:ring-brand-green/20 focus:border-brand-green cursor-pointer"
               >
                 <option value="featured">Featured Remedies</option>
                 <option value="rating">Highest Rated</option>
@@ -199,8 +197,8 @@ export default function ProductsPage() {
                     onClick={() => setSelectedCategory(cat)}
                     className={`px-3.5 py-1.5 rounded-full text-xs font-medium transition-all duration-200 ${
                       isSelected
-                        ? "bg-brand-green text-white shadow-sm"
-                        : "bg-brand-sand text-brand-brown hover:bg-brand-brown-border/50"
+                        ? "bg-brand-green text-white shadow-sm font-semibold"
+                        : "bg-white text-brand-brown border border-brand-brown-border hover:border-brand-green/60"
                     }`}
                   >
                     {cat}
@@ -223,10 +221,10 @@ export default function ProductsPage() {
                   <button
                     key={dosha}
                     onClick={() => setSelectedDosha(dosha)}
-                    className={`px-3 py-1 rounded-full text-xs font-medium transition-all duration-200 border ${
+                    className={`px-3.5 py-1.5 rounded-full text-xs font-medium transition-all duration-200 ${
                       isSelected
-                        ? "bg-brand-brown text-white border-brand-brown shadow-sm"
-                        : "bg-white text-brand-brown-muted border-brand-brown-border hover:border-brand-brown"
+                        ? "bg-brand-brown text-white shadow-sm font-semibold"
+                        : "bg-white text-brand-brown border border-brand-brown-border hover:border-brand-brown"
                     }`}
                   >
                     {dosha}
@@ -252,7 +250,7 @@ export default function ProductsPage() {
         {/* Product Grid */}
         {filteredProducts.length === 0 ? (
           <div className="bg-white rounded-xl p-12 text-center border border-brand-brown-border max-w-lg mx-auto space-y-4">
-            <div className="w-16 h-16 rounded-full bg-brand-sand flex items-center justify-center mx-auto text-brand-gold">
+            <div className="w-16 h-16 rounded-full bg-brand-brown/5 border border-brand-brown-border flex items-center justify-center mx-auto text-brand-gold">
               <Search className="w-8 h-8 stroke-[1.5]" />
             </div>
             <div className="space-y-1">
@@ -290,7 +288,7 @@ export default function ProductsPage() {
                   {/* Image Container */}
                   <Link
                     href={`/products/${product.slug}`}
-                    className="relative aspect-square w-full bg-brand-sand/30 overflow-hidden block"
+                    className="relative aspect-square w-full bg-white border-b border-brand-brown-border overflow-hidden block"
                   >
                     <Image
                       src={product.image}
@@ -343,13 +341,13 @@ export default function ProductsPage() {
 
                       {/* Rating & Reviews */}
                       <div className="flex items-center gap-1.5 pt-1">
-                        <div className="flex text-amber-500">
+                        <div className="flex text-brand-gold">
                           {[...Array(5)].map((_, i) => (
                             <Star
                               key={i}
                               className={`w-3 h-3 ${
                                 i < Math.floor(product.rating)
-                                  ? "fill-amber-400 text-amber-400"
+                                  ? "fill-brand-gold text-brand-gold"
                                   : "text-neutral-300"
                               }`}
                             />
@@ -392,7 +390,7 @@ export default function ProductsPage() {
                         className={`p-2.5 rounded-lg flex items-center justify-center transition-all duration-200 focus:outline-none ${
                           addedItemSlug === product.slug
                             ? "bg-brand-green text-white"
-                            : "bg-brand-sand text-brand-brown hover:bg-brand-green hover:text-white"
+                            : "bg-brand-brown/5 text-brand-brown hover:bg-brand-green hover:text-white"
                         }`}
                         title="Add to Cart"
                         aria-label={`Add ${product.title} to cart`}
@@ -425,7 +423,7 @@ export default function ProductsPage() {
               <h2 className="font-serif text-2xl sm:text-3xl font-bold tracking-tight text-white">
                 How Our Sacred Medicines Are Compounded
               </h2>
-              <p className="text-xs sm:text-sm text-brand-cream-dark leading-relaxed">
+              <p className="text-xs sm:text-sm text-white/80 leading-relaxed">
                 Unlike commercial mass-produced cosmetics that use mineral oils and chemical extracts, Ayur Veda Mantra preparations follow strict classical heating cycles (*Paka Vidhi*). Each formulation is slow-boiled for up to 72 hours in copper and bronze vessels to ensure deep cellular bioavailability.
               </p>
               <div className="pt-2">
@@ -448,7 +446,7 @@ export default function ProductsPage() {
                 <h3 className="font-serif font-semibold text-sm text-white">
                   Wildcrafted Herbs
                 </h3>
-                <p className="text-xs text-brand-cream-dark leading-relaxed">
+                <p className="text-xs text-white/80 leading-relaxed">
                   Roots, barks, and blossoms sustainably harvested during their peak astrological potencies.
                 </p>
               </div>
@@ -460,7 +458,7 @@ export default function ProductsPage() {
                 <h3 className="font-serif font-semibold text-sm text-white">
                   A2 Gir Cow Ghee
                 </h3>
-                <p className="text-xs text-brand-cream-dark leading-relaxed">
+                <p className="text-xs text-white/80 leading-relaxed">
                   Cultured Bilona ghee churned from organic grass-fed indigenous Gir cows as a lipid carrier.
                 </p>
               </div>
@@ -472,7 +470,7 @@ export default function ProductsPage() {
                 <h3 className="font-serif font-semibold text-sm text-white">
                   No Artificial Additives
                 </h3>
-                <p className="text-xs text-brand-cream-dark leading-relaxed">
+                <p className="text-xs text-white/80 leading-relaxed">
                   Zero parabens, artificial fragrances, synthetic emulsifiers, or animal testing.
                 </p>
               </div>
@@ -484,7 +482,7 @@ export default function ProductsPage() {
                 <h3 className="font-serif font-semibold text-sm text-white">
                   Physician Tested
                 </h3>
-                <p className="text-xs text-brand-cream-dark leading-relaxed">
+                <p className="text-xs text-white/80 leading-relaxed">
                   Verified in our Panchakarma treatment center with thousands of clinical patients.
                 </p>
               </div>

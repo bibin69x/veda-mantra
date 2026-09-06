@@ -41,7 +41,7 @@ export function Header() {
   return (
     <>
       {/* Announcement & Clinic Bar */}
-      <div className="bg-brand-brown text-brand-cream-dark text-xs py-2 px-4 border-b border-brand-brown-light/30">
+      <div className="bg-brand-brown text-white/80 text-xs py-2 px-4 border-b border-brand-brown-light/30">
         <Container size="xl" className="flex items-center justify-between">
           <div className="flex items-center gap-6 text-[11px] sm:text-xs">
             <span className="flex items-center gap-1.5 text-brand-gold-light">
@@ -55,7 +55,7 @@ export function Header() {
           </div>
 
           <div className="flex items-center gap-4 text-[11px] sm:text-xs">
-            <span className="hidden sm:inline-block text-brand-sand">
+            <span className="hidden sm:inline-block text-white/70">
               Authentic Vedic Healing & Doctor Consultations
             </span>
             <Link
@@ -73,8 +73,8 @@ export function Header() {
         className={cn(
           "sticky top-0 z-50 w-full transition-all duration-300",
           isScrolled
-            ? "glass-header shadow-luxury border-b border-brand-brown-border py-2.5"
-            : "bg-brand-cream/95 backdrop-blur-md border-b border-brand-brown-border/60 py-4"
+            ? "bg-white/95 shadow-luxury border-b border-brand-brown-border py-2.5 backdrop-blur-md"
+            : "bg-white border-b border-brand-brown-border/60 py-4"
         )}
       >
         <Container size="xl">
@@ -101,7 +101,7 @@ export function Header() {
                     key={link.name}
                     href={link.href}
                     className={cn(
-                      "text-sm font-medium tracking-wider uppercase transition-colors duration-200 relative py-1",
+                      "text-xs uppercase tracking-widest transition-colors font-medium py-1 relative",
                       isActive
                         ? "text-brand-green font-semibold"
                         : "text-brand-brown hover:text-brand-green"
@@ -109,40 +109,34 @@ export function Header() {
                   >
                     {link.name}
                     {isActive && (
-                      <span className="absolute bottom-0 left-0 w-full h-0.5 bg-brand-green rounded-full animate-fadeIn" />
+                      <span className="absolute bottom-0 left-0 w-full h-0.5 bg-brand-green animate-fadeIn" />
                     )}
                   </Link>
                 );
               })}
             </nav>
 
-            {/* Desktop Actions */}
+            {/* Right Action Icons & Booking CTA */}
             <div className="hidden sm:flex items-center space-x-5">
               <Link
                 href="/login"
-                className="p-2 text-brand-brown hover:text-brand-green hover:bg-brand-sand/60 rounded-full transition-colors relative group"
-                title="Account"
-                aria-label="Account"
+                className="p-2 text-brand-brown hover:text-brand-green transition-colors focus:outline-none"
+                aria-label="Patient Account Login"
               >
                 <User className="w-5 h-5" />
-                <span className="sr-only">Account</span>
               </Link>
 
               <button
                 onClick={openCart}
-                className="p-2 text-brand-brown hover:text-brand-green hover:bg-brand-sand/60 rounded-full transition-colors relative group focus:outline-none"
-                title="Shopping Cart"
+                className="p-2 text-brand-brown hover:text-brand-green transition-colors relative focus:outline-none"
                 aria-label="Open Shopping Cart"
               >
                 <ShoppingBag className="w-5 h-5" />
-                {cartCount > 0 ? (
-                  <span className="absolute top-0 right-0 w-4 h-4 bg-brand-green text-white text-[10px] font-bold rounded-full flex items-center justify-center animate-pulse">
+                {cartCount > 0 && (
+                  <span className="absolute top-1 right-1 w-4 h-4 bg-brand-green text-white text-[10px] font-bold rounded-full flex items-center justify-center animate-scaleUp">
                     {cartCount}
                   </span>
-                ) : (
-                  <span className="absolute top-1 right-1 w-2 h-2 bg-brand-gold rounded-full" />
                 )}
-                <span className="sr-only">Cart</span>
               </button>
 
               <Button
@@ -184,7 +178,7 @@ export function Header() {
 
         {/* Mobile Navigation Drawer */}
         {mobileMenuOpen && (
-          <div className="lg:hidden fixed inset-x-0 top-[102px] bg-brand-cream border-b border-brand-brown-border shadow-2xl transition-all duration-300 animate-fadeIn z-40 max-h-[calc(100vh-110px)] overflow-y-auto">
+          <div className="lg:hidden fixed inset-x-0 top-[102px] bg-white border-b border-brand-brown-border shadow-2xl transition-all duration-300 animate-fadeIn z-40 max-h-[calc(100vh-110px)] overflow-y-auto">
             <div className="px-6 py-8 space-y-6">
               <nav className="flex flex-col space-y-4">
                 {NAV_LINKS.map((link) => {

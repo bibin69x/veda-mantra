@@ -23,7 +23,7 @@ export function Badge({
     gold: "bg-brand-gold/15 text-brand-gold-dark border border-brand-gold/30",
     brown: "bg-brand-brown text-white",
     outline: "border border-brand-brown/30 text-brand-brown",
-    sanskrit: "bg-brand-sand text-brand-brown-muted italic font-serif tracking-normal lowercase",
+    sanskrit: "bg-brand-brown/5 border border-brand-brown-border/60 text-brand-brown-muted italic font-serif tracking-normal lowercase",
   };
 
   return (

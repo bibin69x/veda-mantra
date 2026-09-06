@@ -45,8 +45,8 @@ export function SectionHeading({
           className={cn(
             "text-[11px] font-semibold tracking-widest-luxury uppercase mb-3 px-3 py-1 rounded-full",
             isDark
-              ? "bg-brand-brown-light text-brand-gold-light"
-              : "bg-brand-sand/80 text-brand-brown-muted"
+              ? "bg-white/10 text-brand-gold-light"
+              : "bg-brand-brown/5 border border-brand-brown-border/60 text-brand-brown-muted"
           )}
         >
           {tagline}
@@ -70,7 +70,7 @@ export function SectionHeading({
         <p
           className={cn(
             "text-sm sm:text-base leading-relaxed font-light mt-1",
-            isDark ? "text-brand-cream/80" : "text-brand-brown-muted"
+            isDark ? "text-white/80" : "text-brand-brown-muted"
           )}
         >
           {description}

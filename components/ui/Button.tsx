@@ -42,7 +42,7 @@ export function Button({
     gold:
       "bg-brand-gold text-white hover:bg-brand-gold-dark shadow-md hover:shadow-lg focus:ring-brand-gold active:scale-[0.98]",
     ghost:
-      "text-brand-brown hover:bg-brand-cream-dark hover:text-brand-brown-dark focus:ring-brand-brown",
+      "text-brand-brown hover:bg-brand-brown/5 hover:text-brand-brown-dark focus:ring-brand-brown",
     link:
       "text-brand-green hover:underline p-0 h-auto font-medium focus:ring-0",
   };

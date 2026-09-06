@@ -84,9 +84,9 @@ const SAMPLE_ORDERS = [
 
 export default function AccountOrdersPage() {
   return (
-    <div className="min-h-screen bg-brand-cream pb-24">
+    <div className="min-h-screen bg-white pb-24">
       {/* Header Breadcrumbs */}
-      <div className="bg-brand-sand/40 border-b border-brand-brown-border/60 py-3">
+      <div className="bg-white border-b border-brand-brown-border/60 py-3">
         <Container size="xl">
           <nav className="flex items-center space-x-2 text-xs text-brand-brown-muted">
             <Link href="/" className="hover:text-brand-green transition-colors">
@@ -123,7 +123,7 @@ export default function AccountOrdersPage() {
                   className="bg-white rounded-2xl border border-brand-brown-border shadow-card overflow-hidden"
                 >
                   {/* Order Card Header */}
-                  <div className="bg-brand-sand/40 p-4 sm:p-5 border-b border-brand-brown-border/60 flex flex-wrap items-center justify-between gap-3 text-xs">
+                  <div className="bg-white p-4 sm:p-5 border-b border-brand-brown-border flex flex-wrap items-center justify-between gap-3 text-xs">
                     <div className="space-y-0.5">
                       <span className="text-brand-brown-muted block text-[11px]">Order Reference</span>
                       <strong className="font-mono text-sm font-bold text-brand-brown">{order.id}</strong>
@@ -144,7 +144,7 @@ export default function AccountOrdersPage() {
                         className={`inline-block px-3 py-1 rounded-full text-xs font-bold ${
                           order.status === "Delivered"
                             ? "bg-brand-green/10 text-brand-green"
-                            : "bg-blue-50 text-blue-700 border border-blue-200"
+                            : "bg-brand-green/10 text-brand-green border border-brand-green/20"
                         }`}
                       >
                         {order.status}
@@ -156,7 +156,7 @@ export default function AccountOrdersPage() {
                   <div className="p-5 space-y-4 divide-y divide-brand-brown-border/40">
                     {order.items.map((item, idx) => (
                       <div key={idx} className="pt-3 first:pt-0 flex gap-4 items-center">
-                        <div className="relative w-14 h-14 rounded-xl overflow-hidden bg-brand-sand/30 border border-brand-brown-border shrink-0">
+                        <div className="relative w-14 h-14 rounded-xl overflow-hidden bg-white border border-brand-brown-border shrink-0">
                           <Image src={item.image} alt={item.title} fill className="object-cover" />
                         </div>
                         <div className="flex-1 min-w-0">
@@ -175,7 +175,7 @@ export default function AccountOrdersPage() {
                   </div>
 
                   {/* Order Card Footer Actions */}
-                  <div className="p-4 bg-brand-sand/20 border-t border-brand-brown-border/60 flex flex-wrap items-center justify-between gap-3 text-xs">
+                  <div className="p-4 bg-white border-t border-brand-brown-border flex flex-wrap items-center justify-between gap-3 text-xs">
                     <div className="flex items-center gap-2 text-brand-brown-muted">
                       <Truck className="w-3.5 h-3.5 text-brand-green" />
                       <span>
@@ -186,7 +186,7 @@ export default function AccountOrdersPage() {
                     <div className="flex items-center gap-2">
                       <button
                         onClick={() => alert(`Downloading Invoice for ${order.id}...`)}
-                        className="px-3 py-1.5 rounded-lg border border-brand-brown-border bg-white text-brand-brown font-semibold hover:bg-brand-sand transition-colors flex items-center gap-1.5"
+                        className="px-3 py-1.5 rounded-lg border border-brand-brown-border bg-white text-brand-brown font-semibold hover:bg-brand-brown/5 transition-colors flex items-center gap-1.5"
                       >
                         <Download className="w-3.5 h-3.5" />
                         Download Invoice

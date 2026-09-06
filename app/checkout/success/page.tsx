@@ -71,13 +71,13 @@ function SuccessContent() {
         <p className="text-sm text-brand-brown-muted max-w-md mx-auto">
           Your sacred Ayurvedic medicines are being carefully compounded and prepared for dispatch at our dispensary.
         </p>
-        <p className="text-xs font-mono font-bold text-brand-gold-dark bg-brand-sand/60 py-1.5 px-4 rounded-full inline-block mt-2">
+        <p className="text-xs font-mono font-bold text-brand-gold-dark bg-brand-brown/5 border border-brand-brown-border/60 py-1.5 px-4 rounded-full inline-block mt-2">
           Order Reference: {orderNum}
         </p>
       </div>
 
       {/* Tracking Timeline */}
-      <div className="bg-brand-sand/40 rounded-2xl p-6 border border-brand-brown-border text-left space-y-4">
+      <div className="bg-white rounded-2xl p-6 border border-brand-brown-border shadow-sm text-left space-y-4">
         <div className="flex items-center justify-between border-b border-brand-brown-border/60 pb-3">
           <span className="text-xs font-bold uppercase tracking-wider text-brand-brown flex items-center gap-2">
             <Truck className="w-4 h-4 text-brand-green" />
@@ -162,7 +162,7 @@ function SuccessContent() {
 
 export default function CheckoutSuccessPage() {
   return (
-    <div className="min-h-screen bg-brand-cream py-16 sm:py-20">
+    <div className="min-h-screen bg-white py-16 sm:py-20">
       <Container size="md">
         <Suspense
           fallback={

@@ -61,9 +61,9 @@ function RegisterContent() {
   };
 
   return (
-    <div className="min-h-screen bg-brand-cream py-16 sm:py-24 flex items-center">
+    <div className="min-h-screen bg-white py-16 sm:py-24 flex items-center">
       <Container size="md">
-        <div className="max-w-lg mx-auto bg-white rounded-3xl p-8 sm:p-10 border border-brand-brown-border shadow-luxury space-y-6">
+        <div className="max-w-lg mx-auto bg-white rounded-2xl p-8 sm:p-10 border border-brand-brown-border shadow-luxury space-y-6">
           {/* Logo & Header */}
           <div className="text-center space-y-2">
             <div className="relative h-12 w-48 mx-auto mb-3">
@@ -81,7 +81,7 @@ function RegisterContent() {
             <h1 className="font-serif text-2xl sm:text-3xl font-bold text-brand-brown">
               Begin Your Healing Journey
             </h1>
-            <p className="text-xs text-brand-brown-muted">
+            <p className="text-xs text-brand-brown-muted font-light">
               Create an account to book consultations, track custom formulations, and save medical case sheets.
             </p>
           </div>
@@ -105,7 +105,7 @@ function RegisterContent() {
                 value={fullName}
                 onChange={(e) => setFullName(e.target.value)}
                 placeholder="e.g. Radhika Sharma"
-                className="w-full p-3 bg-brand-sand/30 border border-brand-brown-border rounded-xl text-sm text-brand-brown focus:outline-none focus:ring-1 focus:ring-brand-green"
+                className="w-full p-3 bg-white border border-brand-brown-border rounded-xl text-sm text-brand-brown focus:outline-none focus:ring-1 focus:ring-brand-green"
               />
             </div>
 
@@ -120,7 +120,7 @@ function RegisterContent() {
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
                   placeholder="name@example.com"
-                  className="w-full p-3 bg-brand-sand/30 border border-brand-brown-border rounded-xl text-sm text-brand-brown focus:outline-none focus:ring-1 focus:ring-brand-green"
+                  className="w-full p-3 bg-white border border-brand-brown-border rounded-xl text-sm text-brand-brown focus:outline-none focus:ring-1 focus:ring-brand-green"
                 />
               </div>
 
@@ -134,7 +134,7 @@ function RegisterContent() {
                   value={phone}
                   onChange={(e) => setPhone(e.target.value)}
                   placeholder="9876543210"
-                  className="w-full p-3 bg-brand-sand/30 border border-brand-brown-border rounded-xl text-sm text-brand-brown focus:outline-none focus:ring-1 focus:ring-brand-green"
+                  className="w-full p-3 bg-white border border-brand-brown-border rounded-xl text-sm text-brand-brown focus:outline-none focus:ring-1 focus:ring-brand-green"
                 />
               </div>
             </div>
@@ -142,14 +142,14 @@ function RegisterContent() {
             <div className="space-y-1">
               <label className="text-xs font-bold uppercase tracking-wider text-brand-brown flex items-center gap-1.5">
                 <Lock className="w-3.5 h-3.5 text-brand-brown-muted" />
-                Password (Minimum 8 Characters) *
+                Create Password *
               </label>
               <input
                 type="password"
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
-                placeholder="••••••••"
-                className="w-full p-3 bg-brand-sand/30 border border-brand-brown-border rounded-xl text-sm text-brand-brown focus:outline-none focus:ring-1 focus:ring-brand-green"
+                placeholder="Minimum 8 characters"
+                className="w-full p-3 bg-white border border-brand-brown-border rounded-xl text-sm text-brand-brown focus:outline-none focus:ring-1 focus:ring-brand-green"
               />
             </div>
 
@@ -162,7 +162,7 @@ function RegisterContent() {
               <select
                 value={dosha}
                 onChange={(e) => setDosha(e.target.value)}
-                className="w-full p-3 bg-brand-sand/30 border border-brand-brown-border rounded-xl text-sm text-brand-brown focus:outline-none focus:ring-1 focus:ring-brand-green"
+                className="w-full p-3 bg-white border border-brand-brown-border rounded-xl text-sm text-brand-brown focus:outline-none focus:ring-1 focus:ring-brand-green"
               >
                 <option value="Not Sure / To Be Assessed">Not Sure / To Be Assessed</option>
                 <option value="Tridoshic (Vata-Pitta-Kapha)">Tridoshic (Balanced)</option>
@@ -226,7 +226,7 @@ export default function RegisterPage() {
   return (
     <Suspense
       fallback={
-        <div className="min-h-screen bg-brand-cream flex items-center justify-center">
+        <div className="min-h-screen bg-white flex items-center justify-center">
           <div className="animate-spin w-8 h-8 border-4 border-brand-green border-t-transparent rounded-full" />
         </div>
       }

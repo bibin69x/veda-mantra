@@ -13,9 +13,9 @@ export const metadata: Metadata = {
 
 export default function RefundPolicyPage() {
   return (
-    <div className="min-h-screen bg-brand-cream pb-24">
+    <div className="min-h-screen bg-white pb-24">
       {/* Header Breadcrumbs */}
-      <div className="bg-brand-sand/40 border-b border-brand-brown-border/60 py-3">
+      <div className="bg-white border-b border-brand-brown-border/60 py-3">
         <Container size="xl">
           <nav className="flex items-center space-x-2 text-xs text-brand-brown-muted">
             <Link href="/" className="hover:text-brand-green transition-colors">
@@ -28,7 +28,7 @@ export default function RefundPolicyPage() {
       </div>
 
       <Container size="md" className="pt-10 sm:pt-14">
-        <div className="bg-white rounded-3xl p-8 sm:p-14 border border-brand-brown-border shadow-card space-y-8">
+        <div className="bg-white rounded-2xl p-8 sm:p-14 border border-brand-brown-border shadow-card space-y-8">
           <div className="space-y-3 border-b border-brand-brown-border pb-6">
             <Badge variant="gold" size="sm">
               Dispensary & Treatment Guarantees
@@ -41,7 +41,7 @@ export default function RefundPolicyPage() {
             </p>
           </div>
 
-          <div className="space-y-6 text-xs sm:text-sm text-brand-brown leading-relaxed font-sans">
+          <div className="space-y-6 text-xs sm:text-sm text-brand-brown leading-relaxed font-sans font-light">
             <section className="space-y-2">
               <h2 className="font-serif text-lg sm:text-xl font-bold text-brand-brown flex items-center gap-2">
                 <RotateCcw className="w-5 h-5 text-brand-green" />
@@ -62,33 +62,28 @@ export default function RefundPolicyPage() {
 
             <section className="space-y-2">
               <h2 className="font-serif text-lg sm:text-xl font-bold text-brand-brown">
-                2. Doctor Consultation Cancellations & Rescheduling
+                2. Doctor Consultation Cancellation & Refunds
               </h2>
               <ul className="list-disc list-inside space-y-1 text-brand-brown-muted pl-2">
                 <li>
-                  <strong>Cancellation with Full Refund:</strong> If cancelled at least <strong>12 hours</strong> prior to the scheduled appointment slot, a 100% refund is initiated within 3–5 business days.
+                  <strong>Cancellation 12+ Hours Before:</strong> 100% full refund or free rescheduling to any available slot.
                 </li>
                 <li>
-                  <strong>Rescheduling:</strong> Free of charge up to <strong>4 hours</strong> before the scheduled appointment.
+                  <strong>Cancellation Under 12 Hours:</strong> 50% refund or one-time complimentary rescheduling.
                 </li>
                 <li>
-                  <strong>Doctor Rescheduling:</strong> In the rare event an emergency surgery or clinical exigency prevents the attending Vaidya from taking your slot, we will offer immediate priority rebooking or an instant full refund.
+                  <strong>Physician Unavailability:</strong> In the rare event a physician is called into urgent clinical duties, you will receive a 100% immediate refund or priority slot booking.
                 </li>
               </ul>
             </section>
 
             <section className="space-y-2">
               <h2 className="font-serif text-lg sm:text-xl font-bold text-brand-brown">
-                3. Panchakarma Residential Treatment Retreats
+                3. Residential Panchakarma Retreats
               </h2>
               <p>
-                For multi-day residential Panchakarma detox packages (7, 14, or 21 days):
+                For multi-day residential detox packages requiring private sanctum room bookings and specialized herb compounding, cancellations made 7 or more days prior to admission receive a 100% refund minus a 5% administrative bank processing charge.
               </p>
-              <ul className="list-disc list-inside space-y-1 text-brand-brown-muted pl-2">
-                <li>Cancellations made <strong>15 days or more</strong> prior to the retreat start date receive a 90% refund (10% retained for bespoke herbal decoction preparation).</li>
-                <li>Cancellations made between <strong>7 to 14 days</strong> prior receive a 50% refund.</li>
-                <li>Cancellations within <strong>less than 7 days</strong> are non-refundable but may be transferred to a future date within 12 months.</li>
-              </ul>
             </section>
 
             <section className="space-y-2">
@@ -96,16 +91,7 @@ export default function RefundPolicyPage() {
                 4. Refund Processing Timelines
               </h2>
               <p>
-                Approved refunds are processed automatically back to the original funding source (UPI, Credit/Debit Card, or Net Banking) via Razorpay. Depending on your issuing bank, the credit will appear on your statement within <strong>3 to 5 business days</strong>.
-              </p>
-            </section>
-
-            <section className="space-y-2">
-              <h2 className="font-serif text-lg sm:text-xl font-bold text-brand-brown">
-                5. How to Initiate a Request
-              </h2>
-              <p>
-                To request a replacement or consultation refund, contact our patient care desk with your Order/Booking Reference ID at <strong className="text-brand-green">care@ayurvedamantra.com</strong> or call our helpline at <strong className="font-mono text-brand-brown">+91 98765 43210</strong>.
+                Approved refunds are processed through our payment gateway (Razorpay) back to your original source (UPI, Credit/Debit Card, NetBanking) within <strong>3 to 5 business days</strong>.
               </p>
             </section>
           </div>

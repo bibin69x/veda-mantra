@@ -25,7 +25,7 @@ const FAQS = [
   {
     question: "What is Nadi Pariksha and how does it diagnose my body type?",
     answer:
-      "Nadi Pariksha is the ancient Ayurvedic science of pulse diagnosis. By gently reading the radial pulse with three fingers, our Senior Vaidyas decode the subtle vibrational rhythms of your Vata, Pitta, and Kapha doshas, uncovering deep cellular imbalances, metabolic toxins (Ama), and organ health before physical symptoms manifest.",
+      "Nadi Pariksha is the ancient Ayurvedic science of pulse diagnosis. By gently reading the radial pulse with three fingers, Chief Physician Dr. Anupama Ramachandran decodes the subtle vibrational rhythms of your Vata, Pitta, and Kapha doshas, uncovering deep cellular imbalances, metabolic toxins (Ama), and organ health before physical symptoms manifest.",
   },
   {
     question: "How do I prepare for an In-Clinic Panchakarma assessment?",
@@ -35,7 +35,7 @@ const FAQS = [
   {
     question: "How are Online Video Consultations conducted?",
     answer:
-      "Online consultations take place over high-definition secure video links (Google Meet / Zoom). Our Vaidyas conduct an in-depth Prakriti assessment, tongue and facial inspection (Darshana Pariksha), and clinical lifestyle questioning. A digital Sastric prescription with dietary protocols is issued within 2 hours.",
+      "Online consultations take place over high-definition secure video links (Google Meet / Zoom). Dr. Anupama conducts an in-depth Prakriti assessment, tongue and facial inspection (Darshana Pariksha), and clinical lifestyle questioning. A digital Sastric prescription with dietary protocols is issued within 2 hours.",
   },
   {
     question: "Are your classical medicines and oils 100% natural and safe?",
@@ -45,7 +45,7 @@ const FAQS = [
   {
     question: "Can I receive customized Panchakarma residential packages?",
     answer:
-      "Yes, we offer 7-day, 14-day, and 21-day residential clinical Panchakarma detox retreats at our Kerala sanctuary. Packages include full boarding, organic Ayurvedic Sattvic meals, daily multi-stage therapies (*Purva, Pradhana, Paschat Karma*), and daily Vaidya monitoring.",
+      "Yes, we offer 7-day, 14-day, and 21-day residential clinical Panchakarma detox retreats at our Kerala sanctuary. Packages include full boarding, organic Ayurvedic Sattvic meals, daily multi-stage therapies (Purva, Pradhana, Paschat Karma), and daily Vaidya monitoring.",
   },
   {
     question: "How long does shipping take for dispensary medicine orders?",
@@ -83,11 +83,9 @@ export default function ContactPage() {
   };
 
   return (
-    <div className="min-h-screen bg-brand-cream pb-24">
-      {/* Editorial Hero Banner */}
+    <div className="min-h-screen bg-white pb-24">
+      {/* Editorial Hero Banner (bg-brand-brown) */}
       <section className="relative bg-brand-brown text-white py-16 lg:py-20 overflow-hidden border-b border-brand-brown-light/30">
-        <div className="absolute inset-0 opacity-10 bg-[radial-gradient(#C5A059_1px,transparent_1px)] [background-size:24px_24px]" />
-
         <Container size="xl" className="relative z-10 text-center max-w-4xl mx-auto space-y-4">
           <Badge
             variant="gold"
@@ -101,100 +99,82 @@ export default function ContactPage() {
             <p className="font-serif italic text-brand-gold text-xs sm:text-sm tracking-widest">
               आरोग्यं परमं भाग्यम् स्वास्थ्यं सर्वार्थसाधनम्
             </p>
-            <h1 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-white">
-              Connect with Our Vaidyas & Healing Sanctuary
+            <h1 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-normal tracking-tight text-white">
+              Connect with Our Clinical Sanctum
             </h1>
           </div>
 
-          <p className="text-xs sm:text-sm text-brand-cream-dark leading-relaxed max-w-2xl mx-auto">
-            Whether you seek guidance on Panchakarma admissions, custom herbal prescriptions, or scheduling a pulse diagnosis appointment, our medical coordinators are here to assist you.
+          <p className="text-xs sm:text-sm text-brand-sand/90 leading-relaxed max-w-2xl mx-auto font-light">
+            Whether you are planning a classical Panchakarma detox, seeking medical pulse diagnosis, or ordering dispensary remedies, our Vaidyas and healthcare coordinators are here to guide your healing journey.
           </p>
         </Container>
       </section>
 
-      <Container size="xl" className="pt-12">
-        {/* Contact Info Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16">
-          {/* Card 1: Location */}
-          <div className="bg-white rounded-2xl p-6 sm:p-8 border border-brand-brown-border shadow-card space-y-4 flex flex-col justify-between">
-            <div className="space-y-3">
-              <div className="w-12 h-12 rounded-2xl bg-brand-green/10 text-brand-green flex items-center justify-center">
-                <MapPin className="w-6 h-6" />
-              </div>
-              <h3 className="font-serif text-xl font-bold text-brand-brown">
-                Treatment Sanctum
-              </h3>
-              <p className="text-xs text-brand-brown leading-relaxed">
-                Ayur Veda Mantra Panchakarma Treatment & Research Centre
-                <br />
-                Temple Sanctum Enclave, Fort Road
-                <br />
-                Kochi, Kerala — 682001, India
-              </p>
+      {/* Main Content Layout */}
+      <Container size="xl" className="pt-12 sm:pt-16 space-y-12">
+        {/* 3 Sanctum Location & Helpline Cards */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div className="bg-white rounded-sm p-6 border border-brand-brown-border shadow-card-soft space-y-3">
+            <div className="w-10 h-10 rounded-full bg-brand-green/10 text-brand-green flex items-center justify-center">
+              <MapPin className="w-5 h-5" />
             </div>
-            <span className="text-[11px] font-semibold text-brand-green flex items-center gap-1 pt-2 border-t border-brand-brown-border/60">
-              <ShieldCheck className="w-3.5 h-3.5" /> NABH Accredited Facility
+            <h3 className="font-serif font-medium text-lg text-brand-brown">
+              Sanctuary Location
+            </h3>
+            <p className="text-xs text-brand-brown-muted leading-relaxed font-light">
+              Ayur Veda Mantra Panchakarma Treatment & Research Centre, Near Sree Krishna Temple Road, Kochi, Kerala — 682001, India.
+            </p>
+            <span className="text-[11px] font-semibold text-brand-green block pt-1">
+              Open Daily for In-Clinic Visits
             </span>
           </div>
 
-          {/* Card 2: Phone & Hours */}
-          <div className="bg-white rounded-2xl p-6 sm:p-8 border border-brand-brown-border shadow-card space-y-4 flex flex-col justify-between">
-            <div className="space-y-3">
-              <div className="w-12 h-12 rounded-2xl bg-brand-gold/15 text-brand-gold-dark flex items-center justify-center">
-                <Phone className="w-6 h-6" />
-              </div>
-              <h3 className="font-serif text-xl font-bold text-brand-brown">
-                Direct Helpline
-              </h3>
-              <p className="text-xs text-brand-brown leading-relaxed">
-                General Inquiries: <strong className="font-mono text-brand-brown">+91 98765 43210</strong>
-                <br />
-                WhatsApp Medical Desk: <strong className="font-mono text-brand-brown">+91 98765 43211</strong>
-                <br />
-                Mon – Sun: 8:00 AM – 8:00 PM IST
-              </p>
+          <div className="bg-white rounded-sm p-6 border border-brand-brown-border shadow-card-soft space-y-3">
+            <div className="w-10 h-10 rounded-full bg-brand-green/10 text-brand-green flex items-center justify-center">
+              <Phone className="w-5 h-5" />
             </div>
-            <span className="text-[11px] font-semibold text-brand-gold-dark flex items-center gap-1 pt-2 border-t border-brand-brown-border/60">
-              <Clock className="w-3.5 h-3.5" /> Emergency Support Available
+            <h3 className="font-serif font-medium text-lg text-brand-brown">
+              Direct Helpline Desks
+            </h3>
+            <div className="text-xs text-brand-brown-muted space-y-1 font-light">
+              <p>General Helpline: <strong className="text-brand-brown">+91 98765 43210</strong></p>
+              <p>WhatsApp Desk: <strong className="text-brand-brown">+91 98765 43211</strong></p>
+            </div>
+            <span className="text-[11px] font-semibold text-brand-green block pt-1">
+              Mon – Sun: 8:00 AM – 8:00 PM IST
             </span>
           </div>
 
-          {/* Card 3: Email */}
-          <div className="bg-white rounded-2xl p-6 sm:p-8 border border-brand-brown-border shadow-card space-y-4 flex flex-col justify-between">
-            <div className="space-y-3">
-              <div className="w-12 h-12 rounded-2xl bg-brand-brown/10 text-brand-brown flex items-center justify-center">
-                <Mail className="w-6 h-6" />
-              </div>
-              <h3 className="font-serif text-xl font-bold text-brand-brown">
-                Dispensary & Inquiries
-              </h3>
-              <p className="text-xs text-brand-brown leading-relaxed">
-                Patient Care: <strong className="text-brand-green">care@ayurvedamantra.com</strong>
-                <br />
-                Doctor Consultations: <strong className="text-brand-green">appointments@ayurvedamantra.com</strong>
-                <br />
-                Research Inquiries: <strong className="text-brand-green">research@ayurvedamantra.com</strong>
-              </p>
+          <div className="bg-white rounded-sm p-6 border border-brand-brown-border shadow-card-soft space-y-3">
+            <div className="w-10 h-10 rounded-full bg-brand-green/10 text-brand-green flex items-center justify-center">
+              <Mail className="w-5 h-5" />
             </div>
-            <span className="text-[11px] font-semibold text-brand-brown-muted flex items-center gap-1 pt-2 border-t border-brand-brown-border/60">
-              <MessageSquare className="w-3.5 h-3.5" /> Fast Response Within 24 Hours
+            <h3 className="font-serif font-medium text-lg text-brand-brown">
+              Dispensary & Inquiries
+            </h3>
+            <div className="text-xs text-brand-brown-muted space-y-1 font-light">
+              <p>Patient Care: <strong className="text-brand-brown">care@ayurvedamantra.com</strong></p>
+              <p>Consultations: <strong className="text-brand-brown">consult@ayurvedamantra.com</strong></p>
+            </div>
+            <span className="text-[11px] font-semibold text-brand-green block pt-1">
+              24-Hour Clinical Email Turnaround
             </span>
           </div>
         </div>
 
-        {/* 2-Column: Inquiry Form & Sanctuary Location Overview */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-start mb-20">
-          {/* Left Column: Form */}
-          <div className="lg:col-span-7 bg-white rounded-3xl p-8 sm:p-10 border border-brand-brown-border shadow-card space-y-6">
+        {/* Form and Quick Actions Split */}
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+          {/* Left Column: Patient Inquiry Form */}
+          <div className="lg:col-span-7 bg-white rounded-sm p-8 sm:p-10 border border-brand-brown-border shadow-card space-y-6">
             <div className="space-y-1 border-b border-brand-brown-border/60 pb-4">
-              <Badge variant="green" size="sm">
-                Patient Inquiry Form
-              </Badge>
+              <span className="text-xs font-semibold text-brand-green uppercase tracking-widest">
+                Message Our Medical Coordinator
+              </span>
               <h2 className="font-serif text-2xl font-bold text-brand-brown">
-                Send a Message to Our Medical Desk
+                Send a Medical Inquiry
               </h2>
-              <p className="text-xs text-brand-brown-muted">
-                Our Vaidyas and healthcare coordinators will review your query and respond promptly.
+              <p className="text-xs text-brand-brown-muted font-light">
+                Fill out the details below and our clinical coordinator will reach out to discuss your health needs.
               </p>
             </div>
 
@@ -211,7 +191,7 @@ export default function ContactPage() {
                       value={formData.fullName}
                       onChange={(e) => setFormData({ ...formData, fullName: e.target.value })}
                       placeholder="e.g. Radhika Sharma"
-                      className="w-full p-3 bg-brand-sand/30 border border-brand-brown-border rounded-xl text-xs text-brand-brown focus:outline-none focus:ring-1 focus:ring-brand-green"
+                      className="w-full p-3 bg-white border border-brand-brown-border rounded-lg text-xs text-brand-brown focus:outline-none focus:ring-1 focus:ring-brand-green"
                     />
                   </div>
 
@@ -225,7 +205,7 @@ export default function ContactPage() {
                       value={formData.email}
                       onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                       placeholder="e.g. radhika@example.com"
-                      className="w-full p-3 bg-brand-sand/30 border border-brand-brown-border rounded-xl text-xs text-brand-brown focus:outline-none focus:ring-1 focus:ring-brand-green"
+                      className="w-full p-3 bg-white border border-brand-brown-border rounded-lg text-xs text-brand-brown focus:outline-none focus:ring-1 focus:ring-brand-green"
                     />
                   </div>
                 </div>
@@ -240,7 +220,7 @@ export default function ContactPage() {
                       value={formData.phone}
                       onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
                       placeholder="+91 98765 43210"
-                      className="w-full p-3 bg-brand-sand/30 border border-brand-brown-border rounded-xl text-xs text-brand-brown focus:outline-none focus:ring-1 focus:ring-brand-green font-mono"
+                      className="w-full p-3 bg-white border border-brand-brown-border rounded-lg text-xs text-brand-brown focus:outline-none focus:ring-1 focus:ring-brand-green font-mono"
                     />
                   </div>
 
@@ -251,7 +231,7 @@ export default function ContactPage() {
                     <select
                       value={formData.category}
                       onChange={(e) => setFormData({ ...formData, category: e.target.value })}
-                      className="w-full p-3 bg-brand-sand/30 border border-brand-brown-border rounded-xl text-xs text-brand-brown focus:outline-none focus:ring-1 focus:ring-brand-green"
+                      className="w-full p-3 bg-white border border-brand-brown-border rounded-lg text-xs text-brand-brown focus:outline-none focus:ring-1 focus:ring-brand-green"
                     >
                       <option value="General Inquiry">General Healthcare Inquiry</option>
                       <option value="Panchakarma Admission">Panchakarma Treatment Admission</option>
@@ -272,7 +252,7 @@ export default function ContactPage() {
                     value={formData.message}
                     onChange={(e) => setFormData({ ...formData, message: e.target.value })}
                     placeholder="Please describe your health requirements, questions about therapies, or preferred visit dates..."
-                    className="w-full p-3 bg-brand-sand/30 border border-brand-brown-border rounded-xl text-xs text-brand-brown focus:outline-none focus:ring-1 focus:ring-brand-green"
+                    className="w-full p-3 bg-white border border-brand-brown-border rounded-lg text-xs text-brand-brown focus:outline-none focus:ring-1 focus:ring-brand-green"
                   />
                 </div>
 
@@ -288,7 +268,7 @@ export default function ContactPage() {
                 </Button>
               </form>
             ) : (
-              <div className="p-8 bg-brand-sand/40 rounded-2xl border border-brand-brown-border text-center space-y-4 animate-fadeIn">
+              <div className="p-8 bg-white rounded-lg border border-brand-green text-center space-y-4 animate-fadeIn shadow-md">
                 <div className="w-16 h-16 rounded-full bg-brand-green/10 text-brand-green flex items-center justify-center mx-auto">
                   <CheckCircle2 className="w-8 h-8 stroke-[2.2]" />
                 </div>
@@ -297,7 +277,7 @@ export default function ContactPage() {
                     Dhanyavadah! Inquiry Received
                   </h3>
                   <p className="text-xs text-brand-brown-muted max-w-md mx-auto leading-relaxed">
-                    Our Senior Vaidyas and healthcare coordinators have received your message. We will reach out to you within 24 hours at <strong className="text-brand-brown">{formData.email}</strong>.
+                    Our healthcare coordinators have received your message. We will reach out to you within 24 hours at <strong className="text-brand-brown">{formData.email}</strong>.
                   </p>
                 </div>
                 <button
@@ -310,17 +290,17 @@ export default function ContactPage() {
             )}
           </div>
 
-          {/* Right Column: Sanctum Atmosphere & Doctor CTA */}
+          {/* Right Column: Doctor Access CTA & Visiting Hours */}
           <div className="lg:col-span-5 space-y-6">
-            <div className="bg-brand-brown text-white rounded-3xl p-8 space-y-5 border border-brand-brown-light/40 shadow-luxury">
+            <div className="bg-brand-brown text-white rounded-sm p-8 space-y-5 border border-brand-gold/20 shadow-luxury">
               <Badge variant="gold" size="sm" className="bg-brand-gold/20 text-brand-gold-light border-brand-gold/40">
                 Direct Vaidya Access
               </Badge>
               <h3 className="font-serif text-2xl font-bold">
                 Need an Immediate Consultation?
               </h3>
-              <p className="text-xs sm:text-sm text-brand-cream-dark leading-relaxed">
-                Skip the contact form and schedule an instant video consultation or in-clinic Nadi Pariksha with our Senior Certified Vaidyas directly.
+              <p className="text-xs sm:text-sm text-brand-sand/80 leading-relaxed font-light">
+                Skip the contact form and schedule an instant video consultation or in-clinic Nadi Pariksha with Chief Physician Dr. Anupama Ramachandran directly.
               </p>
               <div className="pt-2">
                 <Button
@@ -336,7 +316,7 @@ export default function ContactPage() {
             </div>
 
             {/* Clinic Visiting Hours Box */}
-            <div className="bg-white rounded-3xl p-6 sm:p-8 border border-brand-brown-border shadow-card space-y-4">
+            <div className="bg-white rounded-sm p-6 sm:p-8 border border-brand-brown-border shadow-card space-y-4">
               <h4 className="font-serif font-bold text-lg text-brand-brown border-b border-brand-brown-border/60 pb-3">
                 Sanctum Treatment Timings
               </h4>
@@ -361,8 +341,8 @@ export default function ContactPage() {
           </div>
         </div>
 
-        {/* Patient FAQs Accordion */}
-        <div className="bg-white rounded-3xl p-8 sm:p-12 border border-brand-brown-border shadow-card space-y-8">
+        {/* Patient FAQs Accordion (bg-white) */}
+        <div className="bg-white rounded-sm p-8 sm:p-12 border border-brand-brown-border shadow-card space-y-8">
           <div className="text-center space-y-2 max-w-2xl mx-auto">
             <Badge variant="gold" size="sm" className="mx-auto">
               Frequently Asked Questions
@@ -370,7 +350,7 @@ export default function ContactPage() {
             <h2 className="font-serif text-2xl sm:text-3xl font-bold text-brand-brown">
               Common Questions About Ayurvedic Therapies
             </h2>
-            <p className="text-xs text-brand-brown-muted">
+            <p className="text-xs text-brand-brown-muted font-light">
               Learn more about how our Panchakarma treatments, pulse diagnosis, and online consultations work.
             </p>
           </div>
@@ -393,7 +373,7 @@ export default function ContactPage() {
                   </button>
 
                   {isOpen && (
-                    <div className="pb-4 pt-1 text-xs sm:text-sm text-brand-brown-muted leading-relaxed animate-fadeIn">
+                    <div className="pb-4 pt-1 text-xs sm:text-sm text-brand-brown-muted leading-relaxed animate-fadeIn font-light">
                       <p>{faq.answer}</p>
                     </div>
                   )}

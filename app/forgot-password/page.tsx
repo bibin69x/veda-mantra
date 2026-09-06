@@ -25,9 +25,9 @@ export default function ForgotPasswordPage() {
   };
 
   return (
-    <div className="min-h-screen bg-brand-cream py-16 sm:py-24 flex items-center">
+    <div className="min-h-screen bg-white py-16 sm:py-24 flex items-center">
       <Container size="md">
-        <div className="max-w-md mx-auto bg-white rounded-3xl p-8 sm:p-10 border border-brand-brown-border shadow-luxury space-y-6">
+        <div className="max-w-md mx-auto bg-white rounded-2xl p-8 sm:p-10 border border-brand-brown-border shadow-luxury space-y-6">
           <div className="text-center space-y-2">
             <div className="relative h-12 w-48 mx-auto mb-3">
               <Image
@@ -44,7 +44,7 @@ export default function ForgotPasswordPage() {
             <h1 className="font-serif text-2xl sm:text-3xl font-bold text-brand-brown">
               Reset Your Password
             </h1>
-            <p className="text-xs text-brand-brown-muted">
+            <p className="text-xs text-brand-brown-muted font-light">
               Enter your registered email address and we will send you a secure link to reset your credentials.
             </p>
           </div>
@@ -62,7 +62,7 @@ export default function ForgotPasswordPage() {
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
                   placeholder="name@example.com"
-                  className="w-full p-3 bg-brand-sand/30 border border-brand-brown-border rounded-xl text-sm text-brand-brown focus:outline-none focus:ring-1 focus:ring-brand-green"
+                  className="w-full p-3 bg-white border border-brand-brown-border rounded-xl text-sm text-brand-brown focus:outline-none focus:ring-1 focus:ring-brand-green"
                 />
               </div>
 
@@ -77,7 +77,7 @@ export default function ForgotPasswordPage() {
               </Button>
             </form>
           ) : (
-            <div className="p-6 bg-brand-sand/40 rounded-2xl border border-brand-brown-border text-center space-y-3 animate-fadeIn">
+            <div className="p-6 bg-white rounded-2xl border border-brand-brown-border shadow-sm text-center space-y-3 animate-fadeIn">
               <div className="w-12 h-12 rounded-full bg-brand-green/10 text-brand-green flex items-center justify-center mx-auto">
                 <CheckCircle2 className="w-6 h-6 stroke-[2.5]" />
               </div>

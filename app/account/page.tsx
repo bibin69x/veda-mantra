@@ -39,9 +39,9 @@ export default function AccountDashboardPage() {
   }, []);
 
   return (
-    <div className="min-h-screen bg-brand-cream pb-24">
+    <div className="min-h-screen bg-white pb-24">
       {/* Header Breadcrumbs */}
-      <div className="bg-brand-sand/40 border-b border-brand-brown-border/60 py-3">
+      <div className="bg-white border-b border-brand-brown-border/60 py-3">
         <Container size="xl">
           <nav className="flex items-center space-x-2 text-xs text-brand-brown-muted">
             <Link href="/" className="hover:text-brand-green transition-colors">
@@ -73,7 +73,7 @@ export default function AccountDashboardPage() {
                 <h1 className="font-serif text-2xl sm:text-3xl font-bold">
                   Namaste, {userName}
                 </h1>
-                <p className="text-xs sm:text-sm text-brand-cream-dark max-w-xl leading-relaxed">
+                <p className="text-xs sm:text-sm text-white/80 max-w-xl leading-relaxed">
                   Your personalized wellness dashboard. Access your classical prescriptions, scheduled Nadi Pariksha sessions, and order deliveries.
                 </p>
               </div>
@@ -132,7 +132,7 @@ export default function AccountDashboardPage() {
 
               <div className="flex flex-col md:flex-row gap-5 items-start md:items-center justify-between">
                 <div className="flex gap-4 items-center">
-                  <div className="relative w-16 h-16 rounded-xl overflow-hidden bg-brand-sand shrink-0 border border-brand-brown-border">
+                  <div className="relative w-16 h-16 rounded-xl overflow-hidden bg-white shrink-0 border border-brand-brown-border">
                     <Image
                       src="https://images.unsplash.com/photo-1594824813589-325244585e5d?auto=format&fit=crop&w=800&q=80"
                       alt="Dr. Anupama Ramachandran"
@@ -192,13 +192,13 @@ export default function AccountDashboardPage() {
               </div>
 
               {/* Order Row */}
-              <div className="p-4 rounded-xl bg-brand-sand/30 border border-brand-brown-border/60 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+              <div className="p-4 rounded-xl bg-white border border-brand-brown-border shadow-sm flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
                 <div className="space-y-1">
                   <div className="flex items-center gap-2.5">
                     <span className="text-xs font-mono font-bold text-brand-brown">
                       ORD-AVM-849201
                     </span>
-                    <span className="bg-blue-50 text-blue-700 border border-blue-200 text-[10px] font-bold px-2 py-0.5 rounded-full">
+                    <span className="bg-brand-green/10 text-brand-green border border-brand-green/20 text-[10px] font-bold px-2 py-0.5 rounded-full">
                       In Transit • BlueDart Express
                     </span>
                   </div>
@@ -222,7 +222,7 @@ export default function AccountDashboardPage() {
             </div>
 
             {/* Dosha & Lifestyle Recommendation Card */}
-            <div className="bg-brand-sand/40 rounded-2xl p-6 border border-brand-brown-border space-y-4">
+            <div className="bg-white rounded-2xl p-6 border border-brand-brown-border shadow-sm space-y-4">
               <div className="flex items-center gap-2">
                 <Flame className="w-5 h-5 text-brand-gold" />
                 <h3 className="font-serif text-lg font-bold text-brand-brown">

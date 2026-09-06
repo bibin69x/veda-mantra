@@ -143,10 +143,10 @@ export default function CheckoutPage() {
 
   if (items.length === 0) {
     return (
-      <div className="min-h-screen bg-brand-cream py-20">
+      <div className="min-h-screen bg-white py-20">
         <Container size="md">
           <div className="bg-white rounded-2xl p-10 text-center border border-brand-brown-border shadow-card space-y-5">
-            <div className="w-16 h-16 rounded-full bg-brand-sand/80 flex items-center justify-center mx-auto text-brand-gold">
+            <div className="w-16 h-16 rounded-full bg-brand-brown/5 border border-brand-brown-border flex items-center justify-center mx-auto text-brand-gold">
               <ShoppingBag className="w-8 h-8 stroke-[1.5]" />
             </div>
             <div className="space-y-1">
@@ -167,9 +167,9 @@ export default function CheckoutPage() {
   }
 
   return (
-    <div className="min-h-screen bg-brand-cream pb-24">
+    <div className="min-h-screen bg-white pb-24">
       {/* Breadcrumb Bar */}
-      <div className="bg-brand-sand/40 border-b border-brand-brown-border/60 py-3">
+      <div className="bg-white border-b border-brand-brown-border py-3">
         <Container size="xl">
           <nav className="flex items-center space-x-2 text-xs text-brand-brown-muted">
             <Link href="/" className="hover:text-brand-green transition-colors">
@@ -224,7 +224,7 @@ export default function CheckoutPage() {
                         setShippingAddress({ ...shippingAddress, fullName: e.target.value })
                       }
                       placeholder="e.g. Rajesh Pillai"
-                      className={`w-full p-3 bg-brand-sand/30 border rounded-lg text-sm text-brand-brown focus:outline-none focus:ring-1 focus:ring-brand-green ${
+                      className={`w-full p-3 bg-white border rounded-lg text-sm text-brand-brown focus:outline-none focus:ring-1 focus:ring-brand-green ${
                         formErrors.fullName ? "border-red-500" : "border-brand-brown-border"
                       }`}
                     />
@@ -246,7 +246,7 @@ export default function CheckoutPage() {
                         setShippingAddress({ ...shippingAddress, email: e.target.value })
                       }
                       placeholder="e.g. rajesh@example.com"
-                      className={`w-full p-3 bg-brand-sand/30 border rounded-lg text-sm text-brand-brown focus:outline-none focus:ring-1 focus:ring-brand-green ${
+                      className={`w-full p-3 bg-white border rounded-lg text-sm text-brand-brown focus:outline-none focus:ring-1 focus:ring-brand-green ${
                         formErrors.email ? "border-red-500" : "border-brand-brown-border"
                       }`}
                     />
@@ -268,7 +268,7 @@ export default function CheckoutPage() {
                         setShippingAddress({ ...shippingAddress, phone: e.target.value })
                       }
                       placeholder="e.g. 9876543210"
-                      className={`w-full p-3 bg-brand-sand/30 border rounded-lg text-sm text-brand-brown focus:outline-none focus:ring-1 focus:ring-brand-green ${
+                      className={`w-full p-3 bg-white border rounded-lg text-sm text-brand-brown focus:outline-none focus:ring-1 focus:ring-brand-green ${
                         formErrors.phone ? "border-red-500" : "border-brand-brown-border"
                       }`}
                     />
@@ -290,7 +290,7 @@ export default function CheckoutPage() {
                         setShippingAddress({ ...shippingAddress, addressLine1: e.target.value })
                       }
                       placeholder="e.g. 42, Temple Road, Near Sree Krishna Temple"
-                      className={`w-full p-3 bg-brand-sand/30 border rounded-lg text-sm text-brand-brown focus:outline-none focus:ring-1 focus:ring-brand-green ${
+                      className={`w-full p-3 bg-white border rounded-lg text-sm text-brand-brown focus:outline-none focus:ring-1 focus:ring-brand-green ${
                         formErrors.addressLine1 ? "border-red-500" : "border-brand-brown-border"
                       }`}
                     />
@@ -311,7 +311,7 @@ export default function CheckoutPage() {
                         setShippingAddress({ ...shippingAddress, landmark: e.target.value })
                       }
                       placeholder="e.g. Opposite Post Office"
-                      className="w-full p-3 bg-brand-sand/30 border border-brand-brown-border rounded-lg text-sm text-brand-brown focus:outline-none focus:ring-1 focus:ring-brand-green"
+                      className="w-full p-3 bg-white border border-brand-brown-border rounded-lg text-sm text-brand-brown focus:outline-none focus:ring-1 focus:ring-brand-green"
                     />
                   </div>
 
@@ -327,7 +327,7 @@ export default function CheckoutPage() {
                         setShippingAddress({ ...shippingAddress, city: e.target.value })
                       }
                       placeholder="e.g. Kochi"
-                      className={`w-full p-3 bg-brand-sand/30 border rounded-lg text-sm text-brand-brown focus:outline-none focus:ring-1 focus:ring-brand-green ${
+                      className={`w-full p-3 bg-white border rounded-lg text-sm text-brand-brown focus:outline-none focus:ring-1 focus:ring-brand-green ${
                         formErrors.city ? "border-red-500" : "border-brand-brown-border"
                       }`}
                     />
@@ -346,7 +346,7 @@ export default function CheckoutPage() {
                       onChange={(e) =>
                         setShippingAddress({ ...shippingAddress, state: e.target.value })
                       }
-                      className="w-full p-3 bg-brand-sand/30 border border-brand-brown-border rounded-lg text-sm text-brand-brown focus:outline-none focus:ring-1 focus:ring-brand-green"
+                      className="w-full p-3 bg-white border border-brand-brown-border rounded-lg text-sm text-brand-brown focus:outline-none focus:ring-1 focus:ring-brand-green"
                     >
                       {INDIAN_STATES.map((st) => (
                         <option key={st} value={st}>
@@ -372,7 +372,7 @@ export default function CheckoutPage() {
                         })
                       }
                       placeholder="e.g. 682001"
-                      className={`w-full p-3 bg-brand-sand/30 border rounded-lg text-sm font-mono text-brand-brown focus:outline-none focus:ring-1 focus:ring-brand-green ${
+                      className={`w-full p-3 bg-white border rounded-lg text-sm font-mono text-brand-brown focus:outline-none focus:ring-1 focus:ring-brand-green ${
                         formErrors.pincode ? "border-red-500" : "border-brand-brown-border"
                       }`}
                     />
@@ -462,7 +462,7 @@ export default function CheckoutPage() {
                     onClick={() => setPaymentMethod("razorpay")}
                     className={`p-5 rounded-xl border-2 transition-all cursor-pointer flex items-center justify-between ${
                       paymentMethod === "razorpay"
-                        ? "border-brand-brown bg-brand-sand/30 shadow-sm"
+                        ? "border-brand-brown bg-brand-brown/5 shadow-sm"
                         : "border-brand-brown-border hover:border-brand-brown bg-white"
                     }`}
                   >
@@ -483,7 +483,7 @@ export default function CheckoutPage() {
                       className={`text-xs font-semibold px-3 py-1 rounded-full ${
                         paymentMethod === "razorpay"
                           ? "bg-brand-brown text-white"
-                          : "bg-brand-sand text-brand-brown-muted"
+                          : "bg-brand-brown/10 text-brand-brown-muted"
                       }`}
                     >
                       {paymentMethod === "razorpay" ? "Selected" : "Select"}
@@ -495,7 +495,7 @@ export default function CheckoutPage() {
                     onClick={() => setPaymentMethod("cod")}
                     className={`p-5 rounded-xl border-2 transition-all cursor-pointer flex items-center justify-between ${
                       paymentMethod === "cod"
-                        ? "border-brand-brown bg-brand-sand/30 shadow-sm"
+                        ? "border-brand-brown bg-brand-brown/5 shadow-sm"
                         : "border-brand-brown-border hover:border-brand-brown bg-white"
                     }`}
                   >
@@ -516,7 +516,7 @@ export default function CheckoutPage() {
                       className={`text-xs font-semibold px-3 py-1 rounded-full ${
                         paymentMethod === "cod"
                           ? "bg-brand-brown text-white"
-                          : "bg-brand-sand text-brand-brown-muted"
+                          : "bg-brand-brown/10 text-brand-brown-muted"
                       }`}
                     >
                       {paymentMethod === "cod" ? "Selected" : "Select"}
@@ -557,7 +557,7 @@ export default function CheckoutPage() {
               <div className="space-y-3.5 max-h-64 overflow-y-auto pr-1 divide-y divide-brand-brown-border/40">
                 {items.map((item) => (
                   <div key={item.id} className="pt-3 first:pt-0 flex gap-3 items-center">
-                    <div className="relative w-12 h-12 rounded-lg overflow-hidden bg-brand-sand/30 border border-brand-brown-border shrink-0">
+                    <div className="relative w-12 h-12 rounded-lg overflow-hidden bg-white border border-brand-brown-border shrink-0">
                       <Image src={item.image} alt={item.title} fill className="object-cover" />
                     </div>
                     <div className="flex-1 min-w-0">

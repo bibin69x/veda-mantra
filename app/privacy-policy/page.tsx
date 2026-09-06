@@ -13,9 +13,9 @@ export const metadata: Metadata = {
 
 export default function PrivacyPolicyPage() {
   return (
-    <div className="min-h-screen bg-brand-cream pb-24">
+    <div className="min-h-screen bg-white pb-24">
       {/* Header Breadcrumbs */}
-      <div className="bg-brand-sand/40 border-b border-brand-brown-border/60 py-3">
+      <div className="bg-white border-b border-brand-brown-border/60 py-3">
         <Container size="xl">
           <nav className="flex items-center space-x-2 text-xs text-brand-brown-muted">
             <Link href="/" className="hover:text-brand-green transition-colors">
@@ -28,7 +28,7 @@ export default function PrivacyPolicyPage() {
       </div>
 
       <Container size="md" className="pt-10 sm:pt-14">
-        <div className="bg-white rounded-3xl p-8 sm:p-14 border border-brand-brown-border shadow-card space-y-8">
+        <div className="bg-white rounded-2xl p-8 sm:p-14 border border-brand-brown-border shadow-card space-y-8">
           <div className="space-y-3 border-b border-brand-brown-border pb-6">
             <Badge variant="gold" size="sm">
               Legal Compliance • DPDP Act 2023 & Healthcare Privacy
@@ -41,7 +41,7 @@ export default function PrivacyPolicyPage() {
             </p>
           </div>
 
-          <div className="space-y-6 text-xs sm:text-sm text-brand-brown leading-relaxed font-sans">
+          <div className="space-y-6 text-xs sm:text-sm text-brand-brown leading-relaxed font-sans font-light">
             <section className="space-y-2">
               <h2 className="font-serif text-lg sm:text-xl font-bold text-brand-brown">
                 1. Commitment to Patient Confidentiality
@@ -60,57 +60,49 @@ export default function PrivacyPolicyPage() {
                   <strong className="text-brand-brown">Patient Profile Data:</strong> Full Name, Email, WhatsApp Phone, Date of Birth, Gender, and Delivery Address.
                 </li>
                 <li>
-                  <strong className="text-brand-brown">Clinical Health Information:</strong> Chief health complaints, symptoms duration, known allergies, current allopathic/Ayurvedic prescriptions, and Prakriti constitutional assessments.
+                  <strong className="text-brand-brown">Clinical Intake & Diagnostic Notes:</strong> Symptoms, Prakriti dosha assessments, medical history, prior scans, and prescription records.
                 </li>
                 <li>
-                  <strong className="text-brand-brown">Transaction & Payment Data:</strong> Razorpay cryptographic tokenized IDs, order receipts, and GST invoices. (We never store raw credit card numbers or UPI PINs on our servers).
+                  <strong className="text-brand-brown">Payment Transaction Logs:</strong> Razorpay secure tokenized transaction IDs (we never store credit card numbers or banking passwords).
                 </li>
               </ul>
             </section>
 
             <section className="space-y-2">
               <h2 className="font-serif text-lg sm:text-xl font-bold text-brand-brown">
-                3. Purpose of Processing
+                3. Purpose of Clinical Data Processing
               </h2>
-              <p>Your data is processed exclusively for:</p>
+              <p className="text-brand-brown-muted">
+                Your medical data is utilized strictly by certified physicians for:
+              </p>
               <ul className="list-disc list-inside space-y-1 text-brand-brown-muted pl-2">
-                <li>Conducting personalized Ayurvedic consultations and generating Sastric medical prescriptions.</li>
-                <li>Formulating and safely compounding customized herbal oils and rasayanas at our dispensary.</li>
-                <li>Dispatching order tracking notifications and appointment calendar reminders via WhatsApp/Email.</li>
-                <li>Ensuring clinical safety against herbal contraindications or drug interactions.</li>
+                <li>Formulating personalized Panchakarma therapy plans and herbal prescriptions.</li>
+                <li>Facilitating continuous physician follow-ups and telemetry consultations.</li>
+                <li>Compounding and dispatching personalized apothecary medicines.</li>
+                <li>Maintaining regulatory compliance with the Ministry of AYUSH.</li>
               </ul>
             </section>
 
             <section className="space-y-2">
               <h2 className="font-serif text-lg sm:text-xl font-bold text-brand-brown">
-                4. Data Security & Encryption
+                4. Data Security & Storage Standards
               </h2>
               <p>
-                All data transmission between your browser and our servers is encrypted using 256-bit SSL (TLS 1.3) protocols. Patient medical files are secured in database clusters with Row Level Security (RLS) and strict role-based practitioner authorization.
+                We employ bank-grade 256-bit SSL encryption for all network transmissions. Patient databases are hosted within secure ISO 27001-certified Indian data centers with strict role-based access control (RBAC). Only the treating physician and registered pharmacists can view medical profiles.
               </p>
             </section>
 
             <section className="space-y-2">
               <h2 className="font-serif text-lg sm:text-xl font-bold text-brand-brown">
-                5. Third-Party Integrations
+                5. Contacting the Grievance & Privacy Officer
               </h2>
               <p>
-                We collaborate solely with verified, enterprise-grade infrastructure providers:
+                If you have questions regarding your medical privacy or wish to request data erasure, please email our Data Protection Officer at:
               </p>
-              <ul className="list-disc list-inside space-y-1 text-brand-brown-muted pl-2">
-                <li><strong>Razorpay:</strong> RBI-licensed compliant payment gateway.</li>
-                <li><strong>Supabase:</strong> ISO 27001 certified encrypted PostgreSQL data storage.</li>
-                <li><strong>Logistics Partners:</strong> BlueDart, Delhivery, and India Post solely for shipping labels.</li>
-              </ul>
-            </section>
-
-            <section className="space-y-2">
-              <h2 className="font-serif text-lg sm:text-xl font-bold text-brand-brown">
-                6. Patient Rights & Data Portability
-              </h2>
-              <p>
-                You retain the right to request a complete copy of your medical case history, update address preferences, or request permanent deletion of non-clinical account data by contacting our Privacy Officer at <strong className="text-brand-green">privacy@ayurvedamantra.com</strong>.
-              </p>
+              <div className="p-4 bg-white rounded-xl border border-brand-brown-border text-xs space-y-1 mt-2">
+                <p><strong>Privacy Desk:</strong> privacy@ayurvedamantra.com</p>
+                <p><strong>Physical Address:</strong> Ayur Veda Mantra Sanctum, Kochi, Kerala — 682001, India.</p>
+              </div>
             </section>
           </div>
         </div>

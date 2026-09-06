@@ -49,9 +49,9 @@ const PAST_CONSULTATIONS = [
 
 export default function AccountConsultationsPage() {
   return (
-    <div className="min-h-screen bg-brand-cream pb-24">
+    <div className="min-h-screen bg-white pb-24">
       {/* Header Breadcrumbs */}
-      <div className="bg-brand-sand/40 border-b border-brand-brown-border/60 py-3">
+      <div className="bg-white border-b border-brand-brown-border/60 py-3">
         <Container size="xl">
           <nav className="flex items-center space-x-2 text-xs text-brand-brown-muted">
             <Link href="/" className="hover:text-brand-green transition-colors">
@@ -106,7 +106,7 @@ export default function AccountConsultationsPage() {
                 >
                   <div className="flex flex-col md:flex-row gap-5 items-start md:items-center justify-between">
                     <div className="flex gap-4 items-center">
-                      <div className="relative w-16 h-16 sm:w-20 sm:h-20 rounded-xl overflow-hidden bg-brand-sand shrink-0 border border-brand-brown-border">
+                      <div className="relative w-16 h-16 sm:w-20 sm:h-20 rounded-xl overflow-hidden bg-white shrink-0 border border-brand-brown-border">
                         <Image src={c.image} alt={c.doctorName} fill className="object-cover" />
                       </div>
                       <div className="space-y-1">
@@ -172,7 +172,7 @@ export default function AccountConsultationsPage() {
 
                     <button
                       onClick={() => alert(`Downloading Medical Case Sheet ${c.id}...`)}
-                      className="px-3 py-1.5 rounded-lg border border-brand-brown-border bg-brand-sand/40 text-brand-brown text-xs font-semibold hover:bg-brand-sand transition-colors flex items-center gap-1.5 self-start sm:self-auto"
+                      className="px-3 py-1.5 rounded-lg border border-brand-brown-border bg-white text-brand-brown text-xs font-semibold hover:bg-brand-brown/5 transition-colors flex items-center gap-1.5 self-start sm:self-auto"
                     >
                       <Download className="w-3.5 h-3.5" />
                       Download Case Sheet (.PDF)
@@ -189,7 +189,7 @@ export default function AccountConsultationsPage() {
                         {c.prescribedTherapies.map((t, i) => (
                           <span
                             key={i}
-                            className="bg-brand-sand text-brand-brown text-[11px] px-2.5 py-1 rounded-md border border-brand-brown-border/40"
+                            className="bg-brand-brown/5 border border-brand-brown-border/60 text-brand-brown text-[11px] px-2.5 py-1 rounded-md"
                           >
                             {t}
                           </span>

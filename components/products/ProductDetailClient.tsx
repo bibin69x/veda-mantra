@@ -91,9 +91,9 @@ export function ProductDetailClient({ product }: ProductDetailClientProps) {
   );
 
   return (
-    <div className="min-h-screen bg-brand-cream pb-24">
+    <div className="min-h-screen bg-white pb-24">
       {/* Breadcrumb Navigation */}
-      <div className="bg-brand-sand/40 border-b border-brand-brown-border/60 py-3">
+      <div className="bg-white border-b border-brand-brown-border py-3">
         <Container size="xl">
           <nav className="flex items-center space-x-2 text-xs text-brand-brown-muted">
             <Link href="/" className="hover:text-brand-green transition-colors">
@@ -120,7 +120,7 @@ export function ProductDetailClient({ product }: ProductDetailClientProps) {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 bg-white rounded-2xl p-6 sm:p-10 border border-brand-brown-border shadow-card">
           {/* Left Column: Image Gallery */}
           <div className="lg:col-span-6 space-y-4">
-            <div className="relative aspect-square w-full rounded-xl overflow-hidden bg-brand-sand/30 border border-brand-brown-border">
+            <div className="relative aspect-square w-full rounded-xl overflow-hidden bg-white border border-brand-brown-border">
               <Image
                 src={selectedImage}
                 alt={product.title}
@@ -176,7 +176,7 @@ export function ProductDetailClient({ product }: ProductDetailClientProps) {
             )}
 
             {/* Quality Guarantee Box */}
-            <div className="bg-brand-sand/40 border border-brand-brown-border/60 rounded-xl p-4 grid grid-cols-2 gap-3 text-xs text-brand-brown">
+            <div className="bg-white border border-brand-brown-border shadow-sm rounded-xl p-4 grid grid-cols-2 gap-3 text-xs text-brand-brown">
               <div className="flex items-center gap-2">
                 <ShieldCheck className="w-4 h-4 text-brand-green shrink-0" />
                 <span>Ashtanga Certified</span>
@@ -219,13 +219,13 @@ export function ProductDetailClient({ product }: ProductDetailClientProps) {
 
               {/* Rating & Reviews */}
               <div className="flex items-center gap-3 pt-1">
-                <div className="flex text-amber-500">
+                <div className="flex text-brand-gold">
                   {[...Array(5)].map((_, i) => (
                     <Star
                       key={i}
                       className={`w-4 h-4 ${
                         i < Math.floor(product.rating)
-                          ? "fill-amber-400 text-amber-400"
+                          ? "fill-brand-gold text-brand-gold"
                           : "text-neutral-300"
                       }`}
                     />
@@ -260,7 +260,7 @@ export function ProductDetailClient({ product }: ProductDetailClientProps) {
               </p>
 
               {/* Tagline */}
-              <p className="text-sm text-brand-brown leading-relaxed bg-brand-sand/30 p-3.5 rounded-lg border border-brand-brown-border/40">
+              <p className="text-sm text-brand-brown leading-relaxed bg-brand-brown/5 p-3.5 rounded-lg border border-brand-brown-border/60">
                 {product.tagline}
               </p>
 
@@ -298,10 +298,10 @@ export function ProductDetailClient({ product }: ProductDetailClientProps) {
               <div className="space-y-3 pt-3">
                 <div className="flex items-center gap-4">
                   {/* Quantity Stepper */}
-                  <div className="flex items-center border border-brand-brown-border rounded-lg bg-brand-sand/40 p-1">
+                  <div className="flex items-center border border-brand-brown-border rounded-lg bg-white p-1">
                     <button
                       onClick={() => setQuantity((q) => Math.max(1, q - 1))}
-                      className="p-2 hover:bg-white text-brand-brown rounded transition-colors focus:outline-none"
+                      className="p-2 hover:bg-brand-brown/5 text-brand-brown rounded transition-colors focus:outline-none"
                       aria-label="Decrease quantity"
                     >
                       <Minus className="w-3.5 h-3.5" />
@@ -311,7 +311,7 @@ export function ProductDetailClient({ product }: ProductDetailClientProps) {
                     </span>
                     <button
                       onClick={() => setQuantity((q) => q + 1)}
-                      className="p-2 hover:bg-white text-brand-brown rounded transition-colors focus:outline-none"
+                      className="p-2 hover:bg-brand-brown/5 text-brand-brown rounded transition-colors focus:outline-none"
                       aria-label="Increase quantity"
                     >
                       <Plus className="w-3.5 h-3.5" />
@@ -374,7 +374,7 @@ export function ProductDetailClient({ product }: ProductDetailClientProps) {
                 className={`px-4 py-2 text-xs sm:text-sm font-medium tracking-wide rounded-lg whitespace-nowrap transition-colors ${
                   activeTab === tab.id
                     ? "bg-brand-brown text-white font-semibold"
-                    : "text-brand-brown-muted hover:text-brand-brown hover:bg-brand-sand/50"
+                    : "text-brand-brown-muted hover:text-brand-brown hover:bg-brand-brown/5"
                 }`}
               >
                 {tab.label}
@@ -395,7 +395,7 @@ export function ProductDetailClient({ product }: ProductDetailClientProps) {
                 <p className="pt-2">{product.description}</p>
               </div>
 
-              <div className="bg-brand-sand/40 border border-brand-brown-border/60 rounded-xl p-5 space-y-2">
+              <div className="bg-white border border-brand-brown-border shadow-sm rounded-xl p-5 space-y-2">
                 <h4 className="font-serif font-semibold text-base text-brand-brown flex items-center gap-2">
                   <Flame className="w-4 h-4 text-brand-gold" />
                   Classical Paka Vidhi (Decoction Methodology)
@@ -423,7 +423,7 @@ export function ProductDetailClient({ product }: ProductDetailClientProps) {
                 {product.botanicalActives.map((herb, idx) => (
                   <div
                     key={idx}
-                    className="p-4 rounded-xl bg-brand-sand/30 border border-brand-brown-border/60 space-y-1.5"
+                    className="p-4 rounded-xl bg-white border border-brand-brown-border shadow-sm space-y-1.5"
                   >
                     <div className="flex items-center justify-between">
                       <h4 className="font-serif font-bold text-base text-brand-brown">
@@ -461,7 +461,7 @@ export function ProductDetailClient({ product }: ProductDetailClientProps) {
                 {product.benefits.map((benefit, idx) => (
                   <div
                     key={idx}
-                    className="flex items-start gap-3 p-3.5 rounded-lg bg-brand-sand/20 border border-brand-brown-border/40"
+                    className="flex items-start gap-3 p-3.5 rounded-lg bg-white border border-brand-brown-border shadow-sm"
                   >
                     <div className="w-6 h-6 rounded-full bg-brand-green/10 text-brand-green flex items-center justify-center shrink-0 mt-0.5">
                       <Check className="w-3.5 h-3.5 stroke-[2.5]" />
@@ -481,7 +481,7 @@ export function ProductDetailClient({ product }: ProductDetailClientProps) {
                   <Clock className="w-5 h-5 text-brand-green" />
                   Application Method & Dosage
                 </h3>
-                <p className="bg-brand-sand/30 p-4 rounded-xl border border-brand-brown-border/40">
+                <p className="bg-brand-brown/5 p-4 rounded-xl border border-brand-brown-border/60">
                   {product.howToUse}
                 </p>
               </div>
@@ -505,7 +505,7 @@ export function ProductDetailClient({ product }: ProductDetailClientProps) {
                 Safety, Contraindications & Storage
               </h3>
               <div className="space-y-4">
-                <div className="p-4 rounded-xl bg-amber-50/60 border border-amber-200/80 text-amber-950 space-y-1">
+                <div className="p-4 rounded-xl bg-brand-brown/5 border border-brand-brown-border text-brand-brown space-y-1">
                   <h4 className="font-bold text-xs uppercase tracking-wider">
                     Physician Precautions:
                   </h4>
@@ -533,13 +533,13 @@ export function ProductDetailClient({ product }: ProductDetailClientProps) {
                     Customer & Patient Reviews
                   </h3>
                   <div className="flex items-center gap-2 pt-1">
-                    <div className="flex text-amber-500">
+                    <div className="flex text-brand-gold">
                       {[...Array(5)].map((_, i) => (
                         <Star
                           key={i}
                           className={`w-4 h-4 ${
                             i < Math.floor(product.rating)
-                              ? "fill-amber-400 text-amber-400"
+                              ? "fill-brand-gold text-brand-gold"
                               : "text-neutral-300"
                           }`}
                         />
@@ -568,7 +568,7 @@ export function ProductDetailClient({ product }: ProductDetailClientProps) {
                   {product.reviews.map((rev) => (
                     <div
                       key={rev.id}
-                      className="p-5 rounded-xl bg-brand-sand/20 border border-brand-brown-border/60 space-y-2"
+                      className="p-5 rounded-xl bg-white border border-brand-brown-border shadow-sm space-y-2"
                     >
                       <div className="flex items-center justify-between">
                         <div className="flex items-center gap-2">
@@ -589,11 +589,11 @@ export function ProductDetailClient({ product }: ProductDetailClientProps) {
                         <span className="text-xs text-brand-brown-muted">{rev.date}</span>
                       </div>
 
-                      <div className="flex text-amber-500">
+                      <div className="flex text-brand-gold">
                         {[...Array(rev.rating)].map((_, i) => (
                           <Star
                             key={i}
-                            className="w-3.5 h-3.5 fill-amber-400 text-amber-400"
+                            className="w-3.5 h-3.5 fill-brand-gold text-brand-gold"
                           />
                         ))}
                       </div>
@@ -605,7 +605,7 @@ export function ProductDetailClient({ product }: ProductDetailClientProps) {
                   ))}
                 </div>
               ) : (
-                <div className="p-8 text-center bg-brand-sand/20 rounded-xl space-y-2">
+                <div className="p-8 text-center bg-white border border-brand-brown-border rounded-xl space-y-2">
                   <p className="font-serif text-base text-brand-brown font-medium">
                     Be the first to review this classical formulation!
                   </p>
@@ -696,7 +696,7 @@ export function ProductDetailClient({ product }: ProductDetailClientProps) {
                 >
                   <Link
                     href={`/products/${p.slug}`}
-                    className="relative aspect-square w-full bg-brand-sand/30 overflow-hidden block"
+                    className="relative aspect-square w-full bg-white border-b border-brand-brown-border overflow-hidden block"
                   >
                     <Image
                       src={p.image}

@@ -58,7 +58,7 @@ export function CartDrawer() {
       />
 
       {/* Slide-out Drawer Panel */}
-      <div className="relative z-10 w-full max-w-md bg-brand-cream border-l border-brand-brown-border shadow-2xl flex flex-col h-full transform transition-transform duration-300 ease-out animate-slideInRight">
+      <div className="relative z-10 w-full max-w-md bg-white border-l border-brand-brown-border shadow-2xl flex flex-col h-full transform transition-transform duration-300 ease-out animate-slideInRight">
         {/* Drawer Header */}
         <div className="px-6 py-5 bg-brand-brown text-white flex items-center justify-between border-b border-brand-brown-light/40">
           <div className="flex items-center gap-3">
@@ -69,14 +69,14 @@ export function CartDrawer() {
               <h2 className="font-serif text-lg font-semibold tracking-wide">
                 Your Ayurvedic Remedies
               </h2>
-              <p className="text-xs text-brand-cream-dark">
+              <p className="text-xs text-white/80">
                 {cartCount} {cartCount === 1 ? "item" : "items"} selected
               </p>
             </div>
           </div>
           <button
             onClick={closeCart}
-            className="p-2 text-brand-cream-dark hover:text-white hover:bg-white/10 rounded-full transition-colors focus:outline-none"
+            className="p-2 text-white/80 hover:text-white hover:bg-white/10 rounded-full transition-colors focus:outline-none"
             aria-label="Close cart drawer"
           >
             <X className="w-5 h-5" />
@@ -84,7 +84,7 @@ export function CartDrawer() {
         </div>
 
         {/* Free Shipping Progress Indicator */}
-        <div className="bg-brand-sand/50 px-6 py-3 border-b border-brand-brown-border/60">
+        <div className="bg-white px-6 py-3 border-b border-brand-brown-border">
           {freeShippingRemaining > 0 ? (
             <div className="space-y-1.5">
               <div className="flex items-center justify-between text-xs text-brand-brown">
@@ -96,9 +96,9 @@ export function CartDrawer() {
                   {freeShippingProgress}%
                 </span>
               </div>
-              <div className="w-full h-2 bg-brand-brown-border/40 rounded-full overflow-hidden">
+              <div className="w-full h-2 bg-brand-brown/10 rounded-full overflow-hidden">
                 <div
-                  className="h-full bg-gradient-to-r from-brand-gold to-brand-green transition-all duration-500 rounded-full"
+                  className="h-full bg-brand-green transition-all duration-500 rounded-full"
                   style={{ width: `${freeShippingProgress}%` }}
                 />
               </div>
@@ -115,7 +115,7 @@ export function CartDrawer() {
         <div className="flex-1 overflow-y-auto px-6 py-4 space-y-4 divide-y divide-brand-brown-border/40">
           {items.length === 0 ? (
             <div className="h-full flex flex-col items-center justify-center text-center py-12 px-4 space-y-5">
-              <div className="w-20 h-20 rounded-full bg-brand-sand/80 flex items-center justify-center text-brand-gold">
+              <div className="w-20 h-20 rounded-full bg-brand-brown/5 border border-brand-brown-border flex items-center justify-center text-brand-gold">
                 <ShoppingBag className="w-10 h-10 stroke-[1.2]" />
               </div>
               <div className="space-y-2 max-w-xs">
@@ -186,7 +186,7 @@ export function CartDrawer() {
                     >
                       {item.title}
                     </Link>
-                    <span className="inline-block text-[10px] uppercase font-semibold text-brand-brown-muted bg-brand-sand px-2 py-0.5 rounded">
+                    <span className="inline-block text-[10px] uppercase font-semibold text-brand-brown-muted bg-brand-brown/5 border border-brand-brown-border/60 px-2 py-0.5 rounded">
                       {item.volumeOrWeight}
                     </span>
                   </div>
@@ -196,7 +196,7 @@ export function CartDrawer() {
                     <div className="flex items-center border border-brand-brown-border rounded bg-white">
                       <button
                         onClick={() => updateQuantity(item.id, item.quantity - 1)}
-                        className="p-1 hover:bg-brand-sand text-brand-brown transition-colors focus:outline-none"
+                        className="p-1 hover:bg-brand-brown/5 text-brand-brown transition-colors focus:outline-none"
                         aria-label="Decrease quantity"
                       >
                         <Minus className="w-3 h-3" />
@@ -206,7 +206,7 @@ export function CartDrawer() {
                       </span>
                       <button
                         onClick={() => updateQuantity(item.id, item.quantity + 1)}
-                        className="p-1 hover:bg-brand-sand text-brand-brown transition-colors focus:outline-none"
+                        className="p-1 hover:bg-brand-brown/5 text-brand-brown transition-colors focus:outline-none"
                         aria-label="Increase quantity"
                       >
                         <Plus className="w-3 h-3" />
