@@ -63,7 +63,15 @@ Phase 11 — Real Clinical Data Migration, Supabase & Analytics Architecture Int
   - Client (`lib/supabase/client.ts`) and Server SSR (`lib/supabase/server.ts`) helpers.
 
 ### D. Core Website & User Experience
-- [x] **Homepage (`/`)**: Hero, Philosophy, Featured Panchakarma, Why Ayur Veda Mantra, Formulations, Doctor Consultation Banner, Testimonials, Vedic Wisdom.
+- [x] **Homepage (`/`)**: Rebuilt with strict 3-color background palette (**White**, **Brand Brown `#2B241E`**, and **Brand Green `#1D4F40`**):
+  - 1. *Hero Section* (`bg-brand-brown` with full-bleed atmospheric background, Dr. Anupama focus, and consultation/treatment CTAs).
+  - 2. *Philosophy & Tri-Dosha Science* (`bg-white` with clean white cards and Vedic elements).
+  - 3. *Featured Panchakarma Treatments* (`bg-brand-green` with 11 clinical therapy packages).
+  - 4. *Why Ayur Veda Mantra & Clinical Pillars* (`bg-white` with treatment sanctum visuals).
+  - 5. *3-Stage Authentic Panchakarma Process* (`bg-brand-brown` detailing Purva Karma, Pradhana Karma, and Paschat Karma).
+  - 6. *Chief Physician Consultation Banner* (`bg-brand-green` featuring Dr. Anupama Ramachandran).
+  - 7. *Patient Healing Stories & Testimonials* (`bg-white` with clean clinical reviews).
+  - 8. *Vedic Wisdom & Classical Teachings* (`bg-brand-brown` with classical Shastra insights).
 - [x] **About Page (`/about`)**: Lineage, Charaka Samhita shloka, 4 guiding pillars, Dr. Anupama Ramachandran spotlight, Treatment Sanctum architecture.
 - [x] **Treatments Catalog & Dynamic PDPs (`/treatments`, `/treatments/[slug]`)**: 11 clinical treatment pages with contraindications, step-by-step stages, and sticky booking sidebar.
 - [x] **Apothecary Products Catalog & Dynamic PDPs (`/products`, `/products/[slug]`)**: 12 Sastric formulations with botanical ingredient breakdown, Ayurvedic actions, and customer reviews.
