@@ -2,6 +2,7 @@ import React from "react";
 import { HeroSection } from "@/components/home/HeroSection";
 import { PhilosophySection } from "@/components/home/PhilosophySection";
 import { FeaturedTreatmentsSection } from "@/components/home/FeaturedTreatmentsSection";
+import { WhyAyurVedaSection } from "@/components/home/WhyAyurVedaSection";
 import { PanchakarmaProcessSection } from "@/components/home/PanchakarmaProcessSection";
 import { ConsultationBanner } from "@/components/home/ConsultationBanner";
 import { TestimonialsSection } from "@/components/home/TestimonialsSection";
@@ -19,16 +20,19 @@ export default function HomePage() {
       {/* 3. Featured Treatments (bg-brand-green) */}
       <FeaturedTreatmentsSection />
 
-      {/* 4. The 3 Stages of Authentic Panchakarma (bg-brand-brown) */}
+      {/* 4. Why Ayur Veda Mantra & Clinical Pillars (bg-white) */}
+      <WhyAyurVedaSection />
+
+      {/* 5. The 3 Stages of Authentic Panchakarma (bg-brand-brown) */}
       <PanchakarmaProcessSection />
 
-      {/* 5. Chief Physician Consultation Banner (bg-brand-green) */}
+      {/* 6. Chief Physician Consultation Banner (bg-brand-green) */}
       <ConsultationBanner />
 
-      {/* 6. Patient Healing Stories & Verified Testimonials (bg-white) */}
+      {/* 7. Patient Healing Stories & Verified Testimonials (bg-white) */}
       <TestimonialsSection />
 
-      {/* 7. Vedic Wisdom & Classical Teachings (bg-brand-green) */}
+      {/* 8. Vedic Wisdom & Classical Teachings (bg-brand-green) */}
       <VedicWisdomSection />
     </div>
   );
