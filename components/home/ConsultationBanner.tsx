@@ -2,33 +2,29 @@ import React from "react";
 import Image from "next/image";
 import { Container } from "@/components/ui/Container";
 import { Button } from "@/components/ui/Button";
-import { Calendar, Video, MapPin, CheckCircle, Clock } from "lucide-react";
+import { Calendar, Video, MapPin, CheckCircle, Clock, Award, Sparkles } from "lucide-react";
 
 export function ConsultationBanner() {
   return (
-    <section className="py-20 sm:py-28 bg-brand-brown text-white relative overflow-hidden">
-      {/* Ambient background glows */}
-      <div className="absolute top-0 right-0 w-96 h-96 rounded-full bg-brand-gold/10 blur-3xl pointer-events-none" />
-      <div className="absolute bottom-0 left-0 w-96 h-96 rounded-full bg-brand-green/20 blur-3xl pointer-events-none" />
-
+    <section className="py-20 sm:py-28 bg-brand-green text-white relative overflow-hidden">
       <Container size="xl" className="relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
           {/* Left Doctor Details */}
           <div className="lg:col-span-7 space-y-6">
-            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-brand-brown-light border border-brand-brown-border/30 text-brand-gold-light text-xs font-semibold tracking-widest uppercase">
-              <Calendar className="w-3.5 h-3.5 text-brand-gold" />
+            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-brand-green-dark border border-brand-gold/30 text-brand-gold-light text-xs font-semibold tracking-widest uppercase">
+              <Sparkles className="w-3.5 h-3.5 text-brand-gold" />
               <span>Ayurvedic Vaidya Consultations</span>
             </div>
 
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-serif font-normal text-white leading-tight">
-              Direct Guidance from{" "}
-              <span className="italic text-brand-gold-light">
-                Classical Ayurvedic Physicians
+              Personalized Guidance from{" "}
+              <span className="italic text-brand-gold-light block sm:inline">
+                Chief Physician Dr. Anupama
               </span>
             </h2>
 
-            <p className="text-sm sm:text-base text-brand-sand/80 font-light leading-relaxed max-w-2xl">
-              Experience the depth of authentic diagnosis. Our senior Vaidyas evaluate root causative factors (Nidana), cellular accumulation (Ama), and subtle energetic imbalances to prescribe personalized therapies and herbs.
+            <p className="text-sm sm:text-base text-brand-sand/90 font-light leading-relaxed max-w-2xl">
+              Experience the clinical precision of classical Nadi Pariksha pulse diagnosis. Dr. Anupama Ramachandran (15+ Years Experience) evaluates root causative imbalances (Nidana), cellular accumulation (Ama), and constitutional vitality to prescribe customized healing regimens.
             </p>
 
             {/* Inclusions Grid */}
@@ -43,11 +39,11 @@ export function ConsultationBanner() {
               </div>
               <div className="flex items-start gap-3 text-xs sm:text-sm text-brand-sand">
                 <CheckCircle className="w-4 h-4 text-brand-gold shrink-0 mt-0.5" />
-                <span>Custom Classical Herbal Prescription</span>
+                <span>Tailored Sastric Herbal Prescription</span>
               </div>
               <div className="flex items-start gap-3 text-xs sm:text-sm text-brand-sand">
                 <CheckCircle className="w-4 h-4 text-brand-gold shrink-0 mt-0.5" />
-                <span>Panchakarma Treatment Roadmap</span>
+                <span>Custom Panchakarma Treatment Roadmap</span>
               </div>
             </div>
 
@@ -58,50 +54,57 @@ export function ConsultationBanner() {
                 variant="gold"
                 size="lg"
                 leftIcon={<Video className="w-4 h-4" />}
-                className="w-full sm:w-auto"
+                className="w-full sm:w-auto shadow-lg hover:scale-105 transition-all"
               >
-                Book Online Video Call
+                Book Online Video Call (₹800)
               </Button>
               <Button
                 href="/consultation?mode=in-clinic"
                 variant="outline"
                 size="lg"
                 leftIcon={<MapPin className="w-4 h-4" />}
-                className="w-full sm:w-auto border-brand-sand/40 text-brand-sand hover:bg-brand-sand hover:text-brand-brown"
+                className="w-full sm:w-auto border-white/40 text-white hover:bg-white hover:text-brand-green"
               >
-                Book In-Clinic Visit
+                Book In-Clinic Visit (₹1,200)
               </Button>
             </div>
           </div>
 
           {/* Right Doctor Image Card */}
           <div className="lg:col-span-5 relative flex justify-center">
-            <div className="relative w-full max-w-md bg-brand-brown-dark p-6 rounded-sm border border-brand-brown-light/60 shadow-2xl space-y-5">
-              <div className="relative aspect-[4/3] rounded-sm overflow-hidden">
+            <div className="relative w-full max-w-md bg-white text-brand-brown p-6 rounded-sm shadow-2xl space-y-5">
+              <div className="relative aspect-[4/3] rounded-sm overflow-hidden bg-brand-brown-light">
                 <Image
                   src="https://images.unsplash.com/photo-1594824813589-325244585e5d?auto=format&fit=crop&w=800&q=80"
                   alt="Dr. Anupama Ramachandran — Chief Ayurvedic Physician"
                   fill
                   className="object-cover"
                 />
+                <div className="absolute top-3 right-3 bg-brand-brown text-white text-[10px] font-semibold tracking-wider uppercase px-2.5 py-1 rounded-full shadow-sm">
+                  15+ Years Exp
+                </div>
               </div>
 
-              <div className="space-y-2">
+              <div className="space-y-1.5">
                 <div className="flex items-center justify-between">
-                  <h3 className="font-serif text-xl font-medium text-white">Dr. Anupama Ramachandran</h3>
-                  <span className="text-xs text-brand-gold font-serif italic">BAMS, MD (Ayur)</span>
+                  <h3 className="font-serif text-xl font-bold text-brand-brown">
+                    Dr. Anupama Ramachandran
+                  </h3>
+                  <span className="text-xs text-brand-green font-serif italic font-semibold">
+                    BAMS, MD (Ayur)
+                  </span>
                 </div>
-                <p className="text-xs text-brand-sand/80 font-light">
-                  Chief Physician & Senior Panchakarma Specialist with 15+ years of dedicated clinical practice.
+                <p className="text-xs text-brand-brown-muted font-light leading-relaxed">
+                  Chief Physician & Senior Panchakarma Specialist leading clinical care and pulse diagnosis at Ayur Veda Mantra.
                 </p>
               </div>
 
-              <div className="pt-3 border-t border-brand-brown-light/40 flex items-center justify-between text-xs text-brand-sand/70">
-                <span className="flex items-center gap-1.5">
-                  <Clock className="w-3.5 h-3.5 text-brand-gold" />
-                  <span>Next Slot: Available Today</span>
+              <div className="pt-3 border-t border-brand-brown-border/60 flex items-center justify-between text-xs text-brand-brown-muted">
+                <span className="flex items-center gap-1.5 text-brand-green font-medium">
+                  <Clock className="w-3.5 h-3.5" />
+                  <span>Available Mon – Sat</span>
                 </span>
-                <span className="font-semibold text-brand-gold-light">INR ₹800</span>
+                <span className="font-semibold text-brand-brown">Kochi Sanctum</span>
               </div>
             </div>
           </div>

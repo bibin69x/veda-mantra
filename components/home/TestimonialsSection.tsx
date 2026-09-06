@@ -21,11 +21,11 @@ export function TestimonialsSection() {
           {TESTIMONIALS.map((t: Testimonial) => (
             <div
               key={t.id}
-              className="bg-brand-cream rounded-sm p-8 border border-brand-brown-border flex flex-col justify-between space-y-6 shadow-card-soft transition-all duration-300 hover:shadow-luxury hover:border-brand-gold/40"
+              className="bg-white rounded-sm p-8 border border-brand-brown-border flex flex-col justify-between space-y-6 shadow-sm transition-all duration-300 hover:shadow-luxury hover:border-brand-green"
             >
               <div className="space-y-4">
                 <div className="flex items-center justify-between">
-                  <div className="flex text-amber-500">
+                  <div className="flex text-brand-gold">
                     {Array.from({ length: t.rating }).map((_, i) => (
                       <Star
                         key={i}
@@ -33,7 +33,7 @@ export function TestimonialsSection() {
                       />
                     ))}
                   </div>
-                  <Quote className="w-8 h-8 text-brand-gold/30" />
+                  <Quote className="w-8 h-8 text-brand-gold/20" />
                 </div>
 
                 <p className="text-xs sm:text-sm text-brand-brown-muted leading-relaxed italic font-light">
@@ -60,7 +60,7 @@ export function TestimonialsSection() {
                       <CheckCircle className="w-3.5 h-3.5 text-brand-green shrink-0" />
                     )}
                   </div>
-                  <p className="text-[11px] text-brand-brown-muted">
+                  <p className="text-[11px] text-brand-brown-muted font-light">
                     {t.location} • <span className="text-brand-green font-medium">{t.treatmentOrProduct}</span>
                   </p>
                 </div>

@@ -4,11 +4,10 @@ import React, { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { Container } from "@/components/ui/Container";
-import { SectionHeading } from "@/components/ui/SectionHeading";
 import { Badge } from "@/components/ui/Badge";
 import { Button } from "@/components/ui/Button";
 import { TREATMENTS, TREATMENT_CATEGORIES, Treatment } from "@/data/treatments";
-import { Clock, CheckCircle2, ArrowRight, Calendar } from "lucide-react";
+import { Clock, CheckCircle2, ArrowRight, Calendar, Sparkles } from "lucide-react";
 import { cn, formatINR } from "@/lib/utils";
 
 export function FeaturedTreatmentsSection() {
@@ -20,15 +19,22 @@ export function FeaturedTreatmentsSection() {
       : TREATMENTS.filter((t) => t.category === activeCategory);
 
   return (
-    <section id="treatments" className="py-20 sm:py-28 bg-brand-cream relative">
-      <Container size="xl">
-        <SectionHeading
-          sanskritSubtitle="विशिष्ट पञ्चकर्म एवं चिकित्सा"
-          tagline="Classical Therapies"
-          title="Authentic Ayurvedic Clinical Treatments"
-          description="Every treatment is conducted in accordance with ancient Ayurvedic protocols using freshly prepared medicated decoctions, organic herb-infused oils, and personalized therapeutic techniques."
-          align="center"
-        />
+    <section id="treatments" className="py-20 sm:py-28 bg-brand-green text-white relative overflow-hidden">
+      <Container size="xl" className="relative z-10">
+        {/* Section Header */}
+        <div className="text-center max-w-3xl mx-auto space-y-3 mb-12 sm:mb-16">
+          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-brand-green-dark border border-brand-gold/30 text-brand-gold-light text-xs font-semibold tracking-widest uppercase">
+            <Sparkles className="w-3.5 h-3.5 text-brand-gold" />
+            <span>Classical Therapies & पञ्चकर्म</span>
+          </div>
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-serif font-normal text-white leading-tight">
+            Authentic Ayurvedic Clinical Treatments
+          </h2>
+          <div className="w-16 h-0.5 bg-brand-gold mx-auto my-3" />
+          <p className="text-xs sm:text-sm lg:text-base text-brand-sand/80 font-light leading-relaxed">
+            Every clinical procedure is administered in accordance with classical Sastric scriptures using freshly decocted herbal oils, traditional bronze vessels, and individualized Prakriti protocols.
+          </p>
+        </div>
 
         {/* Category Navigation Pills */}
         <div className="flex flex-wrap items-center justify-center gap-2 sm:gap-3 mb-12 sm:mb-16">
@@ -39,10 +45,10 @@ export function FeaturedTreatmentsSection() {
                 key={category}
                 onClick={() => setActiveCategory(category)}
                 className={cn(
-                  "text-xs sm:text-sm font-medium tracking-wide px-5 py-2.5 rounded-full transition-all duration-300",
+                  "text-xs sm:text-sm font-medium tracking-wide px-5 py-2 rounded-full transition-all duration-300",
                   isActive
-                    ? "bg-brand-green text-white shadow-md shadow-brand-green/20 scale-105"
-                    : "bg-white text-brand-brown border border-brand-brown-border hover:border-brand-green/50 hover:bg-brand-sand/50"
+                    ? "bg-brand-gold text-brand-brown font-semibold shadow-lg scale-105"
+                    : "bg-brand-green-dark/80 text-white border border-white/20 hover:border-brand-gold/60"
                 )}
               >
                 {category}
@@ -56,21 +62,21 @@ export function FeaturedTreatmentsSection() {
           {filteredTreatments.map((treatment: Treatment) => (
             <div
               key={treatment.id}
-              className="group bg-white rounded-sm overflow-hidden border border-brand-brown-border shadow-card-soft transition-all duration-300 hover:shadow-luxury hover:-translate-y-1.5 flex flex-col justify-between"
+              className="group bg-white text-brand-brown rounded-sm overflow-hidden shadow-luxury transition-all duration-300 hover:-translate-y-1.5 flex flex-col justify-between"
             >
               <div>
                 {/* Image Showcase */}
-                <div className="relative aspect-[16/10] overflow-hidden bg-brand-cream-dark">
+                <div className="relative aspect-[16/10] overflow-hidden bg-brand-brown-light">
                   <Image
                     src={treatment.image}
                     alt={treatment.title}
                     fill
                     className="object-cover transition-transform duration-700 group-hover:scale-105"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-60" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-70" />
 
-                  {/* Badges on Image */}
-                  <div className="absolute top-3 left-3 flex flex-wrap gap-1.5">
+                  {/* Category Badge */}
+                  <div className="absolute top-3 left-3">
                     <Badge variant="green" size="sm" className="bg-white/95 text-brand-green font-semibold backdrop-blur-sm shadow-sm">
                       {treatment.category}
                     </Badge>
@@ -102,17 +108,17 @@ export function FeaturedTreatmentsSection() {
                     </h3>
                   </div>
 
-                  <p className="text-xs sm:text-sm text-brand-brown-muted leading-relaxed line-clamp-2">
+                  <p className="text-xs sm:text-sm text-brand-brown-muted leading-relaxed line-clamp-2 font-light">
                     {treatment.tagline}
                   </p>
 
                   {/* Benefits Mini-List */}
-                  <div className="space-y-1.5 pt-2 border-t border-brand-brown-border/60">
+                  <div className="space-y-1.5 pt-3 border-t border-brand-brown-border/60">
                     <p className="text-[11px] font-semibold text-brand-brown uppercase tracking-wider">
                       Key Clinical Benefits:
                     </p>
                     {treatment.benefits.slice(0, 2).map((benefit, i) => (
-                      <div key={i} className="flex items-start gap-2 text-xs text-brand-brown-muted">
+                      <div key={i} className="flex items-start gap-2 text-xs text-brand-brown-muted font-light">
                         <CheckCircle2 className="w-3.5 h-3.5 text-brand-green shrink-0 mt-0.5" />
                         <span className="line-clamp-1">{benefit}</span>
                       </div>
@@ -135,7 +141,7 @@ export function FeaturedTreatmentsSection() {
                   href={`/consultation?treatment=${treatment.slug}`}
                   variant="primary"
                   size="sm"
-                  leftIcon={<Calendar className="w-3.5 h-3.5" />}
+                  leftIcon={<Calendar className="w-4 h-4" />}
                 >
                   Book Session
                 </Button>
@@ -145,13 +151,13 @@ export function FeaturedTreatmentsSection() {
         </div>
 
         {/* Bottom Banner */}
-        <div className="mt-16 p-8 rounded-sm bg-brand-brown text-white flex flex-col md:flex-row items-center justify-between gap-6 shadow-luxury">
+        <div className="mt-16 p-8 rounded-sm bg-brand-brown text-white flex flex-col md:flex-row items-center justify-between gap-6 shadow-2xl border border-brand-gold/20">
           <div className="space-y-2 text-center md:text-left">
-            <h4 className="text-xl font-serif font-normal text-white">
+            <h4 className="text-xl sm:text-2xl font-serif font-normal text-white">
               Unsure which therapy suits your bodily constitution?
             </h4>
-            <p className="text-xs sm:text-sm text-brand-sand/80 max-w-xl">
-              Schedule a comprehensive Nadi Pariksha (Pulse Diagnosis) with our Senior Ayurvedic Vaidyas to determine your exact Prakriti and customized treatment plan.
+            <p className="text-xs sm:text-sm text-brand-sand/80 max-w-xl font-light">
+              Schedule a comprehensive Nadi Pariksha pulse diagnosis with Chief Physician Dr. Anupama Ramachandran to design your custom clinical roadmap.
             </p>
           </div>
 
@@ -161,7 +167,7 @@ export function FeaturedTreatmentsSection() {
             size="md"
             className="shrink-0"
           >
-            Consult Our Vaidyas &rarr;
+            Consult Chief Vaidya &rarr;
           </Button>
         </div>
       </Container>

@@ -8,7 +8,7 @@ const PILLARS = [
   {
     icon: Stethoscope,
     title: "Classical Nadi Pariksha",
-    description: "Deep pulse examination by certified Ayurvedic physicians detecting subtle Dosha imbalances before symptoms manifest.",
+    description: "Deep pulse examination by Chief Physician Dr. Anupama Ramachandran, detecting subtle Dosha imbalances before symptoms manifest.",
   },
   {
     icon: Sparkles,
@@ -18,7 +18,7 @@ const PILLARS = [
   {
     icon: ShieldCheck,
     title: "100% Wildcrafted Botanicals",
-    description: "We use exclusively pure, lab-tested organic herbs, A2 Gir cow ghee, and cold-pressed therapeutic oils.",
+    description: "We use exclusively pure, lab-tested organic herbs, A2 Gir cow medicated ghee, and cold-pressed therapeutic oils.",
   },
   {
     icon: BookOpen,
@@ -34,7 +34,7 @@ export function WhyAyurVedaSection() {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
           {/* Left Visual Column */}
           <div className="lg:col-span-6 relative">
-            <div className="relative aspect-[4/5] rounded-sm overflow-hidden shadow-2xl border-4 border-brand-cream">
+            <div className="relative aspect-[4/5] rounded-sm overflow-hidden shadow-2xl border-4 border-white">
               <Image
                 src="https://images.unsplash.com/photo-1600334089648-b0d9d3028eb2?auto=format&fit=crop&w=1000&q=80"
                 alt="Ayur Veda Mantra Treatment Centre"
@@ -54,8 +54,8 @@ export function WhyAyurVedaSection() {
             </div>
 
             {/* Overlapping Badge */}
-            <div className="absolute -bottom-6 -right-6 hidden sm:block bg-brand-brown text-white p-6 rounded-sm shadow-2xl max-w-xs border border-brand-brown-light/40">
-              <p className="font-serif text-2xl text-brand-gold font-normal">25+ Years</p>
+            <div className="absolute -bottom-6 -right-6 hidden sm:block bg-brand-brown text-white p-6 rounded-sm shadow-2xl max-w-xs border border-brand-gold/20">
+              <p className="font-serif text-2xl text-brand-gold font-normal">15+ Years</p>
               <p className="text-xs text-brand-sand/80 mt-1 font-light leading-relaxed">
                 Of clinical dedication to authentic Ayurvedic and Panchakarma healing.
               </p>
@@ -77,7 +77,7 @@ export function WhyAyurVedaSection() {
               {PILLARS.map((pillar, idx) => {
                 const Icon = pillar.icon;
                 return (
-                  <div key={idx} className="space-y-2.5 p-4 rounded-sm bg-brand-cream border border-brand-brown-border/60">
+                  <div key={idx} className="space-y-2.5 p-5 rounded-sm bg-white border border-brand-brown-border shadow-sm hover:border-brand-green transition-colors">
                     <div className="w-10 h-10 rounded-full bg-brand-green/10 text-brand-green flex items-center justify-center">
                       <Icon className="w-5 h-5" />
                     </div>
@@ -94,13 +94,13 @@ export function WhyAyurVedaSection() {
 
             {/* Checklist of Guarantees */}
             <div className="pt-4 border-t border-brand-brown-border/60 space-y-2.5">
-              <div className="flex items-center gap-3 text-xs text-brand-brown">
+              <div className="flex items-center gap-3 text-xs text-brand-brown font-light">
                 <div className="w-5 h-5 rounded-full bg-brand-green text-white flex items-center justify-center shrink-0">
                   <Check className="w-3 h-3" />
                 </div>
                 <span>Zero chemical preservatives, synthetic fragrances, or adulterated oils.</span>
               </div>
-              <div className="flex items-center gap-3 text-xs text-brand-brown">
+              <div className="flex items-center gap-3 text-xs text-brand-brown font-light">
                 <div className="w-5 h-5 rounded-full bg-brand-green text-white flex items-center justify-center shrink-0">
                   <Check className="w-3 h-3" />
                 </div>

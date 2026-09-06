@@ -1,50 +1,47 @@
 import React from "react";
 import { Container } from "@/components/ui/Container";
 import { SectionHeading } from "@/components/ui/SectionHeading";
-import { Wind, Flame, Droplets, Leaf } from "lucide-react";
+import { Wind, Flame, Droplets, Leaf, Activity } from "lucide-react";
 
 const DOSHAS = [
   {
     name: "Vata",
     sanskrit: "वात (वायु + आकाश)",
     elements: "Air & Space",
-    governs: "Nerve impulses, circulation, breathing, and joint mobility.",
-    imbalanceSign: "Anxiety, insomnia, dry skin, constipation, and joint aches.",
-    remedy: "Warm Abhyanga oil massage, Kati Basti, and grounding herbs.",
+    governs: "Nerve impulses, cellular circulation, breathing rhythm, and joint mobility.",
+    imbalanceSign: "Anxiety, insomnia, dry skin, chronic constipation, and joint stiffness.",
+    remedy: "Warm Abhyanga oil massage, Kati Basti spine therapy, and grounding Sastric rasayanas.",
     icon: Wind,
-    color: "from-blue-50 to-amber-50/30",
   },
   {
     name: "Pitta",
     sanskrit: "पित्त (अग्नि + जल)",
     elements: "Fire & Water",
-    governs: "Digestion, metabolism, cellular energy, and ocular vitality.",
-    imbalanceSign: "Acidity, inflammation, skin flare-ups, migraines, and anger.",
-    remedy: "Shirodhara, cooling herbal ghee, Tarpana, and Takradhara.",
+    governs: "Digestion, metabolic enzymes, cellular energy, liver function, and ocular vitality.",
+    imbalanceSign: "Acid reflux, chronic inflammation, skin flare-ups, migraines, and irritability.",
+    remedy: "Shirodhara, cooling medicated ghee, Netra Tarpana, and Takradhara herbal buttermilk.",
     icon: Flame,
-    color: "from-amber-50 to-orange-50/30",
   },
   {
     name: "Kapha",
     sanskrit: "कफ (जल + पृथ्वी)",
     elements: "Water & Earth",
-    governs: "Bodily structure, joint lubrication, immunity, and stamina.",
-    imbalanceSign: "Lethargy, weight gain, sinus congestion, and fluid retention.",
-    remedy: "Udvartana dry powder massage, herbal steam Swedam, and Kizhi.",
+    governs: "Bodily structure, joint lubrication, immunity, fluid balance, and physical stamina.",
+    imbalanceSign: "Metabolic sluggishness, weight gain, sinus congestion, and lethargy.",
+    remedy: "Udvartana herbal powder exfoliation, Dashamoola steam Swedam, and Kizhi boluses.",
     icon: Droplets,
-    color: "from-emerald-50 to-teal-50/30",
   },
 ];
 
 export function PhilosophySection() {
   return (
-    <section className="py-20 sm:py-28 bg-white border-y border-brand-brown-border">
+    <section className="py-20 sm:py-28 bg-white border-b border-brand-brown-border">
       <Container size="xl">
         <SectionHeading
           sanskritSubtitle="त्रिदोष सिद्धान्त एवं पञ्चकर्म"
-          tagline="Ayurvedic Philosophy"
-          title="The Sacred Science of Tri-Dosha Harmony"
-          description="According to classical Ayurveda, perfect health is the dynamic balance between body constitution (Doshas), digestive fire (Agni), tissue health (Dhatus), and serene mental peace (Prasanna Atma)."
+          tagline="Ayurvedic Science"
+          title="The Sacred Balance of Tri-Dosha Harmony"
+          description="Classical Ayurveda views human health as the dynamic equilibrium between biological energies (Doshas), metabolic fire (Agni), cellular tissues (Dhatus), and mental peace (Prasanna Atma)."
           align="center"
         />
 
@@ -54,9 +51,9 @@ export function PhilosophySection() {
             return (
               <div
                 key={dosha.name}
-                className="group relative rounded-sm p-8 bg-brand-cream border border-brand-brown-border transition-all duration-300 hover:shadow-luxury hover:border-brand-gold/60 flex flex-col justify-between"
+                className="group relative rounded-sm p-8 bg-white border border-brand-brown-border transition-all duration-300 hover:shadow-luxury hover:border-brand-green flex flex-col justify-between"
               >
-                <div className="space-y-4">
+                <div className="space-y-5">
                   <div className="flex items-center justify-between">
                     <div className="w-12 h-12 rounded-full bg-brand-green/10 text-brand-green flex items-center justify-center transition-colors group-hover:bg-brand-green group-hover:text-white">
                       <Icon className="w-6 h-6" />
@@ -79,21 +76,21 @@ export function PhilosophySection() {
                     {dosha.governs}
                   </p>
 
-                  <div className="pt-3 border-t border-brand-brown-border/60 space-y-2 text-xs">
+                  <div className="pt-4 border-t border-brand-brown-border/60 space-y-2.5 text-xs">
                     <div>
                       <span className="font-semibold text-brand-brown">When Imbalanced: </span>
-                      <span className="text-brand-brown-muted">{dosha.imbalanceSign}</span>
+                      <span className="text-brand-brown-muted font-light">{dosha.imbalanceSign}</span>
                     </div>
                     <div>
                       <span className="font-semibold text-brand-green">Vedic Therapy: </span>
-                      <span className="text-brand-brown-muted">{dosha.remedy}</span>
+                      <span className="text-brand-brown-muted font-light">{dosha.remedy}</span>
                     </div>
                   </div>
                 </div>
 
-                <div className="mt-6 pt-4 border-t border-brand-brown-border/40 flex items-center gap-2 text-xs text-brand-gold-dark font-medium">
-                  <Leaf className="w-3.5 h-3.5 text-brand-green" />
-                  <span>Customized by our Vaidyas during Nadi Pariksha</span>
+                <div className="mt-6 pt-4 border-t border-brand-brown-border/40 flex items-center gap-2 text-xs text-brand-brown-muted font-light">
+                  <Leaf className="w-3.5 h-3.5 text-brand-green shrink-0" />
+                  <span>Evaluated during Nadi Pariksha pulse diagnosis</span>
                 </div>
               </div>
             );

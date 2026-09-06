@@ -3,7 +3,7 @@ import { HeroSection } from "@/components/home/HeroSection";
 import { PhilosophySection } from "@/components/home/PhilosophySection";
 import { FeaturedTreatmentsSection } from "@/components/home/FeaturedTreatmentsSection";
 import { WhyAyurVedaSection } from "@/components/home/WhyAyurVedaSection";
-import { FeaturedProductsSection } from "@/components/home/FeaturedProductsSection";
+import { PanchakarmaProcessSection } from "@/components/home/PanchakarmaProcessSection";
 import { ConsultationBanner } from "@/components/home/ConsultationBanner";
 import { TestimonialsSection } from "@/components/home/TestimonialsSection";
 import { VedicWisdomSection } from "@/components/home/VedicWisdomSection";
@@ -11,28 +11,28 @@ import { VedicWisdomSection } from "@/components/home/VedicWisdomSection";
 export default function HomePage() {
   return (
     <div className="flex flex-col min-h-screen">
-      {/* 1. Hero Section */}
+      {/* 1. Hero Section (bg-brand-brown with full-width background) */}
       <HeroSection />
 
-      {/* 2. Philosophy & Tri-Dosha Science */}
+      {/* 2. Philosophy & Tri-Dosha Science (bg-white) */}
       <PhilosophySection />
 
-      {/* 3. Featured Treatments (Body, Head & Face, Specialised, Pain Management) */}
+      {/* 3. Featured Treatments (bg-brand-green) */}
       <FeaturedTreatmentsSection />
 
-      {/* 4. Why Ayur Veda Mantra (Sanctuary & Clinical Pillars) */}
+      {/* 4. Why Ayur Veda Mantra & Clinical Pillars (bg-white) */}
       <WhyAyurVedaSection />
 
-      {/* 5. Classical Herbal Formulations & Oils */}
-      <FeaturedProductsSection />
+      {/* 5. The 3 Stages of Authentic Panchakarma (bg-brand-brown) */}
+      <PanchakarmaProcessSection />
 
-      {/* 6. Doctor Consultation Banner (Nadi Pariksha Booking) */}
+      {/* 6. Chief Physician Consultation Banner (bg-brand-green) */}
       <ConsultationBanner />
 
-      {/* 7. Patient Healing Stories & Verified Testimonials */}
+      {/* 7. Patient Healing Stories & Verified Testimonials (bg-white) */}
       <TestimonialsSection />
 
-      {/* 8. Vedic Wisdom & Lifestyle Teachings */}
+      {/* 8. Vedic Wisdom & Classical Teachings (bg-brand-brown) */}
       <VedicWisdomSection />
     </div>
   );
