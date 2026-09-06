@@ -67,10 +67,11 @@ Phase 12 — Full-Site Pure 3-Color Background Palette Adaptation & Clinical Har
   - 1. *Hero Section* (`bg-brand-brown` with full-bleed atmospheric background, Dr. Anupama focus, and consultation/treatment CTAs).
   - 2. *Philosophy & Tri-Dosha Science* (`bg-white` with clean white cards and Vedic elements).
   - 3. *Featured Panchakarma Treatments* (`bg-brand-green` with 11 clinical therapy packages).
-  - 4. *3-Stage Authentic Panchakarma Process* (`bg-brand-brown` detailing Purva Karma, Pradhana Karma, and Paschat Karma).
-  - 5. *Chief Physician Consultation Banner* (`bg-brand-green` featuring Dr. Anupama Ramachandran).
-  - 6. *Patient Healing Stories & Testimonials* (`bg-white` with clean clinical reviews).
-  - 7. *Vedic Wisdom & Classical Teachings* (`bg-brand-green` with classical Shastra insights and emerald-tinted cards).
+  - 4. *Why Ayur Veda Mantra & Clinical Pillars* (`bg-white` with treatment sanctum visuals).
+  - 5. *3-Stage Authentic Panchakarma Process* (`bg-brand-brown` detailing Purva Karma, Pradhana Karma, and Paschat Karma).
+  - 6. *Chief Physician Consultation Banner* (`bg-brand-green` featuring Dr. Anupama Ramachandran).
+  - 7. *Patient Healing Stories & Testimonials* (`bg-white` with clean clinical reviews).
+  - 8. *Vedic Wisdom & Classical Teachings* (`bg-brand-green` with classical Shastra insights and emerald-tinted cards).
 - [x] **About Page (`/about`)**: Lineage, Charaka Samhita shloka, 4 guiding pillars, Dr. Anupama Ramachandran spotlight, Treatment Sanctum architecture.
 - [x] **Treatments Catalog & Dynamic PDPs (`/treatments`, `/treatments/[slug]`)**: 11 clinical treatment pages with contraindications, step-by-step stages, and sticky booking sidebar.
 - [x] **Apothecary Products Catalog & Dynamic PDPs (`/products`, `/products/[slug]`)**: 12 Sastric formulations with botanical ingredient breakdown, Ayurvedic actions, and customer reviews.
