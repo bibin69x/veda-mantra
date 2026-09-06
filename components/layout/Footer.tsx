@@ -2,58 +2,11 @@ import React from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { Container } from "@/components/ui/Container";
-import { Phone, Mail, MapPin, Clock, ShieldCheck, HeartPulse, Sparkles } from "lucide-react";
+import { Phone, Mail, MapPin, Clock } from "lucide-react";
 
 export function Footer() {
   return (
     <footer className="bg-brand-brown text-white/90 border-t-4 border-brand-green">
-      {/* Upper Trust Signals Strip */}
-      <div className="border-b border-brand-brown-light/40 py-8 bg-brand-brown-dark">
-        <Container size="xl">
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 text-center sm:text-left">
-            <div className="flex items-center sm:items-start gap-4 justify-center sm:justify-start">
-              <div className="p-3 rounded-full bg-brand-green/20 text-brand-gold shrink-0">
-                <ShieldCheck className="w-6 h-6" />
-              </div>
-              <div>
-                <h4 className="font-serif text-base text-white font-medium">100% Classical Purity</h4>
-                <p className="text-xs text-white/70 mt-0.5">Formulations prepared strictly per Vedic texts</p>
-              </div>
-            </div>
-
-            <div className="flex items-center sm:items-start gap-4 justify-center sm:justify-start">
-              <div className="p-3 rounded-full bg-brand-green/20 text-brand-gold shrink-0">
-                <HeartPulse className="w-6 h-6" />
-              </div>
-              <div>
-                <h4 className="font-serif text-base text-white font-medium">Certified Vaidyas</h4>
-                <p className="text-xs text-white/70 mt-0.5">Traditional Nadi Pariksha & clinical care</p>
-              </div>
-            </div>
-
-            <div className="flex items-center sm:items-start gap-4 justify-center sm:justify-start">
-              <div className="p-3 rounded-full bg-brand-green/20 text-brand-gold shrink-0">
-                <Sparkles className="w-6 h-6" />
-              </div>
-              <div>
-                <h4 className="font-serif text-base text-white font-medium">Panchakarma Sanctum</h4>
-                <p className="text-xs text-white/70 mt-0.5">Specialized holistic detox & healing suites</p>
-              </div>
-            </div>
-
-            <div className="flex items-center sm:items-start gap-4 justify-center sm:justify-start">
-              <div className="p-3 rounded-full bg-brand-green/20 text-brand-gold shrink-0">
-                <Clock className="w-6 h-6" />
-              </div>
-              <div>
-                <h4 className="font-serif text-base text-white font-medium">7 Days Clinical Care</h4>
-                <p className="text-xs text-brand-sand/70 mt-0.5">In-clinic & Virtual consultations</p>
-              </div>
-            </div>
-          </div>
-        </Container>
-      </div>
-
       {/* Main Footer Links */}
       <div className="py-14 sm:py-16">
         <Container size="xl">
