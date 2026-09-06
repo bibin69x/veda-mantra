@@ -2,7 +2,7 @@ import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { Container } from "@/components/ui/Container";
-import { ArrowRight, Sparkles, BookOpen } from "lucide-react";
+import { ArrowRight, BookOpen } from "lucide-react";
 
 const ARTICLES = [
   {
@@ -33,11 +33,11 @@ const ARTICLES = [
 
 export function VedicWisdomSection() {
   return (
-    <section className="py-20 sm:py-28 bg-brand-brown text-white relative overflow-hidden">
+    <section className="py-20 sm:py-28 bg-brand-green text-white relative overflow-hidden">
       <Container size="xl" className="relative z-10">
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 sm:mb-16">
           <div className="space-y-3 max-w-2xl">
-            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-brand-brown-light border border-brand-gold/30 text-brand-gold-light text-xs font-semibold tracking-widest uppercase">
+            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-brand-green-dark border border-brand-gold/30 text-brand-gold-light text-xs font-semibold tracking-widest uppercase">
               <BookOpen className="w-3.5 h-3.5 text-brand-gold" />
               <span>Vedic Knowledge & Teachings</span>
             </div>
@@ -45,7 +45,7 @@ export function VedicWisdomSection() {
               Teachings from the Classical Sastras
             </h2>
             <div className="w-16 h-0.5 bg-brand-gold my-2" />
-            <p className="text-xs sm:text-sm lg:text-base text-brand-sand/80 font-light leading-relaxed">
+            <p className="text-xs sm:text-sm lg:text-base text-white/80 font-light leading-relaxed">
               Explore centuries of holistic medicine, daily regimens, and seasonal protocols to sustain vibrant health naturally.
             </p>
           </div>
@@ -63,10 +63,10 @@ export function VedicWisdomSection() {
           {ARTICLES.map((art, idx) => (
             <article
               key={idx}
-              className="group bg-brand-brown-dark rounded-sm border border-brand-brown-light/60 overflow-hidden shadow-2xl transition-all duration-300 hover:border-brand-gold/50 hover:-translate-y-1 flex flex-col justify-between"
+              className="group bg-brand-green-dark rounded-sm border border-brand-green-light/40 overflow-hidden shadow-2xl transition-all duration-300 hover:border-brand-gold/50 hover:-translate-y-1 flex flex-col justify-between"
             >
               <div>
-                <div className="relative aspect-[16/10] overflow-hidden bg-brand-brown">
+                <div className="relative aspect-[16/10] overflow-hidden bg-brand-green">
                   <Image
                     src={art.image}
                     alt={art.title}
@@ -80,13 +80,13 @@ export function VedicWisdomSection() {
                 </div>
 
                 <div className="p-6 space-y-3">
-                  <span className="text-[11px] text-brand-sand/60 font-medium">
+                  <span className="text-[11px] text-white/60 font-medium">
                     {art.readTime}
                   </span>
                   <h3 className="font-serif text-lg font-medium text-white group-hover:text-brand-gold-light transition-colors leading-snug">
                     <Link href={`/journal/${art.slug}`}>{art.title}</Link>
                   </h3>
-                  <p className="text-xs sm:text-sm text-brand-sand/80 leading-relaxed line-clamp-2 font-light">
+                  <p className="text-xs sm:text-sm text-white/80 leading-relaxed line-clamp-2 font-light">
                     {art.excerpt}
                   </p>
                 </div>
