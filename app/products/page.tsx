@@ -88,8 +88,8 @@ export default function ProductsPage() {
           </Badge>
 
           <div className="space-y-3">
-            <p className="font-serif italic text-brand-gold text-sm sm:text-base tracking-widest">
-              शरीरेन्द्रियसत्त्वात्मसंयोगो धारि जीवितम् — चरकसंहिता
+            <p className="font-serif italic text-brand-gold text-sm sm:text-base tracking-widest uppercase">
+              Ayurveda Pharmacy • Classical Formulations
             </p>
             <h1 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-white">
               Sacred Formulations & Classical Elixirs

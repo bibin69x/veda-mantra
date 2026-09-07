@@ -66,7 +66,7 @@ export function WhyAyurVedaSection() {
           {/* Right Content Column */}
           <div className="lg:col-span-6 space-y-6 sm:space-y-8">
             <SectionHeading
-              sanskritSubtitle="परम्परा एवं प्रामाणिकता"
+              sanskritSubtitle="Tradition & Clinical Purity"
               tagline="Why Ayur Veda Mantra"
               title="A Sacred Standard of Clinical Authenticity"
               description="We do not offer generic spa rituals. Ayur Veda Mantra operates as a dedicated Ayurvedic treatment and research sanctuary where therapies are tailored specifically to your unique bio-energy."

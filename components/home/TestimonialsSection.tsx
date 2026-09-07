@@ -10,7 +10,7 @@ export function TestimonialsSection() {
     <section className="py-20 sm:py-28 bg-white border-b border-brand-brown-border">
       <Container size="xl">
         <SectionHeading
-          sanskritSubtitle="आरोग्य अनुभव एवं प्रशंसा"
+          sanskritSubtitle="Patient Journeys & Recovery"
           tagline="Healing Stories"
           title="Words of Rejuvenation from Our Patients"
           description="True healing is experienced in restored energy, eliminated pain, and revitalized physical peace. Read genuine experiences from patients treated at Ayur Veda Mantra."

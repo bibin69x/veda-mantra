@@ -330,7 +330,7 @@ INSERT INTO public.doctors (
 ) VALUES (
     'dr-anupama-ramachandran',
     'Dr. Anupama Ramachandran',
-    'मुख्य आयुर्वेदाचार्या',
+    'Chief Ayurvedic Physician',
     'Chief Physician & Senior Panchakarma Specialist',
     'BAMS, MD (Ayurveda), Senior Pulse Diagnosis (Nadi Pariksha) Consultant',
     '15+ Years Clinical Experience',

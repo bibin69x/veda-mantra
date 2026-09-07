@@ -95,8 +95,8 @@ export default function ContactPage() {
           </Badge>
 
           <div className="space-y-2">
-            <p className="font-serif italic text-brand-gold text-xs sm:text-sm tracking-widest">
-              आरोग्यं परमं भाग्यम् स्वास्थ्यं सर्वार्थसाधनम्
+            <p className="font-serif italic text-brand-gold text-xs sm:text-sm tracking-widest uppercase">
+              Health is the Supreme Wealth • Wellness is the Gateway to Life
             </p>
             <h1 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-normal tracking-tight text-white">
               Connect with Our Clinical Sanctum

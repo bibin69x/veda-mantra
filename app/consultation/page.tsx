@@ -230,8 +230,8 @@ END:VCALENDAR`;
           </Badge>
 
           <div className="space-y-2">
-            <p className="font-serif italic text-brand-gold text-xs sm:text-sm tracking-widest">
-              नाडीपरीक्षा ज्ञानं हि त्रिदोषज्ञाने श्रेष्ठम्
+            <p className="font-serif italic text-brand-gold text-xs sm:text-sm tracking-widest uppercase">
+              Classical Nadi Pariksha & Pulse Diagnosis
             </p>
             <h1 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-white">
               Book Your Ayurvedic Doctor Consultation

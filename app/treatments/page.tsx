@@ -223,7 +223,7 @@ export default function TreatmentsPage() {
         <Container size="xl">
           <div className="text-center max-w-3xl mx-auto space-y-3 mb-16">
             <div className="inline-flex items-center px-3.5 py-1.5 rounded-full bg-brand-green-dark border border-brand-gold/30 text-brand-gold-light text-xs font-semibold tracking-widest uppercase">
-              <span>पञ्चकर्म त्रिविध कर्म विधि</span>
+              <span>The Three Classical Stages</span>
             </div>
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-serif font-normal text-white leading-tight">
               The Scientific Anatomy of a Panchakarma Journey
@@ -237,7 +237,7 @@ export default function TreatmentsPage() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="p-8 rounded-sm bg-white text-brand-brown shadow-luxury space-y-4">
               <span className="text-xs font-serif font-bold text-brand-green uppercase tracking-widest">
-                Stage 01 • पूर्वकर्म
+                Stage 01 • Preparation
               </span>
               <h3 className="text-2xl font-serif text-brand-brown font-medium">
                 Purva Karma (Preparation)
@@ -249,7 +249,7 @@ export default function TreatmentsPage() {
 
             <div className="p-8 rounded-sm bg-white text-brand-brown shadow-luxury space-y-4">
               <span className="text-xs font-serif font-bold text-brand-gold-dark uppercase tracking-widest">
-                Stage 02 • प्रधानकर्म
+                Stage 02 • Cleansing
               </span>
               <h3 className="text-2xl font-serif text-brand-brown font-medium">
                 Pradhana Karma (Detox)
@@ -261,7 +261,7 @@ export default function TreatmentsPage() {
 
             <div className="p-8 rounded-sm bg-white text-brand-brown shadow-luxury space-y-4">
               <span className="text-xs font-serif font-bold text-brand-green uppercase tracking-widest">
-                Stage 03 • पश्चात्कर्म
+                Stage 03 • Restoration
               </span>
               <h3 className="text-2xl font-serif text-brand-brown font-medium">
                 Paschat Karma (Rejuvenation)

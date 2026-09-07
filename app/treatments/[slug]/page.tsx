@@ -173,7 +173,7 @@ export default function TreatmentDetailPage({ params }: PageProps) {
               {/* Step-by-Step Clinical Procedure */}
               <div className="bg-white rounded-sm p-8 border border-brand-brown-border shadow-card-soft space-y-6">
                 <h2 className="text-2xl font-serif text-brand-brown font-medium">
-                  Step-by-Step Clinical Procedure (विधि)
+                  Step-by-Step Clinical Procedure
                 </h2>
                 <div className="w-10 h-0.5 bg-brand-green" />
 

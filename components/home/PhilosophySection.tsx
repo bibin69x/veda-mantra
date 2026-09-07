@@ -6,7 +6,7 @@ import { Wind, Flame, Droplets, Leaf, Activity } from "lucide-react";
 const DOSHAS = [
   {
     name: "Vata",
-    sanskrit: "वात (वायु + आकाश)",
+    sanskrit: "Air & Ether Element",
     elements: "Air & Space",
     governs: "Nerve impulses, cellular circulation, breathing rhythm, and joint mobility.",
     imbalanceSign: "Anxiety, insomnia, dry skin, chronic constipation, and joint stiffness.",
@@ -15,7 +15,7 @@ const DOSHAS = [
   },
   {
     name: "Pitta",
-    sanskrit: "पित्त (अग्नि + जल)",
+    sanskrit: "Fire & Water Element",
     elements: "Fire & Water",
     governs: "Digestion, metabolic enzymes, cellular energy, liver function, and ocular vitality.",
     imbalanceSign: "Acid reflux, chronic inflammation, skin flare-ups, migraines, and irritability.",
@@ -24,7 +24,7 @@ const DOSHAS = [
   },
   {
     name: "Kapha",
-    sanskrit: "कफ (जल + पृथ्वी)",
+    sanskrit: "Water & Earth Element",
     elements: "Water & Earth",
     governs: "Bodily structure, joint lubrication, immunity, fluid balance, and physical stamina.",
     imbalanceSign: "Metabolic sluggishness, weight gain, sinus congestion, and lethargy.",
@@ -38,7 +38,7 @@ export function PhilosophySection() {
     <section className="py-20 sm:py-28 bg-white border-b border-brand-brown-border">
       <Container size="xl">
         <SectionHeading
-          sanskritSubtitle="त्रिदोष सिद्धान्त एवं पञ्चकर्म"
+          sanskritSubtitle="Tri-Dosha Constitutional Principles"
           tagline="Ayurvedic Science"
           title="The Sacred Balance of Tri-Dosha Harmony"
           description="Classical Ayurveda views human health as the dynamic equilibrium between biological energies (Doshas), metabolic fire (Agni), cellular tissues (Dhatus), and mental peace (Prasanna Atma)."

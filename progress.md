@@ -25,7 +25,7 @@ Phase 12 — Full-Site Pure 3-Color Background Palette Adaptation & Clinical Har
 ### A. Chief Doctor & Consultation Engine
 - [x] **Doctor Data Model (`data/doctors.ts`)**: Real single Chief Physician configuration:
   - **Name**: Dr. Anupama Ramachandran
-  - **Title**: Chief Physician & Senior Panchakarma Specialist (`मुख्य आयुर्वेदाचार्या`)
+  - **Title**: Chief Physician & Senior Panchakarma Specialist (Chief Ayurvedic Physician)
   - **Degrees**: BAMS, MD (Ayurveda), Senior Nadi Pariksha Consultant
   - **Experience**: 15+ Years Classical Clinical Experience
   - **Consultation Rates**: Online Video Consultation ₹800 | In-Clinic Nadi Pariksha Visit ₹1,200

@@ -85,9 +85,9 @@ export default function AboutPage() {
           <div className="w-16 h-0.5 bg-brand-gold mx-auto my-6" />
 
           <p className="text-sm sm:text-base lg:text-lg text-brand-sand/90 max-w-2xl mx-auto font-light leading-relaxed">
-            &ldquo;प्रयोजनं चास्य स्वस्थस्य स्वास्थ्यरक्षणम् आतुरस्य विकारप्रशमनं च&rdquo;
+            &ldquo;To protect the health of the healthy and alleviate the afflictions of the ill.&rdquo;
             <span className="block text-xs sm:text-sm text-brand-gold-light font-sans font-normal mt-2">
-              — Charaka Samhita (To protect the health of the healthy and alleviate the affliction of the ill)
+              — Charaka Samhita (The Guiding Principle of Classical Ayurveda)
             </span>
           </p>
         </Container>
@@ -100,7 +100,7 @@ export default function AboutPage() {
             {/* Left Narrative */}
             <div className="lg:col-span-7 space-y-6">
               <SectionHeading
-                sanskritSubtitle="मूल परम्परा एवं स्थापना"
+                sanskritSubtitle="Our Lineage & Founding Vision"
                 tagline="Our Origin Story"
                 title="Rooted in Unbroken Vedic Tradition"
                 align="left"
@@ -139,7 +139,7 @@ export default function AboutPage() {
             <div className="lg:col-span-5 relative">
               <div className="relative aspect-[4/5] rounded-sm overflow-hidden shadow-2xl border-4 border-white">
                 <Image
-                  src="https://images.unsplash.com/photo-1544161515-4ab6ce6db874?auto=format&fit=crop&w=1000&q=80"
+                  src="https://images.unsplash.com/photo-1601049541289-9b1b7bbbfe19?auto=format&fit=crop&w=1000&q=80"
                   alt="Authentic Ayurvedic Treatment Preparation"
                   fill
                   className="object-cover"
@@ -164,7 +164,7 @@ export default function AboutPage() {
         <Container size="xl">
           <div className="text-center max-w-3xl mx-auto space-y-3 mb-16">
             <div className="inline-flex items-center px-3.5 py-1.5 rounded-full bg-brand-green-dark border border-brand-gold/30 text-brand-gold-light text-xs font-semibold tracking-widest uppercase">
-              <span>चतुर्विध सिद्धान्त</span>
+              <span>Four Core Foundations</span>
             </div>
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-serif font-normal text-white leading-tight">
               The Four Foundations of Our Clinical Care
@@ -205,7 +205,7 @@ export default function AboutPage() {
       <section className="py-20 sm:py-28 bg-white border-b border-brand-brown-border">
         <Container size="xl">
           <SectionHeading
-            sanskritSubtitle="मुख्य आयुर्वेदाचार्या"
+            sanskritSubtitle="Chief Medical Faculty"
             tagline="Our Chief Physician"
             title="Guided by Classical Ayurvedic Mastery"
             description="Leading our clinical sanctum with 15+ years of unbroken Sastric lineage, postgraduate training, and pulse diagnosis mastery."
@@ -287,7 +287,7 @@ export default function AboutPage() {
             <div className="lg:col-span-6 space-y-6">
               <div className="space-y-2">
                 <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-brand-brown-light border border-brand-gold/30 text-brand-gold-light text-xs font-semibold tracking-widest uppercase">
-                  <span>चिकित्सालय परिवेश</span>
+                  <span>Sanctuary Environment</span>
                 </div>
                 <h2 className="text-3xl sm:text-4xl font-serif font-normal text-white">
                   Sacred Architecture Crafted for Cellular Restoration

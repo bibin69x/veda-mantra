@@ -7,7 +7,7 @@ import { Calendar, ArrowRight, ShieldCheck, Droplets, Flame, HeartPulse } from "
 const STAGES = [
   {
     step: "01",
-    sanskrit: "पूर्व कर्म",
+    sanskrit: "Preparation Phase",
     title: "Purva Karma (Preparation)",
     subtitle: "Cellular Oleation & Toxin Mobilization",
     description:
@@ -17,7 +17,7 @@ const STAGES = [
   },
   {
     step: "02",
-    sanskrit: "प्रधान कर्म",
+    sanskrit: "Core Elimination Phase",
     title: "Pradhana Karma (Elimination)",
     subtitle: "The Five Sacred Purifications",
     description:
@@ -27,7 +27,7 @@ const STAGES = [
   },
   {
     step: "03",
-    sanskrit: "पश्चात् कर्म",
+    sanskrit: "Post-Care & Rejuvenation",
     title: "Paschat Karma (Restoration)",
     subtitle: "Metabolic Reset & Rasayana Longevity",
     description:
@@ -44,7 +44,7 @@ export function PanchakarmaProcessSection() {
         {/* Section Heading */}
         <div className="text-center max-w-3xl mx-auto space-y-3 mb-16">
           <div className="inline-flex items-center px-3.5 py-1.5 rounded-full bg-brand-brown-light border border-brand-gold/30 text-brand-gold-light text-xs font-semibold tracking-widest uppercase">
-            <span>पञ्चकर्म शोधन विधि</span>
+            <span>Panchakarma Detoxification Protocol</span>
           </div>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-serif font-normal text-white leading-tight">
             The Three Stages of Authentic Panchakarma

@@ -7,7 +7,7 @@ import { ArrowRight, BookOpen } from "lucide-react";
 const ARTICLES = [
   {
     title: "Dinacharya: The Vedic Sacred Morning Ritual for Radiant Vitality",
-    category: "Daily Living (दिनचर्या)",
+    category: "Daily Living (Dinacharya)",
     readTime: "5 min read",
     image: "https://images.unsplash.com/photo-1506126613408-eca07ce68773?auto=format&fit=crop&w=800&q=80",
     slug: "dinacharya-morning-ritual",
@@ -15,15 +15,15 @@ const ARTICLES = [
   },
   {
     title: "Panchakarma Demystified: The Five Classical Elimination Protocols",
-    category: "Clinical Therapeutics (पञ्चकर्म)",
+    category: "Clinical Therapeutics (Panchakarma)",
     readTime: "7 min read",
-    image: "https://images.unsplash.com/photo-1544161515-4ab6ce6db874?auto=format&fit=crop&w=800&q=80",
+    image: "https://images.unsplash.com/photo-1608248597359-57e05697669a?auto=format&fit=crop&w=800&q=80",
     slug: "panchakarma-five-elimination-protocols",
     excerpt: "Understand how Purva Karma (preparatory oleation) liquifies deep cellular toxins before biological elimination takes place.",
   },
   {
     title: "Ritucharya: Seasonal Diet & Cleansing for Monsoon & Autumn",
-    category: "Seasonal Wellness (ऋतुचर्या)",
+    category: "Seasonal Wellness (Ritucharya)",
     readTime: "4 min read",
     image: "https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=800&q=80",
     slug: "ritucharya-seasonal-diet-cleansing",

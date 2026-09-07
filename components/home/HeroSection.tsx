@@ -11,7 +11,7 @@ export function HeroSection() {
       {/* 1. Immersive Full-Width Background Imagery */}
       <div className="absolute inset-0 z-0">
         <Image
-          src="https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=2000&q=85"
+          src="/images/hero.png"
           alt="Authentic Ayurvedic Panchakarma & Natural Healing Sanctum"
           fill
           priority
@@ -40,8 +40,8 @@ export function HeroSection() {
 
           {/* Sanskrit Lineage Mantra & Subtitle */}
           <div className="space-y-2 max-w-2xl mx-auto">
-            <p className="font-serif italic text-base sm:text-lg text-brand-sand/90 tracking-wide">
-              &ldquo;शरीरेन्द्रियसत्त्वात्मसंयोगो धारि जीवितम्&rdquo;
+            <p className="font-serif italic text-base sm:text-lg text-brand-gold-light tracking-wide">
+              &ldquo;Harmonizing Body, Mind, Senses & Soul for Wholeness of Life&rdquo;
             </p>
             <p className="text-xs sm:text-sm lg:text-base text-brand-sand/80 font-light leading-relaxed">
               Experience the profound depth of classical Ayurvedic medicine. Guided by Chief Physician{" "}

@@ -26,7 +26,7 @@ export function FeaturedProductsSection() {
       <Container size="xl">
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 sm:mb-16">
           <SectionHeading
-            sanskritSubtitle="शुद्ध आयुर्वेदिक औषध एवं रसायन"
+            sanskritSubtitle="Pure Classical Formulations & Rasayanas"
             tagline="Medicinal Formulations"
             title="Handcrafted Ayurvedic Remedies"
             description="Proprietary herbal formulations, classical oils, and rejuvenating rasayanas cooked slowly over wood fires in sacred copper and clay cauldrons."
