@@ -12,7 +12,6 @@ import {
   CheckCircle2,
   Calendar,
   ShieldAlert,
-  Sparkles,
   ArrowLeft,
   ArrowRight,
   ShieldCheck,
@@ -210,7 +209,7 @@ export default function TreatmentDetailPage({ params }: PageProps) {
                       key={rIdx}
                       className="inline-flex items-center gap-1.5 px-4 py-2 rounded-full bg-white border border-brand-brown-border text-xs text-brand-brown font-medium shadow-sm"
                     >
-                      <Sparkles className="w-3.5 h-3.5 text-brand-gold" />
+                      <CheckCircle2 className="w-3.5 h-3.5 text-brand-green" />
                       <span>{rec}</span>
                     </span>
                   ))}

@@ -3,7 +3,7 @@
 import React, { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { Mail, ArrowRight, CheckCircle2, ChevronLeft, Sparkles } from "lucide-react";
+import { Mail, ArrowRight, CheckCircle2, ChevronLeft } from "lucide-react";
 import { Container } from "@/components/ui/Container";
 import { Badge } from "@/components/ui/Badge";
 import { Button } from "@/components/ui/Button";

@@ -8,7 +8,7 @@ import { SectionHeading } from "@/components/ui/SectionHeading";
 import { Badge } from "@/components/ui/Badge";
 import { Button } from "@/components/ui/Button";
 import { TREATMENTS, TREATMENT_CATEGORIES, Treatment } from "@/data/treatments";
-import { Clock, Search, CheckCircle2, ArrowRight, Calendar, Sparkles, ShieldCheck } from "lucide-react";
+import { Clock, Search, CheckCircle2, ArrowRight, Calendar, ShieldCheck } from "lucide-react";
 import { formatINR, cn } from "@/lib/utils";
 
 export default function TreatmentsPage() {
@@ -32,8 +32,7 @@ export default function TreatmentsPage() {
       {/* 1. Header Hero Banner (bg-brand-brown) */}
       <section className="relative py-16 sm:py-24 bg-brand-brown text-white overflow-hidden">
         <Container size="xl" className="relative z-10 text-center">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-brand-brown-light border border-brand-gold/30 text-brand-gold-light text-xs font-semibold tracking-widest uppercase mb-4">
-            <Sparkles className="w-3.5 h-3.5 text-brand-gold" />
+          <div className="inline-flex items-center px-3.5 py-1.5 rounded-full bg-brand-brown-light border border-brand-gold/30 text-brand-gold-light text-xs font-semibold tracking-widest uppercase mb-4">
             <span>Classical Panchakarma & Clinical Therapies</span>
           </div>
 
@@ -223,8 +222,7 @@ export default function TreatmentsPage() {
       <section className="py-20 sm:py-24 bg-brand-green text-white border-t border-brand-green-dark">
         <Container size="xl">
           <div className="text-center max-w-3xl mx-auto space-y-3 mb-16">
-            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-brand-green-dark border border-brand-gold/30 text-brand-gold-light text-xs font-semibold tracking-widest uppercase">
-              <Sparkles className="w-3.5 h-3.5 text-brand-gold" />
+            <div className="inline-flex items-center px-3.5 py-1.5 rounded-full bg-brand-green-dark border border-brand-gold/30 text-brand-gold-light text-xs font-semibold tracking-widest uppercase">
               <span>पञ्चकर्म त्रिविध कर्म विधि</span>
             </div>
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-serif font-normal text-white leading-tight">

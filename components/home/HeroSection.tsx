@@ -3,7 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { Container } from "@/components/ui/Container";
 import { Button } from "@/components/ui/Button";
-import { Calendar, ArrowRight, ShieldCheck, Sparkles, Award, HeartPulse, Clock } from "lucide-react";
+import { Calendar, ArrowRight, ShieldCheck, Award, HeartPulse, Clock } from "lucide-react";
 
 export function HeroSection() {
   return (
@@ -27,7 +27,6 @@ export function HeroSection() {
         <div className="max-w-4xl mx-auto space-y-6 sm:space-y-8">
           {/* Tagline Badge */}
           <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-brand-brown-light/80 border border-brand-gold/30 text-brand-gold-light text-xs font-semibold tracking-widest uppercase backdrop-blur-md shadow-lg">
-            <Sparkles className="w-3.5 h-3.5 text-brand-gold animate-pulse" />
             <span>Ayurveda Panchakarma Treatment & Research Centre</span>
           </div>
 

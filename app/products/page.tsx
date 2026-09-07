@@ -8,7 +8,7 @@ import {
   SlidersHorizontal,
   Star,
   ShoppingBag,
-  Sparkles,
+  CheckCircle2,
   ShieldCheck,
   Check,
   Leaf,
@@ -102,7 +102,7 @@ export default function ProductsPage() {
 
           <div className="flex flex-wrap items-center justify-center gap-6 pt-4 text-xs text-brand-gold-light">
             <span className="flex items-center gap-1.5">
-              <Sparkles className="w-4 h-4 text-brand-gold" />
+              <CheckCircle2 className="w-4 h-4 text-brand-gold" />
               100% Wildcrafted Botanicals
             </span>
             <span>•</span>

@@ -81,36 +81,120 @@ Phase 12 — Full-Site Pure 3-Color Background Palette Adaptation & Clinical Har
 
 ---
 
-## 3. Comprehensive Audit of Identified Missing Items & Next Actions
+## 3. Comprehensive Backend & Operational Gaps Audit (Critical Deficiencies & Missing Workflows)
 
-Below is the complete audit of items needed to transition from demo/prototype mode to 100% live client production:
+Below is the detailed diagnostic of current workflows, where data goes today, and the missing infrastructure needed for live business operations:
 
-| Item | Area | Current Status | Action Needed for Live Launch |
-|---|---|---|---|
-| **1. Supabase Project Link** | Database | Local/SSR Ready + Schema Written | Create Supabase project in cloud, run `supabase/schema.sql` in SQL Editor, and paste API keys into `.env.local` |
-| **2. Live Razorpay Keys** | Payments | Test mode architecture ready | Generate live Razorpay Key ID & Secret, configure Webhook Secret on Razorpay Dashboard |
-| **3. Analytics IDs** | Marketing | Analytics component ready in layout | Obtain GA4 Measurement ID (`G-...`), GTM Container ID (`GTM-...`), and GSC token from Google |
-| **4. Real Doctor Imagery** | Media | High-res placeholder loaded | Upload Dr. Anupama Ramachandran's official clinical portrait to `public/images/doctor.jpg` |
-| **5. Clinic Contact & Location** | Contact | Kochi demo address | Update exact clinic street address, official WhatsApp phone number, and Google Maps embed |
-| **6. Legal / Entity Details** | Compliance | Standard Indian healthcare templates | Insert registered firm/clinic legal name, GSTIN, and Grievance Officer email |
-| **7. Transactional Notifications** | Backend | API routes ready | (Optional) Connect Resend / Twilio in API routes to send instant booking confirmation emails/SMS |
+### 🔴 Gap 1: Where do Appointment Bookings go?
+* **Current State**:
+  * Patient completes 5-step wizard at `/consultation` and clicks book/pay.
+  * Submits payload to `POST /api/consultation`.
+  * `/api/consultation` attempts to insert the appointment into Supabase `consultations` table.
+  * **Critical Flaw**: If Supabase environment variables are missing or disconnected, it catches the error with `console.warn` and returns a mock success response `{ success: true, bookingReference: "AVM-..." }`. The patient sees a success screen, but **the data vanishes** into thin air if database keys are not connected.
+* **Missing Features**:
+  * ❌ No email notification sent to Chief Physician / Clinic Admin (`admin@ayurvedamantra.com`).
+  * ❌ No confirmation email sent to the patient with appointment details, Google Meet link, Sastric fasting/preparation protocols, or clinic directions.
+  * ❌ No live Google Calendar / Google Meet API integration (currently generates a static placeholder link `meet.ayurvedamantra.com/...` or client `.ics` download).
+  * ❌ No Admin Appointment Portal for reception staff to view daily slots, mark attendance, or review patient medical history.
 
 ---
 
-## 4. Page-by-Page Real Data Customization Roadmap
+### 🔴 Gap 2: Where does Purchase & Checkout Information go?
+* **Current State**:
+  * Patient adds products to basket, enters Indian delivery address, selects payment method, and clicks "Place Order" at `/checkout`.
+  * `handlePlaceOrder()` in `app/checkout/page.tsx` runs a client-side `setTimeout` (1.5s simulation).
+  * It stores order data **exclusively in browser `sessionStorage`** under `latest_order_receipt` to render the confirmation screen at `/checkout/success`.
+  * **Critical Flaw**: **It NEVER calls any backend API!** The order is never saved to the database (`orders` and `order_items` tables in Supabase remain completely empty). If the user closes their browser, the order record is permanently gone.
+* **Missing Features**:
+  * ❌ No `POST /api/orders` API endpoint to validate items, compute GST, verify inventory, and persist the order in Supabase.
+  * ❌ Clinic staff / pharmacy managers have **zero visibility** into who bought what product, where to ship it, or what address to label.
+  * ❌ No Admin Order Dashboard to view orders, update fulfillment status (Processing -> Shipped -> Delivered), or assign tracking numbers (Delhivery, Bluedart, Speed Post).
 
-We will customize the website page-by-page in the following sequential order:
+---
+
+### 🔴 Gap 3: Email Providers & Transactional Invoices
+* **Current State**:
+  * **Zero email service packages** are installed in `package.json` (no Resend, SendGrid, Postmark, or Nodemailer).
+  * No email sending infrastructure or SMTP credentials configured.
+* **Missing Features**:
+  * ❌ **Customer Order Confirmation & Tax Invoice Email**: Automatic PDF/HTML receipt with itemized GST breakdown (CGST/SGST), billing/shipping address, and dispatch timeframe.
+  * ❌ **Admin New Order Alert Email**: Instant email to the pharmacy dispatch team (`orders@ayurvedamantra.com`) with customer details, phone number, address, and packing list.
+  * ❌ **Patient Doctor Appointment Email**: Full consultation details, appointment time slot, preparation guidelines, and video meeting credentials.
+  * ❌ **Doctor / Clinic Reception Alert Email**: Instant alert to Dr. Anupama / front desk with patient name, age, phone number, reported symptoms, and medical intake sheet.
+  * ❌ **Contact Form Dispatch Email**: When a patient submits `/contact`, no notification is sent to clinic staff or patient.
+
+---
+
+### 🔴 Gap 4: Admin Dashboard & Internal Management Portal
+* **Current State**:
+  * The site only has a **Patient Dashboard** (`/account/*`), currently displaying demo data for Radhika Sharma.
+  * There is **NO Admin Portal** for the clinic team.
+* **Missing Features**:
+  * ❌ **Admin Orders Management (`/admin/orders`)**: Table of all e-commerce purchases, customer contact, shipping addresses, ordered herbs, payment status, and order dispatch controls.
+  * ❌ **Admin Consultations Calendar (`/admin/consultations`)**: Daily/weekly schedule of Dr. Anupama's appointments, intake sheets, patient symptoms, and video join links.
+  * ❌ **Admin Inquiries Inbox (`/admin/inquiries`)**: Viewer for contact form inquiries submitted via `/contact`.
+  * ❌ **Admin Authentication & Role Gate**: Role-based access control (`role: 'admin'`) ensuring only clinic staff can access admin records.
+
+---
+
+### 🔴 Gap 5: Payment Gateway Server-Side Order Creation
+* **Current State**:
+  * Razorpay webhook listener is configured in `app/api/webhooks/razorpay/route.ts` with HMAC signature verification.
+  * Checkout currently simulates payment completion.
+* **Missing Features**:
+  * ❌ Missing `POST /api/razorpay/create-order` endpoint to securely generate official Razorpay Order IDs (`order_...`) before opening the checkout modal.
+  * ❌ Missing client-side payment verification handshake to verify signature and mark orders/consultations as `paid` in the database.
+
+---
+
+## 4. Master Checklist of Missing Items & Action Plan
+
+| # | Missing Component | Priority | Status | Action Required |
+|---|---|---|---|---|
+| **1** | **Backend Orders API (`/api/orders`)** | 🚨 Critical | Missing | Create `app/api/orders/route.ts` to validate checkout, compute taxes, and save to Supabase `orders` & `order_items` tables. |
+| **2** | **Wire Checkout to API** | 🚨 Critical | Missing | Update `app/checkout/page.tsx` to call `/api/orders` instead of just writing to `sessionStorage`. |
+| **3** | **Transactional Email Service (Resend / Nodemailer)** | 🚨 Critical | Missing | Install email SDK (e.g. `resend`), set `RESEND_API_KEY`, and build email dispatch helper in `lib/email/`. |
+| **4** | **HTML Email Templates** | 🚨 Critical | Missing | Build responsive, branded email templates for Order Invoices, Appointment Confirmations, Doctor Alerts, and Contact Form Alerts. |
+| **5** | **Admin Dashboard (`/admin/*`)** | 🚨 High | Missing | Build internal staff dashboard to view real-time orders, shipping addresses, consultations schedule, and contact inquiries. |
+| **6** | **Admin Email Routing Configuration** | 🚨 High | Missing | Define environment variables (`ADMIN_EMAIL=admin@ayurvedamantra.com`, `DOCTOR_EMAIL=doctor@ayurvedamantra.com`, `ORDERS_EMAIL=orders@ayurvedamantra.com`). |
+| **7** | **Razorpay Server Order Creation** | 🚨 High | Missing | Implement `app/api/razorpay/create-order/route.ts` for real payment processing. |
+| **8** | **Supabase Auth Integration** | 🟡 Medium | Prototype Mode | Connect real user signup/login to Supabase Auth (`auth.users`) to link orders and consultations to authenticated patient accounts. |
+| **9** | **Cloud Supabase Setup** | 🟡 Medium | Ready for deploy | Create Supabase project, execute `supabase/schema.sql`, and populate `.env.local` with real URL and service role keys. |
+
+---
+
+## 5. Technical Implementation Roadmap for Missing Backend Features
 
 ```mermaid
 graph TD
-    A["Step 1: Homepage (Hero, Clinic Address, Doctor Banner)"] --> B["Step 2: About Us (Clinical Story & Dr. Anupama Bio)"]
-    B --> C["Step 3: Panchakarma Treatments (Actual Prices, Durations & Protocols)"]
-    C --> D["Step 4: Apothecary Products (Actual Formulations, MRPs & Images)"]
-    D --> E["Step 5: Consultation Engine (Clinic Slots & Intake Fields)"]
-    E --> F["Step 6: Contact & Clinic Sanctum Details"]
-    F --> G["Step 7: Legal, GSTIN & Regulatory Disclaimers"]
-    G --> H["Step 8: Live Production Deployment (Supabase + Razorpay + GA4)"]
+    subgraph "1. E-Commerce Order Flow"
+        A["Patient Checkout (/checkout)"] --> B["POST /api/orders"]
+        B --> C["Supabase (orders & order_items)"]
+        B --> D["Email Service (Resend)"]
+        D --> E["Customer: GST Tax Invoice Email"]
+        D --> F["Admin: Pharmacy Packing & Dispatch Alert"]
+    end
+
+    subgraph "2. Doctor Consultation Flow"
+        G["Patient Booking (/consultation)"] --> H["POST /api/consultation"]
+        H --> I["Supabase (consultations)"]
+        H --> J["Email Service (Resend)"]
+        J --> K["Patient: Appointment Confirmation + Preparation Guide"]
+        J --> L["Doctor: Intake Sheet + Symptoms Alert"]
+    end
+
+    subgraph "3. Admin Staff Portal"
+        M["Clinic Admin Login (/admin)"] --> N["Orders Manager (View addresses, update dispatch)"]
+        M --> O["Consultations Schedule (View patient intake, daily slots)"]
+        M --> P["Inquiry Inbox (Manage contact leads)"]
+    end
 ```
+
+---
+
+## 6. Page-by-Page Real Data Customization Roadmap
+
+We will customize the website page-by-page in the following sequential order:
 
 ### 📍 Step 1: Homepage (`/`)
 - Replace hero tagline and intro copy with client's exact brand phrasing.
@@ -150,15 +234,16 @@ graph TD
 
 ### 📍 Step 8: Cloud Setup & Production Deployment
 - Connect cloud Supabase instance and execute `supabase/schema.sql`.
-- Add live Razorpay and Google Analytics credentials to production environment variables.
+- Add live Razorpay, Email (Resend), and Google Analytics credentials to production environment variables.
 - Deploy to Vercel and map custom domain (`ayurvedamantra.com`).
 
 ---
 
-## 5. Verification & Build Logs
+## 7. Verification & Build Logs
 
 - **Build Command**: `npm.cmd run build`
 - **Output**: **51 / 51 pages pre-rendered successfully (Exit Code 0)**
 - **TypeScript**: 0 errors
 - **ESLint**: 0 warnings
 - **Core Web Vitals**: Zero layout shift, optimized fonts (`next/font`), static pre-rendering across all treatment PDPs and product PDPs.
+

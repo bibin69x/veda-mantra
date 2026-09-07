@@ -6,7 +6,6 @@ import Image from "next/image";
 import {
   Package,
   Calendar,
-  Sparkles,
   ArrowRight,
   Video,
   Clock,
@@ -62,9 +61,6 @@ export default function AccountDashboardPage() {
           <main className="flex-1 space-y-8 w-full">
             {/* Welcome Banner */}
             <div className="bg-brand-brown text-white rounded-3xl p-6 sm:p-8 relative overflow-hidden border border-brand-brown-light/40 shadow-luxury">
-              <div className="absolute right-0 top-0 opacity-10 pointer-events-none">
-                <Sparkles className="w-64 h-64 -mr-12 -mt-12 text-brand-gold" />
-              </div>
 
               <div className="relative z-10 space-y-3">
                 <Badge variant="gold" size="sm" className="bg-brand-gold/20 text-brand-gold-light border-brand-gold/40">
@@ -134,7 +130,7 @@ export default function AccountDashboardPage() {
                 <div className="flex gap-4 items-center">
                   <div className="relative w-16 h-16 rounded-xl overflow-hidden bg-white shrink-0 border border-brand-brown-border">
                     <Image
-                      src="https://images.unsplash.com/photo-1594824813589-325244585e5d?auto=format&fit=crop&w=800&q=80"
+                      src="/Dr. Anupama Ramachandran.jpeg"
                       alt="Dr. Anupama Ramachandran"
                       fill
                       className="object-cover"

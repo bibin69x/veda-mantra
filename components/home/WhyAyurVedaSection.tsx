@@ -2,7 +2,7 @@ import React from "react";
 import Image from "next/image";
 import { Container } from "@/components/ui/Container";
 import { SectionHeading } from "@/components/ui/SectionHeading";
-import { ShieldCheck, Stethoscope, Sparkles, BookOpen, Check } from "lucide-react";
+import { ShieldCheck, Stethoscope, Award, BookOpen, Check } from "lucide-react";
 
 const PILLARS = [
   {
@@ -11,7 +11,7 @@ const PILLARS = [
     description: "Deep pulse examination by Chief Physician Dr. Anupama Ramachandran, detecting subtle Dosha imbalances before symptoms manifest.",
   },
   {
-    icon: Sparkles,
+    icon: Award,
     title: "Authentic Panchakarma Theaters",
     description: "Equipped with traditional hand-carved medicinal wood Dronis (treatment tables) and certified bronze Dhara vessels.",
   },

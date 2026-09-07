@@ -11,7 +11,6 @@ import {
   ShieldCheck,
   CheckCircle2,
   AlertCircle,
-  Sparkles,
 } from "lucide-react";
 import { Container } from "@/components/ui/Container";
 import { Badge } from "@/components/ui/Badge";
@@ -168,7 +167,7 @@ function LoginContent() {
               onClick={handleDemoLogin}
               className="w-full py-2.5 px-4 rounded-xl bg-brand-brown/5 hover:bg-brand-brown/10 text-brand-brown text-xs font-semibold border border-brand-brown-border/60 transition-colors flex items-center justify-center gap-2"
             >
-              <Sparkles className="w-4 h-4 text-brand-gold" />
+              <CheckCircle2 className="w-4 h-4 text-brand-gold" />
               <span>Preview as Demo Patient (Radhika Sharma)</span>
             </button>
           </div>

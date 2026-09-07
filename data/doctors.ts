@@ -45,7 +45,7 @@ export const HEALTH_CONCERNS: HealthConcern[] = [
     title: "Skin & Hair Revitalization",
     sanskritName: "त्वक् विकार एवं केशपतन",
     description: "Psoriasis, eczema, acne, hyperpigmentation, premature graying, and hair thinning.",
-    iconName: "Sparkles",
+    iconName: "Sun",
   },
   {
     id: "womens-health",
@@ -79,7 +79,7 @@ export const DOCTORS: Doctor[] = [
     degrees: "BAMS, MD (Ayurveda), Senior Pulse Diagnosis (Nadi Pariksha) Consultant",
     experience: "15+ Years Clinical Experience",
     bio: "With over 15 years of dedicated classical clinical practice, Dr. Anupama Ramachandran is the Chief Physician leading Ayur Veda Mantra. Specializing in classical Panchakarma protocols, Nadi Pariksha pulse diagnosis, chronic musculoskeletal recovery, and personalized Ayurvedic constitutional healing, Dr. Anupama combines ancient Sastric precision with compassionate, patient-centered clinical care.",
-    image: "https://images.unsplash.com/photo-1594824813589-325244585e5d?auto=format&fit=crop&w=800&q=80",
+    image: "/Dr. Anupama Ramachandran.jpeg",
     specialties: [
       "Classical Panchakarma & Detox",
       "Nadi Pariksha (Pulse Diagnosis)",

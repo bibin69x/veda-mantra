@@ -7,7 +7,7 @@ import { Container } from "@/components/ui/Container";
 import { Badge } from "@/components/ui/Badge";
 import { Button } from "@/components/ui/Button";
 import { TREATMENTS, TREATMENT_CATEGORIES, Treatment } from "@/data/treatments";
-import { Clock, CheckCircle2, ArrowRight, Calendar, Sparkles } from "lucide-react";
+import { Clock, CheckCircle2, ArrowRight, Calendar } from "lucide-react";
 import { cn, formatINR } from "@/lib/utils";
 
 export function FeaturedTreatmentsSection() {
@@ -23,8 +23,7 @@ export function FeaturedTreatmentsSection() {
       <Container size="xl" className="relative z-10">
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto space-y-3 mb-12 sm:mb-16">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-brand-green-dark border border-brand-gold/30 text-brand-gold-light text-xs font-semibold tracking-widest uppercase">
-            <Sparkles className="w-3.5 h-3.5 text-brand-gold" />
+          <div className="inline-flex items-center px-3.5 py-1.5 rounded-full bg-brand-green-dark border border-brand-gold/30 text-brand-gold-light text-xs font-semibold tracking-widest uppercase">
             <span>Classical Therapies & पञ्चकर्म</span>
           </div>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-serif font-normal text-white leading-tight">

@@ -17,7 +17,7 @@ import {
   ChevronRight,
   ChevronLeft,
   Star,
-  Sparkles,
+  Sun,
   Heart,
   Flame,
   Activity,
@@ -38,7 +38,7 @@ import { DOCTORS, HEALTH_CONCERNS, Doctor } from "@/data/doctors";
 const ICONS: Record<string, React.ReactNode> = {
   Activity: <Activity className="w-5 h-5 text-brand-gold" />,
   Flame: <Flame className="w-5 h-5 text-brand-gold" />,
-  Sparkles: <Sparkles className="w-5 h-5 text-brand-gold" />,
+  Sun: <Sun className="w-5 h-5 text-brand-gold" />,
   Heart: <Heart className="w-5 h-5 text-brand-gold" />,
   Moon: <Moon className="w-5 h-5 text-brand-gold" />,
   Shield: <Shield className="w-5 h-5 text-brand-gold" />,

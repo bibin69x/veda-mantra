@@ -12,7 +12,6 @@ import {
   HelpCircle,
   ChevronDown,
   ChevronUp,
-  Sparkles,
   Calendar,
   MessageSquare,
   ShieldCheck,

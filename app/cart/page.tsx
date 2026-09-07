@@ -11,7 +11,7 @@ import {
   ArrowRight,
   ShieldCheck,
   Truck,
-  Sparkles,
+  CheckCircle2,
   Tag,
   Check,
   RotateCcw,
@@ -159,7 +159,7 @@ export default function CartPage() {
                   </div>
                 ) : (
                   <div className="flex items-center gap-2.5 text-xs font-semibold text-brand-green">
-                    <Sparkles className="w-4 h-4 text-brand-gold fill-brand-gold/30 shrink-0" />
+                    <CheckCircle2 className="w-4 h-4 text-brand-green shrink-0" />
                     <span>You have unlocked Free Express Ayurvedic Shipping across India!</span>
                   </div>
                 )}

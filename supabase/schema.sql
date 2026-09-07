@@ -335,7 +335,7 @@ INSERT INTO public.doctors (
     'BAMS, MD (Ayurveda), Senior Pulse Diagnosis (Nadi Pariksha) Consultant',
     '15+ Years Clinical Experience',
     'With over 15 years of dedicated classical clinical practice, Dr. Anupama Ramachandran is the Chief Physician leading Ayur Veda Mantra. Specializing in classical Panchakarma protocols, Nadi Pariksha pulse diagnosis, chronic musculoskeletal recovery, and personalized Ayurvedic constitutional healing, Dr. Anupama combines ancient Sastric precision with compassionate, patient-centered clinical care.',
-    'https://images.unsplash.com/photo-1594824813589-325244585e5d?auto=format&fit=crop&w=800&q=80',
+    '/Dr. Anupama Ramachandran.jpeg',
     ARRAY['Classical Panchakarma & Detox', 'Nadi Pariksha (Pulse Diagnosis)', 'Spine, Joint & Musculoskeletal Care', 'Women''s Health & Hormonal Balance', 'Digestive & Chronic Metabolic Disorders'],
     ARRAY['English', 'Hindi', 'Malayalam', 'Tamil'],
     800,

@@ -3,7 +3,7 @@
 import React, { useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { X, Trash2, Plus, Minus, ShoppingBag, ArrowRight, ShieldCheck, Sparkles, Truck } from "lucide-react";
+import { X, Trash2, Plus, Minus, ShoppingBag, ArrowRight, ShieldCheck, CheckCircle2, Truck } from "lucide-react";
 import { useCart } from "@/context/CartContext";
 import { Button } from "@/components/ui/Button";
 
@@ -105,7 +105,7 @@ export function CartDrawer() {
             </div>
           ) : (
             <div className="flex items-center gap-2 text-xs text-brand-green font-semibold">
-              <Sparkles className="w-4 h-4 text-brand-gold fill-brand-gold/30 shrink-0" />
+              <CheckCircle2 className="w-4 h-4 text-brand-green shrink-0" />
               <span>Congratulations! You have unlocked Free Ayurvedic Delivery.</span>
             </div>
           )}

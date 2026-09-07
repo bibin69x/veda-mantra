@@ -81,7 +81,7 @@ export function Header() {
           <div className="flex items-center justify-between">
             {/* Brand Logo */}
             <Link href="/" className="flex items-center gap-3 group focus:outline-none">
-              <div className="relative h-12 w-48 sm:h-14 sm:w-56 transition-transform duration-300 group-hover:scale-[1.02]">
+              <div className="relative h-14 w-52 sm:h-16 sm:w-64 md:h-[72px] md:w-[280px] transition-transform duration-300 group-hover:scale-[1.02]">
                 <Image
                   src="/logo.png"
                   alt="Ayur Veda Mantra"

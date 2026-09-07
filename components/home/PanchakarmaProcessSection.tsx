@@ -2,7 +2,7 @@ import React from "react";
 import Link from "next/link";
 import { Container } from "@/components/ui/Container";
 import { Button } from "@/components/ui/Button";
-import { Sparkles, Calendar, ArrowRight, ShieldCheck, Droplets, Flame, HeartPulse } from "lucide-react";
+import { Calendar, ArrowRight, ShieldCheck, Droplets, Flame, HeartPulse } from "lucide-react";
 
 const STAGES = [
   {
@@ -43,8 +43,7 @@ export function PanchakarmaProcessSection() {
       <Container size="xl" className="relative z-10">
         {/* Section Heading */}
         <div className="text-center max-w-3xl mx-auto space-y-3 mb-16">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-brand-brown-light border border-brand-gold/30 text-brand-gold-light text-xs font-semibold tracking-widest uppercase">
-            <Sparkles className="w-3.5 h-3.5 text-brand-gold" />
+          <div className="inline-flex items-center px-3.5 py-1.5 rounded-full bg-brand-brown-light border border-brand-gold/30 text-brand-gold-light text-xs font-semibold tracking-widest uppercase">
             <span>पञ्चकर्म शोधन विधि</span>
           </div>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-serif font-normal text-white leading-tight">

@@ -8,10 +8,11 @@ import {
   Star,
   ShoppingBag,
   Check,
+  CheckCircle2,
   ShieldCheck,
   Truck,
   Leaf,
-  Sparkles,
+  Sun,
   Plus,
   Minus,
   ArrowRight,
@@ -182,7 +183,7 @@ export function ProductDetailClient({ product }: ProductDetailClientProps) {
                 <span>Ashtanga Certified</span>
               </div>
               <div className="flex items-center gap-2">
-                <Sparkles className="w-4 h-4 text-brand-gold shrink-0" />
+                <CheckCircle2 className="w-4 h-4 text-brand-gold shrink-0" />
                 <span>Wildcrafted Herbs</span>
               </div>
               <div className="flex items-center gap-2">
@@ -488,7 +489,7 @@ export function ProductDetailClient({ product }: ProductDetailClientProps) {
 
               <div className="space-y-2 pt-2">
                 <h4 className="font-serif font-semibold text-base text-brand-brown flex items-center gap-2">
-                  <Sparkles className="w-4 h-4 text-brand-gold" />
+                  <Sun className="w-4 h-4 text-brand-gold" />
                   Sacred Daily Ritual (Dinacharya Integration)
                 </h4>
                 <p className="text-brand-brown-muted leading-relaxed">

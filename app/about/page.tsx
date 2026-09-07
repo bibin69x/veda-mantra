@@ -6,7 +6,6 @@ import { Container } from "@/components/ui/Container";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { Button } from "@/components/ui/Button";
 import {
-  Sparkles,
   ShieldCheck,
   Leaf,
   HeartPulse,
@@ -32,7 +31,7 @@ const DOCTORS = [
     degrees: "BAMS, MD (Ayurveda), Senior Nadi Pariksha Consultant",
     experience: "15+ Years Clinical Experience",
     bio: "With over 15 years of dedicated classical clinical practice, Dr. Anupama Ramachandran leads the medical faculty at Ayur Veda Mantra. Specializing in authentic Panchakarma detoxification, Nadi Pariksha pulse diagnosis, chronic musculoskeletal disorders, and individualized Prakriti constitutional care, Dr. Anupama brings deep classical mastery and compassionate clinical attention to every patient.",
-    image: "https://images.unsplash.com/photo-1594824813589-325244585e5d?auto=format&fit=crop&w=800&q=80",
+    image: "/Dr. Anupama Ramachandran.jpeg",
     specialties: [
       "Classical Panchakarma Detox",
       "Nadi Pariksha (Pulse Diagnosis)",
@@ -72,8 +71,7 @@ export default function AboutPage() {
       {/* 1. Editorial Hero Banner (bg-brand-brown) */}
       <section className="relative py-20 lg:py-28 bg-brand-brown text-white overflow-hidden">
         <Container size="xl" className="relative z-10 text-center">
-          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-brand-brown-light border border-brand-gold/30 text-brand-gold-light text-xs font-semibold tracking-widest uppercase mb-6">
-            <Sparkles className="w-3.5 h-3.5 text-brand-gold" />
+          <div className="inline-flex items-center px-4 py-1.5 rounded-full bg-brand-brown-light border border-brand-gold/30 text-brand-gold-light text-xs font-semibold tracking-widest uppercase mb-6">
             <span>Ayurveda Panchakarma Treatment & Research Centre</span>
           </div>
 
@@ -165,8 +163,7 @@ export default function AboutPage() {
       <section className="py-20 sm:py-28 bg-brand-green text-white border-b border-brand-green-dark">
         <Container size="xl">
           <div className="text-center max-w-3xl mx-auto space-y-3 mb-16">
-            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-brand-green-dark border border-brand-gold/30 text-brand-gold-light text-xs font-semibold tracking-widest uppercase">
-              <Sparkles className="w-3.5 h-3.5 text-brand-gold" />
+            <div className="inline-flex items-center px-3.5 py-1.5 rounded-full bg-brand-green-dark border border-brand-gold/30 text-brand-gold-light text-xs font-semibold tracking-widest uppercase">
               <span>चतुर्विध सिद्धान्त</span>
             </div>
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-serif font-normal text-white leading-tight">

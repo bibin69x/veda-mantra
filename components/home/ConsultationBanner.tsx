@@ -2,7 +2,7 @@ import React from "react";
 import Image from "next/image";
 import { Container } from "@/components/ui/Container";
 import { Button } from "@/components/ui/Button";
-import { Calendar, Video, MapPin, CheckCircle, Clock, Award, Sparkles } from "lucide-react";
+import { Calendar, Video, MapPin, CheckCircle, Clock, Award } from "lucide-react";
 
 export function ConsultationBanner() {
   return (
@@ -11,8 +11,7 @@ export function ConsultationBanner() {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
           {/* Left Doctor Details */}
           <div className="lg:col-span-7 space-y-6">
-            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-brand-green-dark border border-brand-gold/30 text-brand-gold-light text-xs font-semibold tracking-widest uppercase">
-              <Sparkles className="w-3.5 h-3.5 text-brand-gold" />
+            <div className="inline-flex items-center px-3.5 py-1.5 rounded-full bg-brand-green-dark border border-brand-gold/30 text-brand-gold-light text-xs font-semibold tracking-widest uppercase">
               <span>Ayurvedic Vaidya Consultations</span>
             </div>
 
@@ -75,7 +74,7 @@ export function ConsultationBanner() {
             <div className="relative w-full max-w-md bg-white text-brand-brown p-6 rounded-sm shadow-2xl space-y-5">
               <div className="relative aspect-[4/3] rounded-sm overflow-hidden bg-brand-brown-light">
                 <Image
-                  src="https://images.unsplash.com/photo-1594824813589-325244585e5d?auto=format&fit=crop&w=800&q=80"
+                  src="/Dr. Anupama Ramachandran.jpeg"
                   alt="Dr. Anupama Ramachandran — Chief Ayurvedic Physician"
                   fill
                   className="object-cover"
